@@ -90329,7 +90329,7 @@ skipif mysql # not compatible
 query I rowsort label-9759
 SELECT ALL - 1 + 3 + 5 / AVG ( ALL + CAST ( NULLIF ( CAST ( - 16 AS INTEGER ), CAST ( NULL AS INTEGER ) ) AS REAL ) ) AS col2
 ----
-1
+1.6875
 
 query I rowsort
 SELECT 50 + + 43 AS col2

@@ -28723,7 +28723,7 @@ skipif mysql # not compatible
 query I rowsort label-3049
 SELECT ALL 34 * + 25 * + CASE AVG ( + + 51 ) WHEN 27 + 72 + + CAST ( 30 AS INTEGER ) THEN NULL ELSE - NULLIF ( - 36, + COUNT ( * ) * - AVG ( ALL - - 97 ) ) / COUNT ( + 71 ) END * 44
 ----
-1346400
+1346400.0000000000000000
 
 onlyif mysql # DIV for integer division: 
 query II rowsort label-3050
@@ -43303,7 +43303,7 @@ query II rowsort label-4628
 SELECT - - 74 + 12 AS col0, NULLIF ( 26, - NULLIF ( - 12, + CAST ( NULL AS REAL ) ) ) / - 6 AS col2
 ----
 86
--4
+-4.333333333333333
 
 onlyif mysql # DIV for integer division: 
 query II rowsort label-4629

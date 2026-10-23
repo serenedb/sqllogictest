@@ -2186,7 +2186,7 @@ skipif mysql # not compatible
 query I rowsort label-215
 SELECT - + 93 * COALESCE ( - NULLIF ( + 29, - 54 * - ( - 23 ) - - 66 / - ( + AVG ( ALL + 94 ) ) ), - COALESCE ( CASE 18 WHEN - COUNT ( * ) THEN + 64 WHEN 48 + ( 89 ) THEN + 43 - 53 ELSE + COUNT ( * ) END, 77 ) ) / + 21 - 79 * MAX ( DISTINCT 84 ) AS col1
 ----
--6508
+-6507.5714285714285714
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-216
@@ -8356,7 +8356,7 @@ skipif mysql # not compatible
 query I rowsort label-877
 SELECT DISTINCT - - 19 * + + 0 * ( - COUNT ( * ) ) * 99 / NULLIF ( - + COALESCE ( + 68, + - AVG ( ALL - 3 ), + 25, 75 ), - COUNT ( * ) + MAX ( - + 42 ) + - - 89 / + + SUM ( DISTINCT + + 54 ) * - CAST ( + MIN ( DISTINCT 34 ) AS REAL ) + + - 93 + - 0 ) AS col2
 ----
-0
+-0
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-878
@@ -28147,7 +28147,7 @@ skipif mysql # not compatible
 query I rowsort label-3012
 SELECT 55 / - COALESCE ( - 90, ( + 24 ), 8 * 76 + AVG ( DISTINCT 44 ) * AVG ( ALL - NULLIF ( - 89, - 98 ) ) ) - 41 AS col1
 ----
--41
+-40.38888888888888888889
 
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query I rowsort label-3013
@@ -30607,7 +30607,7 @@ skipif mysql # not compatible
 query I rowsort label-3271
 SELECT COUNT ( * ) - - + 92 * 35 / - + COALESCE ( - + 53, + 48, - AVG ( + 77 ) * - 79 + CASE - 44 WHEN NULLIF ( - COUNT ( DISTINCT 19 ), - 81 * COUNT ( * ) ) * - ( 25 * + 65 ) THEN ( 45 ) * - 79 END + + 53 * 91 ) + COUNT ( * ) AS col1
 ----
-62
+62.7547169811320755
 
 query I rowsort
 SELECT 44 * 65 * - 62 + + - 68
@@ -50799,7 +50799,7 @@ skipif mysql # not compatible
 query II rowsort label-5418
 SELECT - COUNT ( * ) / NULLIF ( 17, + AVG ( DISTINCT 58 ) / - 39 ) AS col1, ( - 83 ) + 14 * 81
 ----
-0
+-0.05882352941176470588
 1051
 
 onlyif mysql # aggregate syntax: 
@@ -57088,7 +57088,7 @@ skipif mysql # not compatible
 query I rowsort label-6082
 SELECT COALESCE ( + ( - 89 ), + AVG ( ALL - 28 ) ) / + MAX ( ALL 37 ) AS col0
 ----
--2
+-2.4054054054054054
 
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query I rowsort label-6083

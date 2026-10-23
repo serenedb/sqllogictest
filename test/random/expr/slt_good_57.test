@@ -38560,7 +38560,7 @@ skipif mysql # not compatible
 query I rowsort label-4154
 SELECT + + COALESCE ( + 94, + - AVG ( DISTINCT - 30 ) / 29 ) / - 82 AS col2
 ----
--1
+-1.1463414634146341
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-4155
@@ -66385,7 +66385,7 @@ skipif mysql # not compatible
 query I rowsort label-7175
 SELECT 55 * + 80 + + COUNT ( DISTINCT + 32 ) / - COALESCE ( - 31, AVG ( ALL ( + 62 ) ) )
 ----
-4400
+4400.03225806451612903226
 
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query I rowsort label-7176
@@ -88595,7 +88595,7 @@ skipif mysql # not compatible
 query I rowsort label-9558
 SELECT DISTINCT + 32 * + CASE + - 82 WHEN + - COALESCE ( - - 93, - 63 * AVG ( - + 15 ) - 80 ) THEN NULL ELSE 81 / - 61 + - 5 + - 11 - + ( + 86 ) / NULLIF ( + COUNT ( * ), - AVG ( - 2 ) * - 82 ) END
 ----
--3296
+-3296.0000000000000000
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-9559

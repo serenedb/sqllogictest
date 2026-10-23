@@ -15685,7 +15685,7 @@ skipif mysql # not compatible
 query I rowsort label-1681
 SELECT ALL - 1 / - + ( + - NULLIF ( - 17, + COALESCE ( + 41, - MAX ( ALL - + 4 ) / AVG ( DISTINCT + 21 ) ) * 47 ) )
 ----
-0
+0.05882352941176470588
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-1682
@@ -26739,7 +26739,7 @@ skipif mysql # not compatible
 query I rowsort label-2866
 SELECT - NULLIF ( + + 4, NULLIF ( + 28, - NULLIF ( + - NULLIF ( + CAST ( - 8 AS REAL ), + CASE - + 27 WHEN - COUNT ( * ) THEN NULL ELSE - CAST ( NULL AS INTEGER ) * 16 END ), - + 33 ) + 81 ) * 95 + + 81 ) / - + MAX ( ALL CAST ( + 21 AS INTEGER ) ) + + 48 - - - COALESCE ( - 35, COUNT ( * ) + 16 ) + + - 30 * - 5 * CAST ( + 75 AS INTEGER ) * - - 71
 ----
-798833
+798833.1904761905
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-2867
@@ -30228,7 +30228,7 @@ skipif mysql # not compatible
 query I rowsort label-3236
 SELECT ALL NULLIF ( - 97, - + NULLIF ( AVG ( ALL + NULLIF ( + + CAST ( NULL AS INTEGER ), 57 ) ), + 23 * 17 + MAX ( - 6 ) ) / + - NULLIF ( - + 33, - ( - + 81 ) ) ) / + + 28
 ----
--3
+-3.4642857142857143
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-3237
@@ -63166,7 +63166,7 @@ skipif mysql # not compatible
 query I rowsort label-6758
 SELECT - COALESCE ( + 39, + NULLIF ( - + ( - 72 ), 31 + + 74 ) + AVG ( ALL - 59 + - 89 ) ) / + 50
 ----
-0
+-0.78000000000000000000
 
 query I rowsort
 SELECT + 31 * + + 72 * - - 27 * 4 * - 7 AS col2
@@ -64830,7 +64830,7 @@ skipif mysql # not compatible
 query I rowsort label-6940
 SELECT ALL + 32 / - - COALESCE ( 43, + + 81 * + + CASE 75 WHEN - - 1 + 94 - + - ( + 0 ) THEN - 34 ELSE NULL END * + AVG ( DISTINCT 69 ) - MIN ( + CAST ( 41 AS INTEGER ) ), 63 * 29 ) * - 28
 ----
-0
+-20.83720930232558139544
 
 query I rowsort
 SELECT 11 * - 51 AS col2
@@ -66549,7 +66549,7 @@ skipif mysql # not compatible
 query II rowsort label-7118
 SELECT DISTINCT COALESCE ( - CAST ( NULL AS INTEGER ), + - SUM ( + - 43 ), + + AVG ( ALL - 28 ) ) / - + 65 * 41 col2, 40 / + 66
 ----
-0
+-27.12307692307692307686
 0
 
 query I rowsort
@@ -81218,7 +81218,7 @@ query II rowsort label-8688
 SELECT MIN ( - - 58 ), - ( - COALESCE ( + 58, - AVG ( ALL + - 4 ) ) ) / + 19 AS col0
 ----
 58
-3
+3.0526315789473684
 
 query I rowsort
 SELECT ALL + ( ( - - 46 ) )

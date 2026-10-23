@@ -1338,7 +1338,7 @@ skipif mysql # not compatible
 query I rowsort label-139
 SELECT + CAST ( - 6 AS REAL ) / + - 32 + + COUNT ( * ) AS col2
 ----
-1
+1.1875
 
 query I rowsort
 SELECT 21 + + 28 AS col1
@@ -13271,7 +13271,7 @@ skipif mysql # not compatible
 query I rowsort label-1406
 SELECT ALL 54 / + NULLIF ( - - CASE CASE 44 WHEN + MIN ( DISTINCT + + 72 ) + - - 50 + 29 - - CAST ( + - 54 AS INTEGER ) / COALESCE ( + COUNT ( * ), + + ( + + COUNT ( * ) ) ) THEN NULL ELSE + 97 + - + MIN ( DISTINCT - 95 ) END WHEN - 99 THEN 56 - - ( + 67 ) * + 92 ELSE ( + - 4 ) + 23 END, + 17 * 80 * + ( NULLIF ( + + 46, - - COALESCE ( 77, 49 ) + + - MAX ( DISTINCT - - 38 ) + ( 85 ) + - 2 + - AVG ( - 87 ) * + 86 + - 95 ) ) )
 ----
-2
+2.8421052631578947
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-1407
@@ -30936,7 +30936,7 @@ skipif mysql # not compatible
 query I rowsort label-3291
 SELECT DISTINCT COALESCE ( 83, + + 24 + 17, - CASE 66 WHEN + + 37 * - 13 / 71 THEN ( AVG ( ALL 5 ) ) * CAST ( + COUNT ( * ) + - CAST ( NULL AS INTEGER ) AS INTEGER ) + - 73 WHEN ( + 49 ) THEN NULL ELSE - ( + 49 ) END ) / ( 31 )
 ----
-2
+2.6774193548387097
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query II rowsort label-3292
@@ -39729,7 +39729,7 @@ skipif mysql # not compatible
 query I rowsort label-4225
 SELECT + 45 * COALESCE ( + - 36, AVG ( ALL - 81 ) + + 71, + 21 + ( ( + ( + - 63 ) ) ) ) / + 15
 ----
--108
+-108.0000000000000000
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-4226
@@ -66068,7 +66068,7 @@ skipif mysql # not compatible
 query I rowsort label-7046
 SELECT ALL + CASE + NULLIF ( 48, + 21 + + + ( + COUNT ( * ) ) + + 82 ) WHEN - + 49 THEN NULL ELSE + COALESCE ( - 34, ( - - 67 ) / - 69 - 2 + + 27 + - 88 + - 71 + + 17 * 34 / 72 + 51 * 0 + + + 59 + - 97 / + 9 * AVG ( DISTINCT 34 ) ) / + 49 END AS col1
 ----
-0
+-0.69387755102040816327
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-7047
@@ -73663,7 +73663,7 @@ skipif mysql # not compatible
 query I rowsort label-7843
 SELECT + 22 / + NULLIF ( 31, - + CAST ( NULL AS REAL ) )
 ----
-0
+0.7096774193548387
 
 query II rowsort
 SELECT ALL NULLIF ( ( - 78 ), 64 ) AS col0, - 26
@@ -89132,7 +89132,7 @@ skipif mysql # not compatible
 query I rowsort label-9525
 SELECT DISTINCT 26 * CAST ( + AVG ( DISTINCT + 91 ) / MAX ( 84 - - 93 ) + 44 AS INTEGER ) + - 3
 ----
-1141
+1167
 
 query I rowsort
 SELECT DISTINCT + - 56 * 21 AS col0
@@ -93507,7 +93507,7 @@ skipif mysql # not compatible
 query I rowsort label-9980
 SELECT ALL - 26 * + 40 + MAX ( 32 ) - - - 52 + 59 * 26 + - NULLIF ( - 28, - AVG ( + 6 ) ) / COALESCE ( - 65, - - 9 * + ( 6 ) + - 6, 89 ) * 30 + - 22
 ----
-452
+439.07692307692307692310
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-9981

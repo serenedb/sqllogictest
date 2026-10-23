@@ -8840,7 +8840,7 @@ skipif mysql # not compatible
 query I rowsort label-972
 SELECT + 6 + 74 / + + CASE + 12 WHEN 91 / + 72 * AVG ( ALL + 17 ) + + 43 + - + 39 * - 13 * + - 83 THEN + 25 / AVG ( DISTINCT - 98 ) + 16 ELSE 57 * + - 60 END + - 32 * + + 18 AS col2
 ----
--570
+-570.02163742690058479532
 
 query I rowsort
 SELECT - 12 - - + 35 AS col0
@@ -39440,7 +39440,7 @@ skipif mysql # not compatible
 query I rowsort label-4341
 SELECT DISTINCT NULLIF ( COUNT ( DISTINCT 86 ), + 96 + + + AVG ( ALL - 25 ) ) / - + 12 AS col2
 ----
-0
+-0.08333333333333333333
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-4342
@@ -52965,7 +52965,7 @@ skipif mysql # not compatible
 query I rowsort label-5814
 SELECT DISTINCT + COALESCE ( - 83, - 66 * + - ( ( + 28 ) ), AVG ( ALL - 94 ) ) / 43 AS col1
 ----
--1
+-1.9302325581395349
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-5815

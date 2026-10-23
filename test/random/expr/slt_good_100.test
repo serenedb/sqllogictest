@@ -5607,7 +5607,7 @@ skipif mysql # not compatible
 query I rowsort label-607
 SELECT + NULLIF ( + + 59, - CAST ( NULL AS REAL ) + ( + + COUNT ( * ) ) ) / 77
 ----
-0
+0.7662337662337663
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-608
@@ -12737,7 +12737,7 @@ skipif mysql # not compatible
 query I rowsort label-1372
 SELECT 58 / COALESCE ( + - 10, + AVG ( + 3 ) ) * - 62 * - 0 / - + 1 * + + 13 - + 35 - + 84 + 36 * - 64 AS col0
 ----
--2423
+-2423.00000000000000000000
 
 query I rowsort
 SELECT 93 * 92 AS col0
@@ -23905,7 +23905,7 @@ query II rowsort label-2548
 SELECT - CAST ( NULL AS INTEGER ) AS col2, COALESCE ( CASE WHEN NOT 81 IS NULL THEN + 74 ELSE - 79 + + 28 * - 99 + - - 61 END, + AVG ( ALL 15 ), - 29 + + COUNT ( * ) + + 13 * + 5 ) / + + 27 AS col2
 ----
 NULL
-2
+2.7407407407407407
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-2549
@@ -42888,7 +42888,7 @@ skipif mysql # not compatible
 query I rowsort label-4574
 SELECT + COUNT ( * ) / + COALESCE ( + CAST ( - NULLIF ( + NULLIF ( 80, 36 + COUNT ( * ) ), - 62 ) AS REAL ), + ( + 44 ) )
 ----
-0
+-0.0125
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-4575
@@ -47931,7 +47931,7 @@ skipif mysql # not compatible
 query II rowsort label-5095
 SELECT ALL + 36 / + COALESCE ( - + 3, + CASE - 47 WHEN 75 THEN 64 / + 73 ELSE NULL END * + + COUNT ( * ) / 24 * 7, + - 4 * + AVG ( ALL - 1 ), - - CAST ( 9 AS INTEGER ) / + 29 ) + - SUM ( DISTINCT 60 ) col2, - 76
 ----
--72
+-72.0000000000000000
 -76
 
 onlyif mysql # aggregate syntax: 
@@ -65746,7 +65746,7 @@ skipif mysql # not compatible
 query I rowsort label-6991
 SELECT ALL + 26 - + NULLIF ( - 34, + 15 * COALESCE ( - 27, - 96 - AVG ( ALL 33 + 77 ) ) ) / 97
 ----
-26
+26.35051546391752577320
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-6992
@@ -71714,7 +71714,7 @@ skipif mysql # not compatible
 query I rowsort label-7617
 SELECT ALL 88 / + COALESCE ( - 85, COUNT ( * ) * + ( - 83 ) * - + CAST ( - + 16 AS INTEGER ) / - + COUNT ( * ), - 85, + AVG ( 40 ) ) + - 31
 ----
--32
+-32.0352941176470588
 
 query I rowsort
 SELECT ( - 7 ) AS col1

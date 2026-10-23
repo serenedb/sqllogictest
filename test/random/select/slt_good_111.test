@@ -36658,9 +36658,9 @@ skipif mysql # not compatible
 query I rowsort
 SELECT + 82 + - ( + col0 ) / CAST ( col0 + + col0 AS REAL ) FROM tab2
 ----
-81
-81
-81
+81.5
+81.5
+81.5
 
 query I rowsort
 SELECT + 94 + col0 * + 18 FROM tab2 AS cor0

@@ -14544,7 +14544,7 @@ skipif mysql # not compatible
 query I rowsort label-1578
 SELECT + ( - ( - 73 ) ) + + 95 + - 51 * + 29 / NULLIF ( + COUNT ( * ), AVG ( + 8 ) * - COUNT ( * ) ) AS col2
 ----
--1311
+-1311.0000000000000000
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-1579
@@ -39228,7 +39228,7 @@ query II rowsort label-4293
 SELECT ALL 91 AS col0, - ( + + 53 ) / - ( - COALESCE ( 43, - 76, + AVG ( DISTINCT NULLIF ( CAST ( NULL AS INTEGER ), - + 28 * + 12 ) ) ) ) AS col1
 ----
 91
--1
+-1.2325581395348837
 
 query I rowsort
 SELECT 1 + + CASE 68 WHEN + 43 THEN NULL ELSE + 33 * 25 * + 10 + - - ( ( - - 32 ) ) END AS col1
@@ -43341,7 +43341,7 @@ skipif mysql # not compatible
 query I rowsort label-4734
 SELECT - COUNT ( * ) / + COALESCE ( - + 79, 67 + - 1, + 47 * - NULLIF ( COUNT ( * ), - ( - - 9 ) - - 21 * - + CAST ( NULL AS REAL ) / + 59 + - 33 ) ) * - 11
 ----
-0
+-0.13924050632911392
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-4735
@@ -65180,7 +65180,7 @@ skipif mysql # not compatible
 query I rowsort label-7129
 SELECT - - CAST ( + COUNT ( * ) AS INTEGER ) / - + COALESCE ( + - AVG ( - CAST ( NULL AS INTEGER ) ), - - 61, MIN ( ALL - 83 ) * - 3 + + 83 )
 ----
-0
+-0.01639344262295081967
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-7130
@@ -68298,7 +68298,7 @@ skipif mysql # not compatible
 query I rowsort label-7479
 SELECT ALL CAST ( + + 42 AS INTEGER ) / - NULLIF ( - 79, CAST ( 31 AS REAL ) * + + ( - 12 ) + + AVG ( + - 58 ) + - + CAST ( NULL AS INTEGER ) / - 30 + - 74 )
 ----
-0
+0.5316455696202531
 
 query I rowsort
 SELECT 25 * + 95 AS col1
@@ -71713,7 +71713,7 @@ skipif mysql # not compatible
 query I rowsort label-7859
 SELECT ( + ( - NULLIF ( + COUNT ( * ), 7 + AVG ( DISTINCT - 91 ) ) ) ) / - + 79 + - 69
 ----
--69
+-68.98734177215189873418
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-7860
@@ -87267,7 +87267,7 @@ skipif mysql # not compatible
 query I rowsort label-9527
 SELECT - CASE - 26 WHEN + 47 THEN + 66 ELSE + 87 / NULLIF ( + 67, + + AVG ( + CAST ( NULL AS INTEGER ) ) * - - 1 + 57 * - - 17 / CASE + COUNT ( * ) WHEN - 83 + - + 10 + + - 42 + 9 + - + 34 THEN - - 31 * - ( + ( CAST ( NULL AS INTEGER ) ) ) + ( + + CAST ( NULL AS INTEGER ) ) + - 88 * + 72 * - - 6 + - 38 / + 55 WHEN - 44 THEN NULL ELSE NULL END ) + 62 END
 ----
--63
+-63.2985074626865672
 
 query I rowsort
 SELECT ALL - 84 * - 6 * 80 AS col0

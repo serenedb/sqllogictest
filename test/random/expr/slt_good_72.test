@@ -2599,7 +2599,7 @@ skipif mysql # not compatible
 query I rowsort label-276
 SELECT - + 64 + + 40 * NULLIF ( + + MAX ( 17 ), + + 4 ) / + + NULLIF ( 32, AVG ( DISTINCT 90 ) ) AS col1
 ----
--43
+-42.7500000000000000
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-277
@@ -6418,7 +6418,7 @@ skipif mysql # not compatible
 query I rowsort label-685
 SELECT DISTINCT 91 - - NULLIF ( 16, + 22 + 33 ) + 92 / + + NULLIF ( - 99, - 29 * + CAST ( NULL AS REAL ) + - + MIN ( 2 ) ) + + 10 AS col1
 ----
-117
+116.07070707070707
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-686
@@ -14864,7 +14864,7 @@ skipif mysql # not compatible
 query I rowsort label-1595
 SELECT DISTINCT + 57 / + NULLIF ( 63, + AVG ( ALL + 94 ) + - 3 )
 ----
-0
+0.90476190476190476190
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-1596
@@ -28033,7 +28033,7 @@ skipif mysql # not compatible
 query I rowsort label-2999
 SELECT DISTINCT + 72 - - 43 * - MIN ( + 13 ) / + COALESCE ( CASE NULLIF ( COUNT ( 53 ), - COUNT ( * ) ) WHEN - 7 THEN 56 * - 25 WHEN - 62 * - 36 THEN NULL END, - COUNT ( * ), + AVG ( 58 ) + 17 * 9 )
 ----
-631
+631.0000000000000000
 
 query I rowsort
 SELECT ALL 19 * - - 65 AS col2
@@ -61707,7 +61707,7 @@ skipif mysql # not compatible
 query I rowsort label-6616
 SELECT ALL + 56 / COALESCE ( + + ( MAX ( ALL + + NULLIF ( - ( 67 ), 19 ) ) ), 47 / - AVG ( ALL + 96 ) ) + + MIN ( DISTINCT - 46 ) + - 58 + ( + 10 ) * COUNT ( * ) * - - 50 * + COUNT ( * ) + + ( 37 + 44 ) * + 8 AS col2
 ----
-1044
+1043.16417910447761194030
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-6617
@@ -80646,7 +80646,7 @@ skipif mysql # not compatible
 query I rowsort label-8632
 SELECT - 77 / NULLIF ( - COUNT ( * ), - AVG ( 4 ) ) + 18 AS col1
 ----
-95
+95.0000000000000000
 
 query I rowsort
 SELECT - 29 * - - 75
@@ -85743,7 +85743,7 @@ skipif mysql # not compatible
 query I rowsort label-9178
 SELECT ALL - 44 / - COALESCE ( - 44, + + COUNT ( ALL + 49 ) * + ( AVG ( DISTINCT - 43 ) ) )
 ----
--1
+-1.00000000000000000000
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-9179

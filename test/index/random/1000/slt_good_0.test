@@ -4325,31 +4325,31 @@ skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort label-220
 SELECT ALL col5 col0 FROM tab0 WHERE + col3 IS NOT NULL
 ----
-1000 values hashing to 2ed57cb9c408b954ec52c7a2da59153d
+1000 values hashing to c070c6475356bd72ea9922d1d21da4c1
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort label-220
 SELECT ALL col5 col0 FROM tab1 WHERE + col3 IS NOT NULL
 ----
-1000 values hashing to 2ed57cb9c408b954ec52c7a2da59153d
+1000 values hashing to c070c6475356bd72ea9922d1d21da4c1
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort label-220
 SELECT ALL col5 col0 FROM tab2 WHERE + col3 IS NOT NULL
 ----
-1000 values hashing to 2ed57cb9c408b954ec52c7a2da59153d
+1000 values hashing to c070c6475356bd72ea9922d1d21da4c1
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort label-220
 SELECT ALL col5 col0 FROM tab3 WHERE + col3 IS NOT NULL
 ----
-1000 values hashing to 2ed57cb9c408b954ec52c7a2da59153d
+1000 values hashing to c070c6475356bd72ea9922d1d21da4c1
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort label-220
 SELECT ALL col5 col0 FROM tab4 WHERE + col3 IS NOT NULL
 ----
-1000 values hashing to 2ed57cb9c408b954ec52c7a2da59153d
+1000 values hashing to c070c6475356bd72ea9922d1d21da4c1
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query IIIIIII rowsort label-225

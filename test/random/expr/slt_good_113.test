@@ -970,7 +970,7 @@ skipif mysql # not compatible
 query I rowsort label-93
 SELECT DISTINCT - 8 * COALESCE ( 39, 54 * - + 54 + 18 + + 30 + - 49 * - SUM ( ALL + 42 ) + - - 6, 0 - + - ( - AVG ( ALL 77 ) ) ) / + 71
 ----
--4
+-4.3943661971830986
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-94
@@ -21293,7 +21293,7 @@ skipif mysql # not compatible
 query II rowsort label-2262
 SELECT + 45 / + + COALESCE ( - 70, - - ( - AVG ( + + 99 ) ) + SUM ( + 65 ) ) AS col2, 23
 ----
-0
+-0.64285714285714285714
 23
 
 onlyif mysql # CAST syntax: SIGNED type: DIV for integer division: 
@@ -44443,7 +44443,7 @@ skipif mysql # not compatible
 query I rowsort label-4732
 SELECT DISTINCT + 69 / - + NULLIF ( + COALESCE ( - + 71, 95 + - 62 ), - CAST ( NULL AS REAL ) * - COUNT ( * ) + - 91 + 77 * - - 44 - - - 7 ) * + + COUNT ( * ) AS col0
 ----
-0
+0.971830985915493
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-4733
@@ -63009,7 +63009,7 @@ skipif mysql # not compatible
 query I rowsort label-6697
 SELECT CASE 24 WHEN - - 89 + ( + ( + - 42 ) ) * + - 50 THEN NULL ELSE + 23 * - 45 END / COALESCE ( - 87, - 93 * - 8 * + + AVG ( 10 ) / 94 * - ( 21 ), + 79 ) * 95 * + 65
 ----
-67925
+73461.2068965517239250
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-6698
@@ -72260,7 +72260,7 @@ skipif mysql # not compatible
 query I rowsort label-7694
 SELECT ALL + 50 * - - 52 * ( + 78 ) + - + COALESCE ( - + 32, + AVG ( DISTINCT - ( + 84 ) ) ) / + - 56
 ----
-202800
+202799.42857142857142857143
 
 query I rowsort
 SELECT DISTINCT + ( + + 10 ) AS col0
@@ -73429,7 +73429,7 @@ skipif mysql # not compatible
 query I rowsort label-7818
 SELECT DISTINCT + 35 * - - 76 + 60 / + NULLIF ( + - 15, - + AVG ( DISTINCT + + 55 ) + - 25 ) AS col2
 ----
-2656
+2656.0000000000000000
 
 query I rowsort
 SELECT ALL + 51 * - - 62 + - - 50 + - + 23 * + ( 66 ) * + 48
@@ -87420,7 +87420,7 @@ skipif mysql # not compatible
 query I rowsort label-9333
 SELECT - 79 * 3 / COALESCE ( 22, - - NULLIF ( + 74, CAST ( 74 AS REAL ) * - 36 / - 4 * - 72 - - 62 + 97 ) ) + - 33
 ----
--43
+-43.77272727272727
 
 query I rowsort
 SELECT DISTINCT + CASE + + 69 WHEN + 66 THEN 50 END * + 28

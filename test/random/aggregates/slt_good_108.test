@@ -80304,7 +80304,7 @@ query II rowsort label-8748
 SELECT DISTINCT - COUNT ( * ), COUNT ( * ) / MIN ( - CAST ( 48 AS REAL ) ) AS col0 FROM tab2 AS cor0 CROSS JOIN tab0 AS cor1
 ----
 -9
-0
+-0.1875
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-8749

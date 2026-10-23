@@ -6174,27 +6174,27 @@ SELECT * FROM tab4 cor0 WHERE NOT col3 * - col3 IS NOT NULL
 query I rowsort label-1080
 SELECT col5 FROM tab0 AS cor0 WHERE NOT ( col0 - col4 ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-1080
 SELECT col5 FROM tab1 AS cor0 WHERE NOT ( col0 - col4 ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-1080
 SELECT col5 FROM tab2 AS cor0 WHERE NOT ( col0 - col4 ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-1080
 SELECT col5 FROM tab3 AS cor0 WHERE NOT ( col0 - col4 ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-1080
 SELECT col5 FROM tab4 AS cor0 WHERE NOT ( col0 - col4 ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-1085
@@ -10910,31 +10910,31 @@ skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort label-1915
 SELECT col5 col5 FROM tab0 WHERE NOT ( ( col1 ) ) >= + ( - 80 ) * - 31 - col0
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort label-1915
 SELECT col5 col5 FROM tab1 WHERE NOT ( ( col1 ) ) >= + ( - 80 ) * - 31 - col0
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort label-1915
 SELECT col5 col5 FROM tab2 WHERE NOT ( ( col1 ) ) >= + ( - 80 ) * - 31 - col0
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort label-1915
 SELECT col5 col5 FROM tab3 WHERE NOT ( ( col1 ) ) >= + ( - 80 ) * - 31 - col0
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort label-1915
 SELECT col5 col5 FROM tab4 WHERE NOT ( ( col1 ) ) >= + ( - 80 ) * - 31 - col0
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query IIIIIII rowsort label-1920
@@ -14424,27 +14424,27 @@ SELECT ALL 38 col3 FROM tab4 AS cor0 WHERE NOT col4 + - 17 IS NULL
 query I rowsort label-2460
 SELECT col2 AS col4 FROM tab0 cor0 WHERE NOT NULL IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-2460
 SELECT col2 AS col4 FROM tab1 cor0 WHERE NOT NULL IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-2460
 SELECT col2 AS col4 FROM tab2 cor0 WHERE NOT NULL IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-2460
 SELECT col2 AS col4 FROM tab3 cor0 WHERE NOT NULL IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-2460
 SELECT col2 AS col4 FROM tab4 cor0 WHERE NOT NULL IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query I rowsort label-2465
@@ -24359,27 +24359,27 @@ SELECT DISTINCT 6 AS col5 FROM tab4 WHERE NOT + col1 <> col1 * ( + CAST ( NULL A
 query I rowsort label-4170
 SELECT col5 AS col5 FROM tab0 WHERE 13 NOT BETWEEN + 18 AND ( NULL )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-4170
 SELECT col5 AS col5 FROM tab1 WHERE 13 NOT BETWEEN + 18 AND ( NULL )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-4170
 SELECT col5 AS col5 FROM tab2 WHERE 13 NOT BETWEEN + 18 AND ( NULL )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-4170
 SELECT col5 AS col5 FROM tab3 WHERE 13 NOT BETWEEN + 18 AND ( NULL )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-4170
 SELECT col5 AS col5 FROM tab4 WHERE 13 NOT BETWEEN + 18 AND ( NULL )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-4175
 SELECT 53 AS col0 FROM tab0 WHERE ( col1 ) IN ( col0 )
@@ -24691,7 +24691,7 @@ skipif mysql # not compatible
 query I rowsort label-4230
 SELECT col5 FROM tab0 WHERE ( CAST ( NULL AS INTEGER ) ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-4230
@@ -24703,7 +24703,7 @@ skipif mysql # not compatible
 query I rowsort label-4230
 SELECT col5 FROM tab1 WHERE ( CAST ( NULL AS INTEGER ) ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-4230
@@ -24715,7 +24715,7 @@ skipif mysql # not compatible
 query I rowsort label-4230
 SELECT col5 FROM tab2 WHERE ( CAST ( NULL AS INTEGER ) ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-4230
@@ -24727,7 +24727,7 @@ skipif mysql # not compatible
 query I rowsort label-4230
 SELECT col5 FROM tab3 WHERE ( CAST ( NULL AS INTEGER ) ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-4230
@@ -24739,7 +24739,7 @@ skipif mysql # not compatible
 query I rowsort label-4230
 SELECT col5 FROM tab4 WHERE ( CAST ( NULL AS INTEGER ) ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-4235
 SELECT - col3 AS col0 FROM tab0 WHERE NULL > col1
@@ -24764,27 +24764,27 @@ SELECT - col3 AS col0 FROM tab4 WHERE NULL > col1
 query I rowsort label-4240
 SELECT ALL col2 AS col1 FROM tab0 AS cor0 WHERE NOT ( col5 ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-4240
 SELECT ALL col2 AS col1 FROM tab1 AS cor0 WHERE NOT ( col5 ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-4240
 SELECT ALL col2 AS col1 FROM tab2 AS cor0 WHERE NOT ( col5 ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-4240
 SELECT ALL col2 AS col1 FROM tab3 AS cor0 WHERE NOT ( col5 ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-4240
 SELECT ALL col2 AS col1 FROM tab4 AS cor0 WHERE NOT ( col5 ) IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query IIIIIII rowsort label-4245
 SELECT ALL * FROM tab0 WHERE NOT ( NULL ) < ( + ( + 78 ) )
@@ -25769,27 +25769,27 @@ SELECT - ( 33 ) * COUNT ( * ) col3 FROM tab4 WHERE NOT + col0 * + CAST ( NULL AS
 query I rowsort label-4390
 SELECT ALL col2 AS col5 FROM tab0 WHERE + col3 NOT IN ( + col1 )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-4390
 SELECT ALL col2 AS col5 FROM tab1 WHERE + col3 NOT IN ( + col1 )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-4390
 SELECT ALL col2 AS col5 FROM tab2 WHERE + col3 NOT IN ( + col1 )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-4390
 SELECT ALL col2 AS col5 FROM tab3 WHERE + col3 NOT IN ( + col1 )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-4390
 SELECT ALL col2 AS col5 FROM tab4 WHERE + col3 NOT IN ( + col1 )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-4395
 SELECT DISTINCT - - col0 * + 7 AS col4 FROM tab0 WHERE + col0 IS NULL
@@ -26419,27 +26419,27 @@ SELECT * FROM tab4 AS cor0 WHERE NOT + 94 + + + CAST ( - + col4 AS INTEGER ) * +
 query I rowsort label-4485
 SELECT col5 AS col4 FROM tab0 AS cor0 WHERE NOT - col4 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-4485
 SELECT col5 AS col4 FROM tab1 AS cor0 WHERE NOT - col4 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-4485
 SELECT col5 AS col4 FROM tab2 AS cor0 WHERE NOT - col4 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-4485
 SELECT col5 AS col4 FROM tab3 AS cor0 WHERE NOT - col4 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-4485
 SELECT col5 AS col4 FROM tab4 AS cor0 WHERE NOT - col4 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query IIIIIII rowsort label-4490
 SELECT * FROM tab0 WHERE col0 * + col0 IS NULL
@@ -33419,27 +33419,27 @@ SELECT * FROM tab4 AS cor0 WHERE NOT col4 = NULL
 query I rowsort label-5725
 SELECT col5 AS col4 FROM tab0 AS cor0 WHERE NOT - col3 + - col3 + + col0 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-5725
 SELECT col5 AS col4 FROM tab1 AS cor0 WHERE NOT - col3 + - col3 + + col0 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-5725
 SELECT col5 AS col4 FROM tab2 AS cor0 WHERE NOT - col3 + - col3 + + col0 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-5725
 SELECT col5 AS col4 FROM tab3 AS cor0 WHERE NOT - col3 + - col3 + + col0 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-5725
 SELECT col5 AS col4 FROM tab4 AS cor0 WHERE NOT - col3 + - col3 + + col0 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-5730
 SELECT - col3 FROM tab0 WHERE + col0 BETWEEN + col0 AND NULL
@@ -40050,11 +40050,11 @@ skipif mysql # not compatible
 query I rowsort label-6880
 SELECT col5 AS col1 FROM tab0 AS cor0 WHERE col4 NOT BETWEEN - ( - 32 ) AND - CAST ( - col1 AS INTEGER )
 ----
-0
-0
-0
-0
-0
+apjmo
+dubev
+ithfo
+ktnfz
+vzeio
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-6880
@@ -40070,11 +40070,11 @@ skipif mysql # not compatible
 query I rowsort label-6880
 SELECT col5 AS col1 FROM tab1 AS cor0 WHERE col4 NOT BETWEEN - ( - 32 ) AND - CAST ( - col1 AS INTEGER )
 ----
-0
-0
-0
-0
-0
+apjmo
+dubev
+ithfo
+ktnfz
+vzeio
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-6880
@@ -40090,11 +40090,11 @@ skipif mysql # not compatible
 query I rowsort label-6880
 SELECT col5 AS col1 FROM tab2 AS cor0 WHERE col4 NOT BETWEEN - ( - 32 ) AND - CAST ( - col1 AS INTEGER )
 ----
-0
-0
-0
-0
-0
+apjmo
+dubev
+ithfo
+ktnfz
+vzeio
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-6880
@@ -40110,11 +40110,11 @@ skipif mysql # not compatible
 query I rowsort label-6880
 SELECT col5 AS col1 FROM tab3 AS cor0 WHERE col4 NOT BETWEEN - ( - 32 ) AND - CAST ( - col1 AS INTEGER )
 ----
-0
-0
-0
-0
-0
+apjmo
+dubev
+ithfo
+ktnfz
+vzeio
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-6880
@@ -40130,11 +40130,11 @@ skipif mysql # not compatible
 query I rowsort label-6880
 SELECT col5 AS col1 FROM tab4 AS cor0 WHERE col4 NOT BETWEEN - ( - 32 ) AND - CAST ( - col1 AS INTEGER )
 ----
-0
-0
-0
-0
-0
+apjmo
+dubev
+ithfo
+ktnfz
+vzeio
 
 query I rowsort label-6885
 SELECT - 17 * + 54 FROM tab0 AS cor0 WHERE + 80 IS NULL
@@ -40819,27 +40819,27 @@ SELECT - + 74 AS col5 FROM tab4 AS cor0 WHERE - 68 IS NOT NULL
 query I rowsort label-7000
 SELECT col5 FROM tab0 AS cor0 WHERE 55 IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-7000
 SELECT col5 FROM tab1 AS cor0 WHERE 55 IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-7000
 SELECT col5 FROM tab2 AS cor0 WHERE 55 IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-7000
 SELECT col5 FROM tab3 AS cor0 WHERE 55 IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-7000
 SELECT col5 FROM tab4 AS cor0 WHERE 55 IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-7005
@@ -44639,27 +44639,27 @@ SELECT ALL - col0 * col4 / - 82 * + 55 AS col1 FROM tab4 AS cor0 WHERE 48 IS NUL
 query I rowsort label-7670
 SELECT ALL col5 AS col2 FROM tab0 cor0 WHERE NULL IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-7670
 SELECT ALL col5 AS col2 FROM tab1 cor0 WHERE NULL IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-7670
 SELECT ALL col5 AS col2 FROM tab2 cor0 WHERE NULL IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-7670
 SELECT ALL col5 AS col2 FROM tab3 cor0 WHERE NULL IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-7670
 SELECT ALL col5 AS col2 FROM tab4 cor0 WHERE NULL IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-7675
 SELECT + col3 FROM tab0 WHERE + + col1 IS NOT NULL
@@ -45810,31 +45810,31 @@ skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort label-7850
 SELECT ALL col2 col2, + 43 - + + col3 FROM tab0 WHERE NULL IS NULL
 ----
-20 values hashing to 6b9106032ed3ab9d6a8ebeede7bcd28d
+20 values hashing to aa8aa07fe2a5a582fe33ca3df7c07837
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort label-7850
 SELECT ALL col2 col2, + 43 - + + col3 FROM tab1 WHERE NULL IS NULL
 ----
-20 values hashing to 6b9106032ed3ab9d6a8ebeede7bcd28d
+20 values hashing to aa8aa07fe2a5a582fe33ca3df7c07837
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort label-7850
 SELECT ALL col2 col2, + 43 - + + col3 FROM tab2 WHERE NULL IS NULL
 ----
-20 values hashing to 6b9106032ed3ab9d6a8ebeede7bcd28d
+20 values hashing to aa8aa07fe2a5a582fe33ca3df7c07837
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort label-7850
 SELECT ALL col2 col2, + 43 - + + col3 FROM tab3 WHERE NULL IS NULL
 ----
-20 values hashing to 6b9106032ed3ab9d6a8ebeede7bcd28d
+20 values hashing to aa8aa07fe2a5a582fe33ca3df7c07837
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort label-7850
 SELECT ALL col2 col2, + 43 - + + col3 FROM tab4 WHERE NULL IS NULL
 ----
-20 values hashing to 6b9106032ed3ab9d6a8ebeede7bcd28d
+20 values hashing to aa8aa07fe2a5a582fe33ca3df7c07837
 
 query I rowsort label-7855
 SELECT DISTINCT - 12 FROM tab0 WHERE - - 53 IS NULL
@@ -46165,31 +46165,31 @@ skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort label-7925
 SELECT ALL - col0 * col3 col0, col2 AS col0 FROM tab0 AS cor0 WHERE NOT ( ( - 20 ) ) IS NULL
 ----
-20 values hashing to 52fc072c082bcb9895966c1b30ea08b6
+20 values hashing to ae31ee1dfe915c5ab78eeefb9f4d93a5
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort label-7925
 SELECT ALL - col0 * col3 col0, col2 AS col0 FROM tab1 AS cor0 WHERE NOT ( ( - 20 ) ) IS NULL
 ----
-20 values hashing to 52fc072c082bcb9895966c1b30ea08b6
+20 values hashing to ae31ee1dfe915c5ab78eeefb9f4d93a5
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort label-7925
 SELECT ALL - col0 * col3 col0, col2 AS col0 FROM tab2 AS cor0 WHERE NOT ( ( - 20 ) ) IS NULL
 ----
-20 values hashing to 52fc072c082bcb9895966c1b30ea08b6
+20 values hashing to ae31ee1dfe915c5ab78eeefb9f4d93a5
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort label-7925
 SELECT ALL - col0 * col3 col0, col2 AS col0 FROM tab3 AS cor0 WHERE NOT ( ( - 20 ) ) IS NULL
 ----
-20 values hashing to 52fc072c082bcb9895966c1b30ea08b6
+20 values hashing to ae31ee1dfe915c5ab78eeefb9f4d93a5
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort label-7925
 SELECT ALL - col0 * col3 col0, col2 AS col0 FROM tab4 AS cor0 WHERE NOT ( ( - 20 ) ) IS NULL
 ----
-20 values hashing to 52fc072c082bcb9895966c1b30ea08b6
+20 values hashing to ae31ee1dfe915c5ab78eeefb9f4d93a5
 
 query I rowsort label-7930
 SELECT DISTINCT + col3 FROM tab0 WHERE NOT - 85 IS NULL
@@ -46919,27 +46919,27 @@ SELECT DISTINCT 57 AS col2, - col0 + + col3 FROM tab4 WHERE + col4 NOT BETWEEN N
 query I rowsort label-8065
 SELECT col2 FROM tab0 AS cor0 WHERE col1 * 12 - + 12 * - col0 * - + 15 NOT BETWEEN 99 AND + - 78 * - col1
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-8065
 SELECT col2 FROM tab1 AS cor0 WHERE col1 * 12 - + 12 * - col0 * - + 15 NOT BETWEEN 99 AND + - 78 * - col1
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-8065
 SELECT col2 FROM tab2 AS cor0 WHERE col1 * 12 - + 12 * - col0 * - + 15 NOT BETWEEN 99 AND + - 78 * - col1
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-8065
 SELECT col2 FROM tab3 AS cor0 WHERE col1 * 12 - + 12 * - col0 * - + 15 NOT BETWEEN 99 AND + - 78 * - col1
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-8065
 SELECT col2 FROM tab4 AS cor0 WHERE col1 * 12 - + 12 * - col0 * - + 15 NOT BETWEEN 99 AND + - 78 * - col1
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query IIIIIIIIIIIIII rowsort label-8070
 SELECT * FROM tab0, tab0 AS cor0 WHERE NOT + 15 IS NOT NULL
@@ -48054,27 +48054,27 @@ SELECT ALL + col0 AS col2 FROM tab4 WHERE col0 IS NOT NULL
 query I rowsort label-8295
 SELECT col5 FROM tab0 WHERE NOT col1 + - col1 IN ( - 92 )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-8295
 SELECT col5 FROM tab1 WHERE NOT col1 + - col1 IN ( - 92 )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-8295
 SELECT col5 FROM tab2 WHERE NOT col1 + - col1 IN ( - 92 )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-8295
 SELECT col5 FROM tab3 WHERE NOT col1 + - col1 IN ( - 92 )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-8295
 SELECT col5 FROM tab4 WHERE NOT col1 + - col1 IN ( - 92 )
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-8300
@@ -52089,27 +52089,27 @@ SELECT + - COUNT ( * ) FROM tab4 WHERE NOT NULL NOT IN ( - col0, 4 )
 query I rowsort label-9010
 SELECT col2 AS col4 FROM tab0 WHERE NULL IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-9010
 SELECT col2 AS col4 FROM tab1 WHERE NULL IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-9010
 SELECT col2 AS col4 FROM tab2 WHERE NULL IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-9010
 SELECT col2 AS col4 FROM tab3 WHERE NULL IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query I rowsort label-9010
 SELECT col2 AS col4 FROM tab4 WHERE NULL IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to e89aa7f60e0f20140bfaa1644e4353b1
 
 query IIIIIII rowsort label-9015
 SELECT * FROM tab0 WHERE 14 = 17 * 97
@@ -53809,27 +53809,27 @@ SELECT ALL * FROM tab4 WHERE NOT ( - 37 + 27 / + col3 ) >= NULL
 query I rowsort label-9315
 SELECT ALL col5 FROM tab0 WHERE NOT ( NULL ) IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-9315
 SELECT ALL col5 FROM tab1 WHERE NOT ( NULL ) IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-9315
 SELECT ALL col5 FROM tab2 WHERE NOT ( NULL ) IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-9315
 SELECT ALL col5 FROM tab3 WHERE NOT ( NULL ) IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-9315
 SELECT ALL col5 FROM tab4 WHERE NOT ( NULL ) IS NOT NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-9320
 SELECT ALL col3 * - 89 FROM tab0 WHERE NOT + ( 73 ) NOT IN ( + 13 * col0 )
@@ -54939,27 +54939,27 @@ SELECT * FROM tab4 WHERE + 99 IS NULL
 query I rowsort label-9515
 SELECT ALL col5 AS col5 FROM tab0 AS cor0 WHERE NOT col1 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-9515
 SELECT ALL col5 AS col5 FROM tab1 AS cor0 WHERE NOT col1 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-9515
 SELECT ALL col5 AS col5 FROM tab2 AS cor0 WHERE NOT col1 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-9515
 SELECT ALL col5 AS col5 FROM tab3 AS cor0 WHERE NOT col1 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 query I rowsort label-9515
 SELECT ALL col5 AS col5 FROM tab4 AS cor0 WHERE NOT col1 IS NULL
 ----
-10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
+10 values hashing to 2e3ca2a3dbb48cfd88543910c6d45571
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-9520

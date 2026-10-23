@@ -8284,11 +8284,11 @@ SELECT col2 + + col2 FROM tab0 GROUP BY col2
 query II rowsort
 SELECT DISTINCT + - AVG ( ALL - - col2 ) AS col1, col2 AS col1 FROM tab0 AS cor0 GROUP BY col2
 ----
--24
+-24.0000000000000000
 24
--38
+-38.0000000000000000
 38
--79
+-79.0000000000000000
 79
 
 query I rowsort
@@ -20394,11 +20394,11 @@ SELECT + col0 / - col0 AS col0 FROM tab0 AS cor0 WHERE + col2 IS NULL GROUP BY c
 query II rowsort
 SELECT - + AVG ( ALL - col0 ) AS col1, - col0 AS col1 FROM tab2 AS cor0 GROUP BY col0
 ----
-15
+15.0000000000000000
 -15
-91
+91.0000000000000000
 -91
-92
+92.0000000000000000
 -92
 
 query I rowsort
@@ -38126,7 +38126,7 @@ SELECT - col2 - - + col0 FROM tab0 GROUP BY col0, col2
 query III rowsort
 SELECT ALL col2 AS col1, - AVG ( - col2 ) AS col1, - col2 AS col1 FROM tab0 AS cor0 GROUP BY col2
 ----
-9 values hashing to 783727379615b8f9ae967fb1ef978f27
+9 values hashing to 7c3a83bc3008c6864caddf1edc9b44f5
 
 query I rowsort
 SELECT - col0 + col0 FROM tab2 GROUP BY col0 HAVING NOT NULL IS NULL

@@ -27475,7 +27475,7 @@ skipif mysql # not compatible
 query I rowsort label-2911
 SELECT ALL 18 / + 41 * + + NULLIF ( - + 24, + - 73 + + 86 / - + 79 / 16 + CAST ( NULL AS REAL ) - + - 46 / + COUNT ( * ) ) AS col2
 ----
-0
+-0
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-2912
@@ -30123,7 +30123,7 @@ skipif mysql # not compatible
 query II rowsort label-3178
 SELECT ALL 16 + - NULLIF ( - 77, CASE - COUNT ( * ) WHEN + COUNT ( * ) THEN + COUNT ( * ) / + CASE - COUNT ( * ) WHEN - 28 * + ( ( + ( - + 6 ) ) ) / 29 * + 84 + + 93 + + + 14 + 58 + 13 / + 39 * 28 + + + 83 - - 12 * - 7 - - 11 THEN NULL ELSE 38 * + 28 END / - AVG ( - - 83 ) - - - 41 + - - 91 + - ( - 4 ) ELSE + + ( + 90 ) END ) * - 40 / - ( - - COUNT ( * ) ) AS col0, + COUNT ( * ) + + 88 AS col0
 ----
-3096
+3096.0000000000000000
 89
 
 onlyif mysql # aggregate syntax: 
@@ -44456,7 +44456,7 @@ query II rowsort label-4713
 SELECT 5, + MAX ( + NULLIF ( 49, + - CAST ( NULL AS REAL ) / - 71 ) ) / + NULLIF ( - + 19, + + 60 * + COUNT ( ALL - 28 ) * - - 35 * - 91 * - - 40 / - 95 + + 24 ) col2
 ----
 5
--2
+-2.5789473684210527
 
 query II rowsort
 SELECT + 41 AS col2, 55
@@ -63248,7 +63248,7 @@ skipif mysql # not compatible
 query I rowsort label-6701
 SELECT 1 / CASE - COUNT ( * ) WHEN 60 * 72 * - + 40 THEN 96 WHEN 86 THEN COALESCE ( - 3, AVG ( 25 ), + 54 / COUNT ( * ) ) * ( 97 ) ELSE 12 END
 ----
-0
+0.08333333333333333333
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-6702
@@ -82248,7 +82248,7 @@ skipif mysql # not compatible
 query II rowsort label-8767
 SELECT - 93 + - COALESCE ( ( + ( + COUNT ( * ) ) ), - - AVG ( + ( + 73 ) ) + 91 ) / NULLIF ( + 67, - ( 28 ) / + + 11 ), 74 AS col2
 ----
--93
+-93.01492537313432835821
 74
 
 onlyif mysql # DIV for integer division: 
@@ -82861,7 +82861,7 @@ skipif mysql # not compatible
 query I rowsort label-8829
 SELECT - NULLIF ( 82, - AVG ( DISTINCT - 95 ) ) / COUNT ( * ) AS col0
 ----
--82
+-82.0000000000000000
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-8830

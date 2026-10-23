@@ -15074,11 +15074,11 @@ skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort
 SELECT ALL - AVG ( + + col1 ) * col1 col2, col1 AS col2 FROM tab1 GROUP BY col1
 ----
--1936
+-1936.0000000000000000
 44
--3249
+-3249.0000000000000000
 57
--36
+-36.0000000000000000
 6
 
 query I rowsort
@@ -28210,9 +28210,9 @@ skipif mysql # not compatible
 query I rowsort label-3803
 SELECT + col0 / NULLIF ( 43, + + AVG ( ALL + col1 ) ) FROM tab0 AS cor0 GROUP BY col0
 ----
-0
-1
-1
+0.60465116279069767442
+1.00000000000000000000
+1.9302325581395349
 
 query II rowsort
 SELECT DISTINCT col0, col0 * col0 AS col2 FROM tab2 AS cor0 GROUP BY col0, col0
@@ -39529,9 +39529,9 @@ skipif mysql # not compatible
 query I rowsort label-5171
 SELECT + 84 * - - 60 + NULLIF ( + 82, + 29 * - 51 + - + SUM ( ALL + COALESCE ( - CASE - 11 WHEN + col2 * - + col0 THEN + 16 END, + col0 * col0 ) ) * + CAST ( NULL AS REAL ) + col1 * col1 ) / + col1 FROM tab1 GROUP BY col1
 ----
-5041
-5041
-5053
+5041.438596491228
+5041.863636363636
+5053.666666666667
 
 query I rowsort
 SELECT DISTINCT - col0 AS col0 FROM tab2 GROUP BY col2, col0 HAVING NULL IS NOT NULL
@@ -49229,11 +49229,11 @@ skipif mysql # not compatible
 query II rowsort label-6162
 SELECT DISTINCT COUNT ( * ) + + AVG ( ALL 54 ) AS col2, + 72 * + col1 AS col2 FROM tab1 GROUP BY col0, col1
 ----
-55
+55.0000000000000000
 3168
-55
+55.0000000000000000
 4104
-55
+55.0000000000000000
 432
 
 onlyif mysql # aggregate syntax: 
@@ -63252,11 +63252,11 @@ SELECT ALL + col2 col2, 55 AS col0 FROM tab0 AS cor0 GROUP BY col2
 query II rowsort
 SELECT - + 11 + AVG ( + - 41 ) - 45 AS col0, - 69 + + 44 AS col0 FROM tab1 AS cor0 GROUP BY col1, col2
 ----
--97
+-97.0000000000000000
 -25
--97
+-97.0000000000000000
 -25
--97
+-97.0000000000000000
 -25
 
 query I rowsort

@@ -14135,7 +14135,7 @@ skipif mysql # not compatible
 query I rowsort label-1491
 SELECT + 78 / + - NULLIF ( 19, - 7 * AVG ( ALL + 82 ) * + - ( COALESCE ( NULLIF ( - 32, 7 * - 48 ), - + 9 * - + 28 ) ) )
 ----
--4
+-4.1052631578947368
 
 query I rowsort
 SELECT + 54 * 78 col2
@@ -41896,7 +41896,7 @@ skipif mysql # not compatible
 query I rowsort label-4447
 SELECT DISTINCT COALESCE ( COUNT ( * ), - + COALESCE ( - AVG ( ALL + 36 ), + - 26 + + ( - 5 ) ) ) / + - NULLIF ( 92, 88 * - COUNT ( * ) + + AVG ( DISTINCT - 93 ) ) + ( 47 ) + + 96 AS col2
 ----
-143
+142.98913043478260869565
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-4448
@@ -54495,7 +54495,7 @@ skipif mysql # not compatible
 query I rowsort label-5799
 SELECT ALL - - 96 + 76 + + + NULLIF ( - + 72, - - AVG ( - 82 ) ) / + + 56 - CAST ( 78 AS INTEGER )
 ----
-93
+92.7142857142857143
 
 query I rowsort
 SELECT ALL - 49 + - 84 AS col2
@@ -72814,7 +72814,7 @@ skipif mysql # not compatible
 query I rowsort label-7771
 SELECT - CAST ( - + 40 AS INTEGER ) * + NULLIF ( COUNT ( * ), 19 * + 48 + + - 79 + AVG ( ALL - 95 ) * - + 20 * COUNT ( * ) + - ( + COUNT ( - 18 ) ) ) / + COUNT ( * ) - - 34 * + 0 - 91 AS col0
 ----
--51
+-51.0000000000000000
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-7772
@@ -80887,7 +80887,7 @@ skipif mysql # not compatible
 query I rowsort label-8636
 SELECT - - 93 - + + CASE 56 WHEN - COUNT ( + 15 ) / - NULLIF ( + COUNT ( * ), + 96 / - 84 + - 64 ) THEN NULL ELSE 23 * 75 / - + NULLIF ( 99, 40 + - 30 * AVG ( ALL + 24 ) / 17 ) END + + 70 * 37
 ----
-2700
+2700.4242424242424242
 
 query I rowsort
 SELECT - 21 * - - 31 AS col1
@@ -88080,7 +88080,7 @@ skipif mysql # not compatible
 query I rowsort label-9393
 SELECT 11 + + + SUM ( DISTINCT 83 ) / COALESCE ( SUM ( + 83 ), - - AVG ( - 57 ) + - 8, - 35 ) * + + 91 + + COUNT ( * ) AS col1
 ----
-103
+103.00000000000000000000
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-9394
@@ -89112,7 +89112,7 @@ skipif mysql # not compatible
 query I rowsort label-9502
 SELECT + COUNT ( * ) / - NULLIF ( - 64, - AVG ( DISTINCT + 1 ) ) * + 50 * - + 87
 ----
-0
+-67.96875000000000000000
 
 query I rowsort
 SELECT ALL 84 * - 2 + - 27 + 75 AS col1

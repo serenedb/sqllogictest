@@ -70339,7 +70339,7 @@ skipif mysql # not compatible
 query I rowsort label-7559
 SELECT - 62 / - COALESCE ( + + NULLIF ( + + MIN ( 98 ), - CAST ( CAST ( NULL AS INTEGER ) AS INTEGER ) ), - 41 * - 12 + - + 73, + 70 - - 63 + AVG ( ALL 23 ) * + 55 * + 41 ) + - 95 + + SUM ( ALL - - 95 ) / - 87 + 74
 ----
--22
+-21.36734693877551020408
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-7560

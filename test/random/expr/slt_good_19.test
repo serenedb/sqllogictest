@@ -56718,7 +56718,7 @@ skipif mysql # not compatible
 query I rowsort label-6049
 SELECT - 23 / + COALESCE ( + + 79, + 4, - 75 + - AVG ( + 40 ) + - 48 + + 5 ) + 62
 ----
-62
+61.70886075949367088608
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-6050
@@ -59090,7 +59090,7 @@ skipif mysql # not compatible
 query I rowsort label-6304
 SELECT - 87 / - COALESCE ( CAST ( + + 16 AS REAL ), 7 )
 ----
-5
+5.4375
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-6305

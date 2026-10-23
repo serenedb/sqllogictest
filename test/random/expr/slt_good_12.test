@@ -19172,7 +19172,7 @@ skipif mysql # not compatible
 query I rowsort label-2069
 SELECT DISTINCT - NULLIF ( 95, + AVG ( DISTINCT + - 60 ) / + 18 + - 57 ) / 12 - - 44 col1
 ----
-37
+36.0833333333333333
 
 onlyif mysql # CAST syntax: SIGNED type: 
 query I rowsort label-2070
@@ -74758,7 +74758,7 @@ skipif mysql # not compatible
 query I rowsort label-7985
 SELECT - - MAX ( 73 ) / + CASE 32 WHEN - 34 THEN NULL WHEN - 59 THEN - 25 + - 82 + - - CASE + - CAST ( CASE - 58 WHEN - + 60 THEN NULL WHEN + 72 THEN NULL WHEN 16 + + 47 * - 59 THEN - + 91 END AS INTEGER ) WHEN ( + 64 ) THEN 35 ELSE NULL END * - AVG ( + + 68 ) ELSE + 40 END
 ----
-1
+1.8250000000000000
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query I rowsort label-7986

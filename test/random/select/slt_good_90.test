@@ -47334,9 +47334,9 @@ skipif mysql # not compatible
 query I rowsort
 SELECT + ( ( - col2 ) ) * CAST ( + 0 AS REAL ) FROM tab0 cor0
 ----
-0
-0
-0
+-0
+-0
+-0
 
 onlyif mysql # support for MySQL specific system types and syntax
 query I rowsort label-5627

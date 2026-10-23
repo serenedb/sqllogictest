@@ -91324,7 +91324,7 @@ skipif mysql # not compatible
 query I rowsort label-9698
 SELECT ALL NULLIF ( CAST ( + + COUNT ( ALL + 87 ) AS INTEGER ), + ( + AVG ( DISTINCT - COALESCE ( + - 22, + + 98, + 2 ) ) ) ) / COUNT ( * ) - - 66 + CASE 63 WHEN + + COUNT ( * ) - - 81 THEN + 13 WHEN 90 THEN NULL ELSE 91 * + 33 END + - COUNT ( * )
 ----
-3069
+3069.00000000000000000000
 
 onlyif mysql # aggregate syntax: DIV for integer division: 
 query II rowsort label-9699

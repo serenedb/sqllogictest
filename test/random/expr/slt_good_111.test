@@ -7397,7 +7397,7 @@ skipif mysql # not compatible
 query I rowsort label-800
 SELECT ALL + 37 / COALESCE ( 99, + - AVG ( - - 52 ) * - 65, SUM ( + 58 ) * + 50 ) - - + COUNT ( * ) + + 67 - + 14 + + NULLIF ( - - ( + COUNT ( * ) ), - - 37 * + NULLIF ( CASE - 99 WHEN + 72 THEN + 46 + + - 2 + - COUNT ( * ) END, - 15 * + 71 - + - 96 ) + + 36 ) * - COUNT ( * ) * + + 65
 ----
--11
+-10.62626262626262626263
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-801
@@ -22949,7 +22949,7 @@ skipif mysql # not compatible
 query I rowsort label-2466
 SELECT DISTINCT 52 * + NULLIF ( + 0, 86 + + 15 + - + CAST ( - 13 AS INTEGER ) * + + 66 ) - + - COALESCE ( + 55, - 53, + CASE - + 22 WHEN - ( NULLIF ( - 87, MAX ( ( 12 ) ) * + COUNT ( * ) + + 64 ) ) THEN + 8 WHEN 1 * - 57 / - - 92 THEN - + AVG ( + - 12 ) ELSE NULL END ) / 63 AS col1
 ----
-0
+0.87301587301587301587
 
 query II rowsort
 SELECT ALL + - 71 col1, 4 AS col0
@@ -34736,7 +34736,7 @@ skipif mysql # not compatible
 query I rowsort label-3729
 SELECT - COALESCE ( + COUNT ( * ), + 87 * ( - COUNT ( * ) ) - AVG ( 39 ) ) / 3 AS col2
 ----
-0
+-0.33333333333333333333
 
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query I rowsort label-3730
@@ -38085,7 +38085,7 @@ skipif mysql # not compatible
 query I rowsort label-4084
 SELECT 2 / COALESCE ( - 58, + + 45 - - AVG ( DISTINCT - 98 ), + 41 )
 ----
-0
+-0.03448275862068965517
 
 onlyif mysql # CAST syntax: SIGNED type: DIV for integer division: 
 query I rowsort label-4085
@@ -38921,7 +38921,7 @@ skipif mysql # not compatible
 query I rowsort label-4174
 SELECT ALL + + COUNT ( * ) / - NULLIF ( + MIN ( + 14 ), + 97 / ( - 23 ) / - 68 + 35 - + 41 + + AVG ( + + 64 ) - + - MAX ( - 25 ) + - 30 + + 66 - - - 9 * 68 + CASE + - ( + 39 ) WHEN 92 THEN + 89 WHEN 38 THEN - COUNT ( * ) * - COUNT ( * ) + 87 * + - 35 + 41 + - 44 * - 99 END ) AS col0
 ----
-0
+-0.07142857142857142857
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-4175
@@ -46640,7 +46640,7 @@ skipif mysql # not compatible
 query I rowsort label-5007
 SELECT ALL - + 94 / + NULLIF ( + COALESCE ( - + AVG ( + CAST ( NULL AS INTEGER ) ), + - 65 ), + - 45 ) + + - 46 AS col2
 ----
--45
+-44.5538461538461538
 
 onlyif mysql # CAST syntax: SIGNED type: DECIMAL type: 
 query II rowsort label-5008
@@ -51568,7 +51568,7 @@ skipif mysql # not compatible
 query I rowsort label-5519
 SELECT ALL + COUNT ( ALL + + 79 ) * - - 56 / + - NULLIF ( - 45, - AVG ( DISTINCT 12 ) ) AS col0
 ----
-1
+1.2444444444444444
 
 query I rowsort
 SELECT DISTINCT - + 34 * + ( + 22 )
@@ -61863,7 +61863,7 @@ skipif mysql # not compatible
 query I rowsort label-6612
 SELECT - NULLIF ( 22, - + COALESCE ( - 69, - + 35, - AVG ( DISTINCT + 63 ) ) ) / - - 62 AS col0
 ----
-0
+-0.35483870967741935484
 
 query I rowsort
 SELECT ALL 71 + + - 31
@@ -61963,7 +61963,7 @@ skipif mysql # not compatible
 query I rowsort label-6625
 SELECT DISTINCT 7 + + + 10 + - 76 / COALESCE ( AVG ( + + CAST ( NULL AS INTEGER ) ), + - 29, - - 65 ) * - + 2 col1
 ----
-13
+11.7586206896551724
 
 query I rowsort
 SELECT ALL 66 + - 67 AS col0
@@ -90893,7 +90893,7 @@ skipif mysql # not compatible
 query I rowsort label-9729
 SELECT DISTINCT - + 15 / + + NULLIF ( - + 35, - NULLIF ( AVG ( DISTINCT 39 ), 80 ) ) * + + 38 + ( 20 ) col0
 ----
-20
+36.28571428571428571434
 
 query I rowsort
 SELECT DISTINCT + 5 * - 92

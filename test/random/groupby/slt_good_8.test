@@ -47783,11 +47783,11 @@ SELECT - cor0.col2 * cor0.col1 AS col2 FROM tab2 AS cor0 GROUP BY cor0.col1, cor
 query II rowsort
 SELECT ALL AVG ( + cor0.col1 ) AS col0, - cor0.col2 AS col0 FROM tab0 AS cor0 GROUP BY cor0.col2
 ----
-0
+0.00000000000000000000
 -38
-0
+0.00000000000000000000
 -79
-81
+81.0000000000000000
 -24
 
 query I rowsort

@@ -10808,7 +10808,7 @@ skipif mysql # not compatible
 query I rowsort label-1160
 SELECT ALL 51 + + 64 - 95 + NULLIF ( - 21, + CAST ( + 99 AS REAL ) ) / + + 88
 ----
-20
+19.761363636363637
 
 query I rowsort
 SELECT ALL CASE 43 WHEN - ( - 16 ) THEN 8 ELSE NULL END col2
@@ -42050,7 +42050,7 @@ skipif mysql # not compatible
 query I rowsort label-4504
 SELECT ALL + 23 / + NULLIF ( - - 38, + AVG ( ALL 96 ) * - 81 * + 30 * 0 + 16 ) col1
 ----
-0
+0.60526315789473684211
 
 query II rowsort
 SELECT 4, + COALESCE ( + - 28, + - 51 * - + 69 ) AS col0
@@ -60683,7 +60683,7 @@ skipif mysql # not compatible
 query I rowsort label-6499
 SELECT DISTINCT + COALESCE ( - COALESCE ( - 65, + 3 * + CAST ( NULL AS INTEGER ) ), - AVG ( - + 67 ) ) / - NULLIF ( - COALESCE ( + - 12, + 57 ), + + 84 ) + - - 46
 ----
-41
+40.5833333333333333
 
 query I rowsort
 SELECT + 71 * + 52
@@ -69816,7 +69816,7 @@ skipif mysql # not compatible
 query I rowsort label-7476
 SELECT ALL - COALESCE ( 69, + COUNT ( * ) * - 4 + + 57 - - AVG ( ALL + 51 ) ) / - 61 + + 95
 ----
-96
+96.1311475409836066
 
 query II rowsort
 SELECT - 68 - 10 + + ( 90 ) AS col2, - 68 AS col2
@@ -70573,7 +70573,7 @@ skipif mysql # not compatible
 query I rowsort label-7556
 SELECT ALL + NULLIF ( + CASE - COUNT ( ALL - + CAST ( NULL AS INTEGER ) ) WHEN - - CAST ( NULL AS INTEGER ) * - 2 THEN + COALESCE ( - - AVG ( 53 ), + + 54 * + + 58 - - 80 + ( 77 ) ) - - - 42 + - ( + - 18 ) + - - AVG ( + - 18 ) + 43 ELSE + NULLIF ( 98, - 72 ) END, - + ( + COUNT ( * ) ) ) / + + ( - 76 )
 ----
--1
+-1.2894736842105263
 
 onlyif mysql # aggregate syntax: 
 query II rowsort label-7557
@@ -79493,7 +79493,7 @@ query II rowsort label-8519
 SELECT ALL 9 AS col2, - COUNT ( * ) * + - COALESCE ( NULLIF ( + 40, + COUNT ( * ) * - 81 ), 92 - - 36 * 56, 81 - - AVG ( + 54 ) ) / CASE WHEN - 54 IS NOT NULL THEN + 26 + 3 END - 84
 ----
 9
--83
+-82.6206896551724138
 
 query I rowsort
 SELECT - - 75 * - 84 AS col1
@@ -88950,7 +88950,7 @@ skipif mysql # not compatible
 query I rowsort label-9550
 SELECT 53 / - NULLIF ( - - 54, + + AVG ( + - ( ( + - 34 ) ) ) + - NULLIF ( 37 + 32, 32 ) )
 ----
-0
+-0.98148148148148148148
 
 query I rowsort
 SELECT ( + 21 ) - - - 87 + - + 59

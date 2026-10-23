@@ -2815,7 +2815,7 @@ skipif mysql # not compatible
 query I rowsort label-313
 SELECT ALL - 55 / CASE - - COUNT ( * ) WHEN + 64 * ( - ( - 15 ) ) THEN - - NULLIF ( - - 98, + CAST ( NULL AS REAL ) * + 99 * + 27 + - + 18 + - + 39 ) ELSE + COUNT ( * ) END * MIN ( - - 29 ) / + + 57 AS col2
 ----
--27
+-27.982456140350877
 
 query I rowsort
 SELECT 18 * + 94 + + 34 * - 28 col1
@@ -17905,7 +17905,7 @@ skipif mysql # not compatible
 query I rowsort label-1940
 SELECT ALL + + NULLIF ( 95, 87 * + + 29 * - + 18 * + NULLIF ( ( - MAX ( DISTINCT - ( + ( + CASE - 9 WHEN NULLIF ( + 10, 82 + + 46 ) THEN NULL WHEN + - 11 THEN + ( - - 92 ) + + 13 * CAST ( NULL AS INTEGER ) END ) ) ) ), 76 * AVG ( ALL - 95 ) ) + + + COUNT ( * ) ) / - - 25 AS col1
 ----
-3
+3.8000000000000000
 
 query I rowsort
 SELECT ALL + - 22 col1
@@ -26686,7 +26686,7 @@ skipif mysql # not compatible
 query I rowsort label-2881
 SELECT DISTINCT NULLIF ( - - COUNT ( 68 ), - COUNT ( * ) * + ( AVG ( - 59 ) ) ) / - 12 * + ( + 67 ) * + NULLIF ( 64, 62 ) * 64 + 30 * ( + NULLIF ( + 86, 13 + COUNT ( * ) / + 66 ) + + 38 ) + + COUNT ( * ) * NULLIF ( 69 * 60, 22 + 73 ) AS col2
 ----
-7860
+-15009.33333333333333241856
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-2882
@@ -40281,7 +40281,7 @@ skipif mysql # not compatible
 query I rowsort label-4329
 SELECT DISTINCT + - 79 / - COALESCE ( 56, + 5, + 91 * AVG ( ALL + 79 ) ) AS col2
 ----
-1
+1.4107142857142857
 
 query I rowsort
 SELECT - 30 * - 5 * 1 * + 40 AS col0
@@ -42314,7 +42314,7 @@ skipif mysql # not compatible
 query I rowsort label-4548
 SELECT ALL - CASE - - 79 WHEN AVG ( 21 ) THEN + AVG ( 24 ) + - + 77 WHEN + 74 + + ( ( + + COUNT ( * ) ) ) - + 84 THEN NULL ELSE 97 - + 65 END / 25
 ----
--1
+-1.2800000000000000
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-4549
@@ -80281,7 +80281,7 @@ skipif mysql # not compatible
 query I rowsort label-8566
 SELECT ALL + NULLIF ( - 57, + - AVG ( DISTINCT ( + 34 ) ) * + 49 ) / + 78 + - 82 col2
 ----
--82
+-82.73076923076923076923
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-8567

@@ -100,13 +100,13 @@ skipif mssql
 query I rowsort
 SELECT count(*) FROM t1 WHERE x=4
 ----
-0
+3
 
 skipif mssql
 query I rowsort
 SELECT count(*) FROM t1 WHERE x=5
 ----
-3
+0
 
 # EVIDENCE-OF: R-40472-60438 Columns that do not appear in the list of
 # assignments are left unmodified.

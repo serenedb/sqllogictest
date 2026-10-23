@@ -4657,7 +4657,7 @@ skipif mysql # not compatible
 query I rowsort label-499
 SELECT ALL CAST ( - - COUNT ( * ) AS INTEGER ) / + NULLIF ( + 3, COALESCE ( - ( - - COUNT ( * ) ), 51, + + 92 * - 25 + + AVG ( DISTINCT - 92 ) ) * + + NULLIF ( - 70, 26 ) * 47 + + 84 * + AVG ( ALL + - 88 ) * + 40 / SUM ( DISTINCT - + 85 ) * + MAX ( - + 18 ) - + + 79 - + - 29 + + COUNT ( + 39 ) - 61 )
 ----
-0
+0.33333333333333333333
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-500
@@ -10957,7 +10957,7 @@ skipif mysql # not compatible
 query I rowsort label-1182
 SELECT 53 / NULLIF ( COALESCE ( - CAST ( + COUNT ( * ) AS INTEGER ), ( - 58 ) - - MAX ( ALL 55 ) * + 99 + AVG ( DISTINCT - 38 ) - - + 32 ), + + 75 ) col1
 ----
--53
+-53.0000000000000000
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-1183
@@ -29844,7 +29844,7 @@ skipif mysql # not compatible
 query II rowsort label-3167
 SELECT - 30 + + + ( + 26 ) / + 39 * 91 - + 18 * COALESCE ( + - COUNT ( * ), COALESCE ( - 80, - + 11 + + - AVG ( 97 ) ), - - 22 * - COUNT ( * ) * - 61 + 24 * + 62 / + - 36 ) / - 69, + 93 * - 52 AS col0
 ----
--30
+-30.26086956521739130435
 -4836
 
 query I rowsort
@@ -49937,7 +49937,7 @@ skipif mysql # not compatible
 query I rowsort label-5313
 SELECT + COALESCE ( + 38, + - CASE + 92 WHEN + 46 THEN - - 69 * + - NULLIF ( + ( 37 ), 74 ) + - 4 ELSE NULL END * - 4 + + + AVG ( + - 68 ), - ( + 24 ) - + 5 ) / + 30
 ----
-1
+1.2666666666666667
 
 onlyif mysql # DIV for integer division: 
 query I rowsort label-5314
@@ -62712,7 +62712,7 @@ skipif mysql # not compatible
 query I rowsort label-6678
 SELECT ALL 69 * 57 + + COALESCE ( + 45, + AVG ( - CAST ( NULL AS INTEGER ) ), 1 * + + 91 - + SUM ( DISTINCT + 17 ) ) / + COUNT ( * ) - + 41 + - 35 AS col1
 ----
-3902
+3902.0000000000000000
 
 onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
 query I rowsort label-6679
@@ -65525,7 +65525,7 @@ skipif mysql # not compatible
 query I rowsort label-6984
 SELECT + + COALESCE ( + 73, COUNT ( * ) ) + - - ( + ( - 99 ) ) / + NULLIF ( - - 75, CAST ( NULL AS REAL ) )
 ----
-72
+71.68
 
 query I rowsort
 SELECT ALL + - 58 - + + 20

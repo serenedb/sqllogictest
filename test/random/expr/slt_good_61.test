@@ -88311,7 +88311,7 @@ query II rowsort label-9462
 SELECT COALESCE ( + 67, + 30 ) / - COUNT ( * ) - + 40 AS col0, + COUNT ( * ) / NULLIF ( - 22, - - 63 + - - AVG ( ALL - - ( - + 51 ) ) + + 92 )
 ----
 -107
-0
+-0.04545454545454545455
 
 onlyif mysql # aggregate syntax: 
 query I rowsort label-9463

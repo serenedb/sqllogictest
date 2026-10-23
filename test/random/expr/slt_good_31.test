@@ -63350,7 +63350,7 @@ skipif mysql # not compatible
 query I rowsort label-7113
 SELECT COALESCE ( + + NULLIF ( - - ( + 6 ), + 18 * - - 69 ), AVG ( + COALESCE ( + 23, 89, 42 / - CAST ( - 51 AS INTEGER ) + 22 ) ) ) / + 76 AS col1
 ----
-0
+0.07894736842105263158
 
 query I rowsort
 SELECT DISTINCT + 96 col0

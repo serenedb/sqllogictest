@@ -9924,11 +9924,11 @@ SELECT + col0 * + - col0 * - col0 AS col2 FROM tab2 AS cor0 GROUP BY col0
 query II rowsort
 SELECT AVG ( col2 ) AS col0, - col1 AS col0 FROM tab0 AS cor0 GROUP BY col1, col2 HAVING + col2 IS NOT NULL
 ----
-24
+24.0000000000000000
 -81
-38
+38.0000000000000000
 0
-79
+79.0000000000000000
 0
 
 query I rowsort
@@ -41865,11 +41865,11 @@ skipif postgresql # PostgreSQL requires AS when renaming output columns
 query II rowsort
 SELECT DISTINCT AVG ( + col1 ) * AVG ( + + col1 ) col2, - col0 col2 FROM tab2 AS cor0 GROUP BY col1, col0
 ----
-1681
+1681.00000000000000000000000000000000
 -92
-3481
+3481.00000000000000000000000000000000
 -91
-3721
+3721.00000000000000000000000000000000
 -15
 
 query II rowsort
@@ -54260,11 +54260,11 @@ SELECT - col2 AS col0 FROM tab2 AS cor0 WHERE NULL = NULL GROUP BY col2
 query II rowsort
 SELECT DISTINCT - AVG ( col2 ) * - col0 AS col1, - col2 AS col1 FROM tab1 AS cor0 GROUP BY col2, col0
 ----
-1260
+1260.0000000000000000
 -45
-176
+176.0000000000000000
 -8
-5822
+5822.0000000000000000
 -71
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
