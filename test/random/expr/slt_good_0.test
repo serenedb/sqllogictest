@@ -63938,6 +63938,7 @@ SELECT 40 AS col1, - 50 DIV - + COALESCE ( COALESCE ( - 1, + - 17 ), - 20, + AVG
 -50
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-7072
 SELECT 40 AS col1, - 50 / - + COALESCE ( COALESCE ( - 1, + - 17 ), - 20, + AVG ( 97 ) )
 ----
