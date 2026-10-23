@@ -73667,9 +73667,9 @@ skipif mysql # not compatible
 query I rowsort label-8083
 SELECT ALL CAST ( - col1 AS REAL ) / 16 AS col0 FROM tab2 AS cor0
 ----
--3
--4
--4
+-3.1875
+-4.1875
+-4.8125
 
 query I rowsort
 SELECT ALL col1 * col2 FROM tab2 AS cor0 WHERE ( NULL ) NOT BETWEEN + 69 + - col0 AND ( - 15 )

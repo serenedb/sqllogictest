@@ -68837,9 +68837,9 @@ skipif duckdb # Statistical rounding
 query I rowsort
 SELECT - col2 * col1 / CAST ( 64 AS REAL ) + col2 FROM tab0
 ----
--11
--34
-0
+-0.515625
+-11.34375
+-34.59375
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 query I rowsort

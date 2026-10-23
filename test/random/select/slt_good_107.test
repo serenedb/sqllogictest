@@ -8465,9 +8465,9 @@ skipif duckdb # Statistical rounding
 query I rowsort
 SELECT - col2 / CAST ( 16 AS REAL ) + tab0.col0 + + col2 AS col2 FROM tab0
 ----
-165
-35
-54
+165.875
+35.9375
+54.9375
 
 onlyif mysql # support for MySQL specific system types and syntax
 query I rowsort label-1003
