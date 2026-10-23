@@ -72930,6 +72930,7 @@ SELECT - ( + 90 ) AS col2 FROM tab0
 
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort
 SELECT ALL 0 / 0 AS col2 FROM tab1 AS cor0 WHERE NOT ( NOT NULL IS NOT NULL )
 ----

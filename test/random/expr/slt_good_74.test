@@ -28720,6 +28720,7 @@ SELECT ALL 34 * + 25 * + CASE AVG ( + + 51 ) WHEN 27 + 72 + + CAST( 30 AS SIGNED
 1346400
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-3049
 SELECT ALL 34 * + 25 * + CASE AVG ( + + 51 ) WHEN 27 + 72 + + CAST ( 30 AS INTEGER ) THEN NULL ELSE - NULLIF ( - 36, + COUNT ( * ) * - AVG ( ALL - - 97 ) ) / COUNT ( + 71 ) END * 44
 ----
@@ -43299,6 +43300,7 @@ SELECT - - 74 + 12 AS col0, NULLIF ( 26, - NULLIF ( - 12, + CAST( NULL AS DECIMA
 -4
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query II rowsort label-4628
 SELECT - - 74 + 12 AS col0, NULLIF ( 26, - NULLIF ( - 12, + CAST ( NULL AS REAL ) ) ) / - 6 AS col2
 ----

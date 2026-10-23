@@ -10805,6 +10805,7 @@ SELECT ALL 51 + + 64 - 95 + NULLIF ( - 21, + CAST( + 99 AS DECIMAL ) ) DIV + + 8
 20
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-1160
 SELECT ALL 51 + + 64 - 95 + NULLIF ( - 21, + CAST ( + 99 AS REAL ) ) / + + 88
 ----
@@ -42047,6 +42048,7 @@ SELECT ALL + 23 DIV + NULLIF ( - - 38, + AVG ( ALL 96 ) * - 81 * + 30 * 0 + 16 )
 0
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-4504
 SELECT ALL + 23 / + NULLIF ( - - 38, + AVG ( ALL 96 ) * - 81 * + 30 * 0 + 16 ) col1
 ----
@@ -60680,6 +60682,7 @@ SELECT DISTINCT + COALESCE ( - COALESCE ( - 65, + 3 * + CAST( NULL AS SIGNED ) )
 41
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-6499
 SELECT DISTINCT + COALESCE ( - COALESCE ( - 65, + 3 * + CAST ( NULL AS INTEGER ) ), - AVG ( - + 67 ) ) / - NULLIF ( - COALESCE ( + - 12, + 57 ), + + 84 ) + - - 46
 ----
@@ -69813,6 +69816,7 @@ SELECT ALL - COALESCE ( 69, + COUNT( * ) * - 4 + + 57 - - AVG ( ALL + 51 ) ) DIV
 96
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-7476
 SELECT ALL - COALESCE ( 69, + COUNT ( * ) * - 4 + + 57 - - AVG ( ALL + 51 ) ) / - 61 + + 95
 ----
@@ -79489,6 +79493,7 @@ SELECT ALL 9 AS col2, - COUNT( * ) * + - COALESCE ( NULLIF ( + 40, + COUNT( * ) 
 -83
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-8519
 SELECT ALL 9 AS col2, - COUNT ( * ) * + - COALESCE ( NULLIF ( + 40, + COUNT ( * ) * - 81 ), 92 - - 36 * 56, 81 - - AVG ( + 54 ) ) / CASE WHEN - 54 IS NOT NULL THEN + 26 + 3 END - 84
 ----
@@ -88947,6 +88952,7 @@ SELECT 53 DIV - NULLIF ( - - 54, + + AVG ( + - ( ( + - 34 ) ) ) + - NULLIF ( 37 
 0
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-9550
 SELECT 53 / - NULLIF ( - - 54, + + AVG ( + - ( ( + - 34 ) ) ) + - NULLIF ( 37 + 32, 32 ) )
 ----

@@ -80828,6 +80828,7 @@ SELECT ALL * FROM tab0 WHERE ( + col2 / col2 * + col1 ) NOT IN ( col2 + - col0 /
 ----
 
 skipif mysql # not compatible
+skipif serenedb # raises in an expression PostgreSQL does not evaluate: serenedb/serenedb#1899
 query III rowsort label-8839
 SELECT ALL * FROM tab0 WHERE ( + col2 / col2 * + col1 ) NOT IN ( col2 + - col0 / 0, - 1, + - CAST ( NULL AS INTEGER ) )
 ----

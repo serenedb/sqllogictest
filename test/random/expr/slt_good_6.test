@@ -31746,6 +31746,7 @@ SELECT - 49 DIV - - NULLIF ( 98, + ( COALESCE ( + - 34, + 14 ) ) * - - 84 * - - 
 0
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-3381
 SELECT - 49 / - - NULLIF ( 98, + ( COALESCE ( + - 34, + 14 ) ) * - - 84 * - - COUNT ( * ) * - NULLIF ( 53, + CAST ( NULL AS REAL ) * - 76 + + + MIN ( 40 ) ) )
 ----
@@ -43039,6 +43040,7 @@ NULL
 
 skipif mysql # not compatible
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort label-4565
 SELECT ALL + 21 * - COALESCE ( - 33, - 4 / - - 42 - + - 68 + - - 40, 29 ) - 90 + - + 11 + - + 19 / + 0 * CAST ( NULL AS INTEGER )
 ----
@@ -46713,6 +46715,7 @@ SELECT 69 + + + 58 AS col2, - 64 DIV + COALESCE ( - 50, - CASE - - 16 WHEN + NUL
 1
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-4947
 SELECT 69 + + + 58 AS col2, - 64 / + COALESCE ( - 50, - CASE - - 16 WHEN + NULLIF ( 46, + - 97 + - - ( ( - CASE + 10 WHEN - ( + ( - 75 ) ) * + 43 THEN + 2 + - 60 ELSE - + COUNT ( * ) END ) ) + - + SUM ( DISTINCT + - 91 ) * + - 84 ) THEN NULL WHEN - 68 + 56 THEN + + 48 * - - AVG ( DISTINCT - 8 ) WHEN + 83 THEN NULL END )
 ----
@@ -64611,6 +64614,7 @@ SELECT ALL + - ( - ( + - COALESCE ( + - 44, - - 38 + AVG ( - - 80 ) + + - 39 + +
 -3805
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-6870
 SELECT ALL + - ( - ( + - COALESCE ( + - 44, - - 38 + AVG ( - - 80 ) + + - 39 + + CAST ( NULL AS INTEGER ) + - 65 + + 43 * - 62 / - + 56 / 21 * 86 ) ) ) / 29 + - - COUNT ( * ) - - 81 * - + MIN ( + 47 )
 ----
@@ -64912,6 +64916,7 @@ NULL
 
 skipif mysql # not compatible
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort label-6902
 SELECT + 74 / - 0 * + + ( 10 ) * - 96 * ( CASE 69 WHEN + 60 + + 5 * - 51 THEN 43 * - - 91 + - - ( - ( 20 ) ) * + - CAST ( NULL AS INTEGER ) + + + 20 END )
 ----
@@ -77386,6 +77391,7 @@ SELECT + COALESCE ( - 21, - AVG ( ALL 93 ) * - 26 + 4 * - 70, 8 * 99 + COUNT( * 
 -89
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-8240
 SELECT + COALESCE ( - 21, - AVG ( ALL 93 ) * - 26 + 4 * - 70, 8 * 99 + COUNT ( * ) - 84 ) / - 2 + - 99
 ----
@@ -86053,6 +86059,7 @@ SELECT + + ( - COALESCE ( + - COUNT( * ), - + AVG ( + - 58 ) * - - 47, - - 53 ) 
 39
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-9184
 SELECT + + ( - COALESCE ( + - COUNT ( * ), - + AVG ( + - 58 ) * - - 47, - - 53 ) ) / - - 15 + + 39 AS col1
 ----
@@ -91756,6 +91763,7 @@ SELECT ALL - COALESCE ( + 43, - ( 55 ), 88 + + 19 ) * MIN( ALL - - 25 ) + + - CO
 -1118
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-9782
 SELECT ALL - COALESCE ( + 43, - ( 55 ), 88 + + 19 ) * MIN ( ALL - - 25 ) + + - COUNT ( * ) / + + NULLIF ( - - 28, AVG ( + + 83 ) + - + 90 + - COUNT ( * ) ) + - 43 AS col1
 ----

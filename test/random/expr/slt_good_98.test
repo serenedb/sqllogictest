@@ -88860,6 +88860,7 @@ NULL
 
 skipif mysql # not compatible
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort label-9472
 SELECT + CASE - MIN ( ALL 97 ) WHEN + CAST ( + 18 AS REAL ) THEN - 62 + - MIN ( - - 78 ) + 54 / - + 0 WHEN - 59 * - - 9 - - 45 - 31 THEN NULL END
 ----

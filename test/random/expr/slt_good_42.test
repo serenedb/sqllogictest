@@ -22635,6 +22635,7 @@ SELECT DISTINCT - ( 43 ) * 42 + - + NULLIF ( + 90, - 49 - + CAST( - - 99 AS DECI
 90
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query II rowsort label-2415
 SELECT DISTINCT - ( 43 ) * 42 + - + NULLIF ( + 90, - 49 - + CAST ( - - 99 AS REAL ) ) / - + 7, 35 + + 55 AS col1
 ----
@@ -40254,6 +40255,7 @@ NULL
 
 skipif mysql # not compatible
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query II rowsort label-4310
 SELECT 73 + ( - + 85 ) AS col0, CASE - ( + + 50 ) WHEN 36 + + CASE - - NULLIF ( + + 92, MIN ( DISTINCT 17 ) + + 54 ) WHEN 43 + + 3 THEN 57 * 30 * - 8 WHEN - + 94 * - 23 THEN - + 30 / + - 88 / CAST ( 0 AS INTEGER ) END THEN + + ( + CAST ( + 63 AS INTEGER ) ) END * 86 + - COUNT ( * ) AS col0
 ----
@@ -51858,6 +51860,7 @@ NULL
 
 skipif mysql # not compatible
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query II rowsort label-5556
 SELECT DISTINCT - CASE + 10 WHEN - 70 THEN - 76 * + + 55 + + 28 / + 92 - + 3 * + CAST ( NULL AS INTEGER ) WHEN COUNT ( * ) THEN + 70 * + - 30 * - 3 * + ( + + 60 ) / - 0 + - + COUNT ( + + 30 ) + - - ( - + 33 ) * - 56 END * 92 * + 44 + - - COUNT ( * ) col1, - 23 + 2
 ----
@@ -71996,6 +71999,7 @@ SELECT DISTINCT - NULLIF ( 20, + AVG ( ALL 29 ) + ( COUNT( * ) + ( - 60 ) ) ) DI
 96
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-7755
 SELECT DISTINCT - NULLIF ( 20, + AVG ( ALL 29 ) + ( COUNT ( * ) + ( - 60 ) ) ) / - 14 + + 95 col0
 ----
@@ -87544,6 +87548,7 @@ SELECT 34 - 83 + + 36 - - - NULLIF ( - COUNT( * ), + AVG ( - - ( + ( 9 ) ) ) * -
 -13
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-9418
 SELECT 34 - 83 + + 36 - - - NULLIF ( - COUNT ( * ), + AVG ( - - ( + ( 9 ) ) ) * - 58 + - 46 + - - 60 ) * + 28 / 78 * 52
 ----

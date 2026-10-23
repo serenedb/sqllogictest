@@ -144,6 +144,7 @@ skipif mysql # empty RHS
 skipif mssql # empty RHS
 skipif oracle # empty RHS
 skipif postgres # PostgreSQL has no empty IN list
+skipif serenedb # NULL NOT IN () is NULL, not true: serenedb/serenedb#1904
 query I nosort
 SELECT 1 FROM t1 WHERE NULL NOT IN ()
 ----

@@ -31946,6 +31946,7 @@ SELECT 57 + 86 / - 37 AS col0 FROM tab1 AS cor0
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort
 SELECT col2 col2 FROM tab1 AS cor0 WHERE NULL < ( 38 ) / - 0
 ----

@@ -67,6 +67,7 @@ CREATE TEMPORARY VIEW view3 AS SELECT x FROM t1 WHERE x>0
 
 skipif mssql  # this is allowed
 skipif postgres # PostgreSQL updates a simple view
+skipif serenedb # cannot update a view: serenedb/serenedb#1901
 statement error
 DELETE FROM view1 WHERE x>0
 
@@ -79,6 +80,7 @@ INSERT INTO view1 VALUES(2,'unknown')
 
 skipif mssql  # this is allowed
 skipif postgres # PostgreSQL updates a simple view
+skipif serenedb # cannot update a view: serenedb/serenedb#1901
 statement error
 UPDATE view1 SET x=2
 

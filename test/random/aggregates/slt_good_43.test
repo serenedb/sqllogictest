@@ -43028,6 +43028,7 @@ SELECT DISTINCT col0, - col1 * - + col1 FROM tab2
 
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query II rowsort
 SELECT ALL col2 * + + 68 AS col2, - 37 / - 0 AS col2 FROM tab2 WHERE NOT NULL > + col0 OR NULL = ( NULL )
 ----

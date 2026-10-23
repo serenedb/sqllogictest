@@ -56715,6 +56715,7 @@ SELECT - 23 DIV + COALESCE ( + + 79, + 4, - 75 + - AVG ( + 40 ) + - 48 + + 5 ) +
 62
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-6049
 SELECT - 23 / + COALESCE ( + + 79, + 4, - 75 + - AVG ( + 40 ) + - 48 + + 5 ) + 62
 ----

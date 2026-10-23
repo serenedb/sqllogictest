@@ -31828,6 +31828,7 @@ SELECT + ( - ( + 40 ) ) DIV + COALESCE ( COUNT( * ), + + 98, + CAST( NULL AS SIG
 -40
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-3975
 SELECT + ( - ( + 40 ) ) / + COALESCE ( COUNT ( * ), + + 98, + CAST ( NULL AS INTEGER ) * - 95 / + ( + 19 ) + - MIN ( 26 ) * 27 * + 64 + + AVG ( ALL - 26 ) )
 ----
@@ -61832,6 +61833,7 @@ SELECT - COALESCE ( - 19, - - 26 * - ( + - AVG ( DISTINCT + + 4 ) ) ) DIV - - 74
 0
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-7629
 SELECT - COALESCE ( - 19, - - 26 * - ( + - AVG ( DISTINCT + + 4 ) ) ) / - - 74 AS col1
 ----
@@ -73543,6 +73545,7 @@ SELECT ALL + ( + COUNT( ALL 24 ) ) * - CASE - 33 WHEN + + CAST( + - 95 AS SIGNED
 0
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-9000
 SELECT ALL + ( + COUNT ( ALL 24 ) ) * - CASE - 33 WHEN + + CAST ( + - 95 AS INTEGER ) THEN + 77 * 36 + - AVG ( + 89 ) * 78 ELSE 76 / - 51 END / + 26 AS col2
 ----
@@ -74444,6 +74447,7 @@ SELECT ALL NULLIF ( + 56, + COALESCE ( 59, 38 + + 91 - + COALESCE ( + + 29, + 80
 2
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-9110
 SELECT ALL NULLIF ( + 56, + COALESCE ( 59, 38 + + 91 - + COALESCE ( + + 29, + 80 ) * + AVG ( DISTINCT - 77 ) ) / + COUNT ( * ) + - 88 ) / 51 + COUNT ( * ) AS col1
 ----
@@ -75398,6 +75402,7 @@ SELECT DISTINCT + COALESCE ( - - COALESCE ( - 44, 14 ), - AVG ( ALL + 71 ) * 50 
 -1
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-9220
 SELECT DISTINCT + COALESCE ( - - COALESCE ( - 44, 14 ), - AVG ( ALL + 71 ) * 50 * + - 6 + - 66 ) / + NULLIF ( + 27, - NULLIF ( - 80, 14 + - 70 ) / - CAST ( + 71 AS INTEGER ) + - 18 * 96 )
 ----

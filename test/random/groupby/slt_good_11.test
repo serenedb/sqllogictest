@@ -2566,6 +2566,7 @@ query I rowsort
 SELECT ALL - col2 FROM tab2 GROUP BY col1, col2 HAVING NULL NOT BETWEEN - col2 AND NULL
 ----
 
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort
 SELECT ALL - AVG ( - col1 ) AS col2, col1 AS col2 FROM tab2 GROUP BY col1
 ----

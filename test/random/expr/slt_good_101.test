@@ -27472,6 +27472,7 @@ SELECT ALL 18 DIV + 41 * + + NULLIF ( - + 24, + - 73 + + 86 DIV - + 79 DIV 16 + 
 0
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-2911
 SELECT ALL 18 / + 41 * + + NULLIF ( - + 24, + - 73 + + 86 / - + 79 / 16 + CAST ( NULL AS REAL ) - + - 46 / + COUNT ( * ) ) AS col2
 ----
@@ -30120,6 +30121,7 @@ SELECT ALL 16 + - NULLIF ( - 77, CASE - COUNT( * ) WHEN + COUNT( * ) THEN + COUN
 89
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-3178
 SELECT ALL 16 + - NULLIF ( - 77, CASE - COUNT ( * ) WHEN + COUNT ( * ) THEN + COUNT ( * ) / + CASE - COUNT ( * ) WHEN - 28 * + ( ( + ( - + 6 ) ) ) / 29 * + 84 + + 93 + + + 14 + 58 + 13 / + 39 * 28 + + + 83 - - 12 * - 7 - - 11 THEN NULL ELSE 38 * + 28 END / - AVG ( - - 83 ) - - - 41 + - - 91 + - ( - 4 ) ELSE + + ( + 90 ) END ) * - 40 / - ( - - COUNT ( * ) ) AS col0, + COUNT ( * ) + + 88 AS col0
 ----
@@ -44452,6 +44454,7 @@ SELECT 5, + MAX( + NULLIF ( 49, + - CAST( NULL AS DECIMAL ) DIV - 71 ) ) DIV + N
 -2
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query II rowsort label-4713
 SELECT 5, + MAX ( + NULLIF ( 49, + - CAST ( NULL AS REAL ) / - 71 ) ) / + NULLIF ( - + 19, + + 60 * + COUNT ( ALL - 28 ) * - - 35 * - 91 * - - 40 / - 95 + + 24 ) col2
 ----
@@ -63245,6 +63248,7 @@ SELECT 1 DIV CASE - COUNT( * ) WHEN 60 * 72 * - + 40 THEN 96 WHEN 86 THEN COALES
 0
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-6701
 SELECT 1 / CASE - COUNT ( * ) WHEN 60 * 72 * - + 40 THEN 96 WHEN 86 THEN COALESCE ( - 3, AVG ( 25 ), + 54 / COUNT ( * ) ) * ( 97 ) ELSE 12 END
 ----
@@ -82245,6 +82249,7 @@ SELECT - 93 + - COALESCE ( ( + ( + COUNT( * ) ) ), - - AVG ( + ( + 73 ) ) + 91 )
 74
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-8767
 SELECT - 93 + - COALESCE ( ( + ( + COUNT ( * ) ) ), - - AVG ( + ( + 73 ) ) + 91 ) / NULLIF ( + 67, - ( 28 ) / + + 11 ), 74 AS col2
 ----
@@ -82858,6 +82863,7 @@ SELECT - NULLIF ( 82, - AVG ( DISTINCT - 95 ) ) DIV COUNT( * ) AS col0
 -82
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-8829
 SELECT - NULLIF ( 82, - AVG ( DISTINCT - 95 ) ) / COUNT ( * ) AS col0
 ----

@@ -2698,6 +2698,7 @@ SELECT COUNT ( - 93 ) + + 27 FROM tab2
 
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort
 SELECT DISTINCT + + col0 * + + col1 / + + 66 FROM tab0 WHERE NULL = + col0 + - 85 / 0
 ----
@@ -8188,6 +8189,7 @@ SELECT ALL + col2 * + - col1 FROM tab1 cor0
 -295
 -3196
 
+skipif serenedb # raises in an expression PostgreSQL does not evaluate: serenedb/serenedb#1899
 query III rowsort
 SELECT * FROM tab2 AS cor0 WHERE NOT + ( + 44 ) NOT BETWEEN + + col2 / - 0 AND NULL
 ----

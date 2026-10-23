@@ -15071,6 +15071,7 @@ SELECT + col1 col2, col1 FROM tab1 GROUP BY col1
 6
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort
 SELECT ALL - AVG ( + + col1 ) * col1 col2, col1 AS col2 FROM tab1 GROUP BY col1
 ----
@@ -28207,6 +28208,7 @@ SELECT + col0 DIV NULLIF ( 43, + + AVG ( ALL + col1 ) ) FROM tab0 AS cor0 GROUP 
 1
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-3803
 SELECT + col0 / NULLIF ( 43, + + AVG ( ALL + col1 ) ) FROM tab0 AS cor0 GROUP BY col0
 ----
@@ -39526,6 +39528,7 @@ SELECT + 84 * - - 60 + NULLIF ( + 82, + 29 * - 51 + - + SUM( ALL + COALESCE ( - 
 5053
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-5171
 SELECT + 84 * - - 60 + NULLIF ( + 82, + 29 * - 51 + - + SUM ( ALL + COALESCE ( - CASE - 11 WHEN + col2 * - + col0 THEN + 16 END, + col0 * col0 ) ) * + CAST ( NULL AS REAL ) + col1 * col1 ) / + col1 FROM tab1 GROUP BY col1
 ----
@@ -49226,6 +49229,7 @@ SELECT DISTINCT COUNT( * ) + + AVG ( ALL 54 ) AS col2, + 72 * + col1 AS col2 FRO
 432
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-6162
 SELECT DISTINCT COUNT ( * ) + + AVG ( ALL 54 ) AS col2, + 72 * + col1 AS col2 FROM tab1 GROUP BY col0, col1
 ----
@@ -63249,6 +63253,7 @@ SELECT ALL + col2 col2, 55 AS col0 FROM tab0 AS cor0 GROUP BY col2
 79
 55
 
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort
 SELECT - + 11 + AVG ( + - 41 ) - 45 AS col0, - 69 + + 44 AS col0 FROM tab1 AS cor0 GROUP BY col1, col2
 ----

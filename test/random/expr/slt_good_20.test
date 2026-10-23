@@ -3983,6 +3983,7 @@ NULL
 
 skipif mysql # not compatible
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort label-410
 SELECT DISTINCT 78 / - COALESCE ( 0, - + ( 73 ) + + CAST ( NULL AS INTEGER ) ) * 91 * - CAST ( NULL AS INTEGER ) * - ( - 62 ) AS col2
 ----
@@ -23249,6 +23250,7 @@ SELECT COALESCE ( - 68, + + AVG ( - + 63 ) ) DIV + 85 AS col1
 0
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-2492
 SELECT COALESCE ( - 68, + + AVG ( - + 63 ) ) / + 85 AS col1
 ----
@@ -33986,6 +33988,7 @@ SELECT DISTINCT + NULLIF ( + 74, - + 46 + - CAST( - + 39 AS DECIMAL ) + + 57 ) D
 -1
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-3637
 SELECT DISTINCT + NULLIF ( + 74, - + 46 + - CAST ( - + 39 AS REAL ) + + 57 ) / - SUM ( + ( - + 6 ) ) + + + COALESCE ( + - 99, COUNT ( * ) ) + + 32 + 54 AS col0
 ----
@@ -35388,6 +35391,7 @@ SELECT - COALESCE ( + 9, + 4 + NULLIF ( - - 0, - + CAST( 4 AS DECIMAL ) + - ( - 
 -5328
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-3793
 SELECT - COALESCE ( + 9, + 4 + NULLIF ( - - 0, - + CAST ( 4 AS REAL ) + - ( - 97 ) ) ) / 94 - - 18 + + 54 * - 99
 ----
@@ -56156,6 +56160,7 @@ SELECT - + NULLIF ( - 39, + 3 * + + MAX( ALL NULLIF ( - CAST( NULL AS DECIMAL ),
 0
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-6011
 SELECT - + NULLIF ( - 39, + 3 * + + MAX ( ALL NULLIF ( - CAST ( NULL AS REAL ), + 3 ) ) + 25 ) / 77 AS col0
 ----
@@ -67538,6 +67543,7 @@ SELECT ALL + 3 + + - ( - SUM( - CAST( + - 88 AS SIGNED ) ) ) DIV NULLIF ( - 71, 
 1931
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-7224
 SELECT ALL + 3 + + - ( - SUM ( - CAST ( + - 88 AS INTEGER ) ) ) / NULLIF ( - 71, + + 55 * COALESCE ( - - ( 93 ), - + 21, AVG ( DISTINCT 84 ) ) * - CAST ( NULL AS REAL ) + - 95 ) * - 41 * + + MAX ( 46 ) + + ( 93 ) - + MAX ( + 51 ) AS col1
 ----

@@ -54274,6 +54274,7 @@ NULL
 
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort
 SELECT ALL + 28 FROM tab1 WHERE NULL BETWEEN ( 58 / - 0 + - col2 ) AND NULL
 ----

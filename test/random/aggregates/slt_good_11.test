@@ -9442,6 +9442,7 @@ SELECT - 69 FROM tab0 WHERE + - col1 NOT IN ( - + col1, CAST( + col0 AS SIGNED )
 ----
 
 skipif mysql # not compatible
+skipif serenedb # raises in an expression PostgreSQL does not evaluate: serenedb/serenedb#1899
 query I rowsort label-1028
 SELECT - 69 FROM tab0 WHERE + - col1 NOT IN ( - + col1, CAST ( + col0 AS INTEGER ), + + ( + + col1 ) / + - 0 * + col0 )
 ----
@@ -38391,6 +38392,7 @@ SELECT DISTINCT - ( - + 95 ) + - COUNT( * ) AS col0 FROM tab1 WHERE NOT + col1 /
 skipif mysql # not compatible
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort label-4186
 SELECT DISTINCT - ( - + 95 ) + - COUNT ( * ) AS col0 FROM tab1 WHERE NOT + col1 / - 26 * col0 + 58 / + 0 / - col2 - + col1 < NULL
 ----

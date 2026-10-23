@@ -32698,6 +32698,7 @@ SELECT col0 / col1 AS col2, + 78 * 68 / - 0 AS col2 FROM tab1 AS cor0 WHERE NOT 
 skipif mysql # not compatible
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query II rowsort label-3594
 SELECT col0 / col1 AS col2, + 78 * 68 / - 0 AS col2 FROM tab1 AS cor0 WHERE NOT NULL > + col2 + CAST ( NULL AS INTEGER )
 ----

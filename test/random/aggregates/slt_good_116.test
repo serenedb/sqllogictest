@@ -12651,6 +12651,7 @@ SELECT + MAX ( col1 ) col2 FROM tab1 AS cor0
 ----
 47
 
+skipif serenedb # raises in an expression PostgreSQL does not evaluate: serenedb/serenedb#1899
 query III rowsort
 SELECT ALL * FROM tab2 WHERE NOT col2 + col0 * - col2 NOT BETWEEN ( col0 / - ( - col1 / + 98 ) ) AND NULL
 ----

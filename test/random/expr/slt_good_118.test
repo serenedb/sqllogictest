@@ -50610,6 +50610,7 @@ SELECT DISTINCT COUNT( * ) * - ( - 34 ) DIV + + 46 * + MIN( ALL + 56 ) * + + COA
 -143
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-5401
 SELECT DISTINCT COUNT ( * ) * - ( - 34 ) / + + 46 * + MIN ( ALL + 56 ) * + + COALESCE ( - 23, 95 * 99 * - ( + CAST ( NULL AS INTEGER ) ) * + 58 * NULLIF ( + 20, + + AVG ( 71 ) / - 58 ) + 39 * COUNT ( * ), - - 72 * - + 68 * - 20 + - ( - 71 ) ) / 1 + + - 74 - + 69 col1
 ----
@@ -58033,6 +58034,7 @@ SELECT + 40 DIV COALESCE ( - + 7, + AVG ( ALL + 56 ) ) - ( 96 ) * - - 10
 -965
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-6177
 SELECT + 40 / COALESCE ( - + 7, + AVG ( ALL + 56 ) ) - ( 96 ) * - - 10
 ----
@@ -73626,6 +73628,7 @@ NULL
 
 skipif mysql # not compatible
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort label-7834
 SELECT ALL 12 / + + 0 * - MAX ( + CASE - 75 WHEN ( 44 ) * - 15 - - ( - + 55 ) * 89 THEN 45 WHEN 67 THEN NULL ELSE NULL END ) + 39 * - 69 AS col2
 ----
@@ -74393,6 +74396,7 @@ SELECT + COUNT( * ) DIV ( + NULLIF ( 11, - ( - 85 ) + - - 35 + + 2 + + 82 * - - 
 0
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-7918
 SELECT + COUNT ( * ) / ( + NULLIF ( 11, - ( - 85 ) + - - 35 + + 2 + + 82 * - - 16 + - + COALESCE ( + - 93, + + CAST ( - ( - 16 ) AS REAL ) ) ) )
 ----
@@ -74562,6 +74566,7 @@ SELECT ALL CASE - + COUNT( * ) WHEN - + 79 THEN NULL ELSE + + COALESCE ( 5, - 51
 0
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-7936
 SELECT ALL CASE - + COUNT ( * ) WHEN - + 79 THEN NULL ELSE + + COALESCE ( 5, - 51, + COALESCE ( + 37, 62 * - 45 + - + 81 + + AVG ( ALL - 68 ) ), + + AVG ( DISTINCT 50 ) ) / - 55 END
 ----

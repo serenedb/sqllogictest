@@ -76263,6 +76263,7 @@ SELECT * FROM tab1 AS cor0 WHERE NOT ( - 93 ) >= ( col1 )
 ----
 9 values hashing to c6c0a4111b36d04dbc811a11e4d54cad
 
+skipif serenedb # raises in an expression PostgreSQL does not evaluate: serenedb/serenedb#1899
 query I rowsort
 SELECT + col2 FROM tab1 AS cor0 WHERE NOT col0 NOT BETWEEN NULL AND col0 / + ( 0 )
 ----

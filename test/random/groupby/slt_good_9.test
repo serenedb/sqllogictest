@@ -8281,6 +8281,7 @@ SELECT col2 + + col2 FROM tab0 GROUP BY col2
 48
 76
 
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort
 SELECT DISTINCT + - AVG ( ALL - - col2 ) AS col1, col2 AS col1 FROM tab0 AS cor0 GROUP BY col2
 ----
@@ -20391,6 +20392,7 @@ query I rowsort
 SELECT + col0 / - col0 AS col0 FROM tab0 AS cor0 WHERE + col2 IS NULL GROUP BY col0 HAVING NOT ( NULL ) IS NOT NULL
 ----
 
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort
 SELECT - + AVG ( ALL - col0 ) AS col1, - col0 AS col1 FROM tab2 AS cor0 GROUP BY col0
 ----
@@ -38123,6 +38125,7 @@ SELECT - col2 - - + col0 FROM tab0 GROUP BY col0, col2
 19
 45
 
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query III rowsort
 SELECT ALL col2 AS col1, - AVG ( - col2 ) AS col1, - col2 AS col1 FROM tab0 AS cor0 GROUP BY col2
 ----

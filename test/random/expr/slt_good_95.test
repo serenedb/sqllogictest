@@ -27914,6 +27914,7 @@ SELECT + ( - 11 ) * 36 * + COALESCE ( + - ( 18 ), 81 * 58 + - COALESCE ( - 0, - 
 312859
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-2984
 SELECT + ( - 11 ) * 36 * + COALESCE ( + - ( 18 ), 81 * 58 + - COALESCE ( - 0, - CAST ( - 81 AS INTEGER ), 1 + - 21, - 69 ) ) * 44 + - COALESCE ( 67 + - 21 * + 40, + NULLIF ( 78, AVG ( DISTINCT - 7 ) + - COUNT ( * ) * - 5 ) ) / - COUNT ( * )
 ----
@@ -40615,6 +40616,7 @@ SELECT + NULLIF ( 95, - + 92 ) + + 14 + - MIN( DISTINCT 74 ) + 24 DIV - CASE 95 
 35
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-4329
 SELECT + NULLIF ( 95, - + 92 ) + + 14 + - MIN ( DISTINCT 74 ) + 24 / - CASE 95 WHEN + + 29 THEN + COALESCE ( - + 36, + + AVG ( DISTINCT + 29 ) * 82 ) * CAST ( - 78 AS INTEGER ) + MAX ( ALL - 41 ) + 39 * CAST ( NULL AS INTEGER ) * - - CASE + CASE ( + 24 ) WHEN - - 46 THEN NULL WHEN - CAST ( - - 99 AS INTEGER ) THEN + - 75 + + 49 + - 48 + - 64 END WHEN + 76 - + + 33 / + 13 + - + 70 THEN - 35 / 88 ELSE NULL END * - 27 * - - 60 WHEN + - 47 THEN NULL ELSE - 80 END * - + 96 AS col0
 ----
@@ -57376,6 +57378,7 @@ SELECT 22 - - + 51 + - + 50 * - COUNT( * ) AS col1, ( + COUNT( * ) ) DIV + + NUL
 0
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query II rowsort label-6113
 SELECT 22 - - + 51 + - + 50 * - COUNT ( * ) AS col1, ( + COUNT ( * ) ) / + + NULLIF ( 44, + AVG ( - 61 ) ) AS col0
 ----
@@ -77612,6 +77615,7 @@ SELECT - NULLIF ( - - NULLIF ( + - 70, - + ( 61 ) ), - - CAST( 56 AS SIGNED ) + 
 1
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-8301
 SELECT - NULLIF ( - - NULLIF ( + - 70, - + ( 61 ) ), - - CAST ( 56 AS INTEGER ) + - CASE - COUNT ( * ) WHEN + 88 THEN + ( - - AVG ( + 59 ) ) * - 57 * - + 48 + - 10 WHEN - 92 * + ( 70 * 62 ) THEN NULL END ) / 42
 ----

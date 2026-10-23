@@ -7462,6 +7462,7 @@ SELECT DISTINCT + 42 DIV ( + CASE - 25 WHEN + 5 * 36 THEN - 7 + + AVG ( ALL - + 
 -42
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-795
 SELECT DISTINCT + 42 / ( + CASE - 25 WHEN + 5 * 36 THEN - 7 + + AVG ( ALL - + 80 ) ELSE - COUNT ( * ) END )
 ----
@@ -19538,6 +19539,7 @@ SELECT ALL - 50 DIV COALESCE ( + COUNT( DISTINCT - 81 ), + - 96, - ( COUNT( * ) 
 -1925
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-2141
 SELECT ALL - 50 / COALESCE ( + COUNT ( DISTINCT - 81 ), + - 96, - ( COUNT ( * ) ) * - 18 + AVG ( ALL + 91 ) ) - + 53 + - 34 * 56 + + COUNT ( * ) * 82
 ----
@@ -25367,6 +25369,7 @@ SELECT DISTINCT - ( + 38 ) * + 63 DIV + + ( - COALESCE ( COUNT( * ), - - AVG ( A
 2394
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-2785
 SELECT DISTINCT - ( + 38 ) * + 63 / + + ( - COALESCE ( COUNT ( * ), - - AVG ( ALL + 28 ) ) ) AS col0
 ----
@@ -27988,6 +27991,7 @@ SELECT DISTINCT - 11 * - + ( CASE CASE + 13 WHEN + 27 * 78 THEN - 91 + - 29 WHEN
 
 skipif mysql # not compatible
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort label-3083
 SELECT DISTINCT - 11 * - + ( CASE CASE + 13 WHEN + 27 * 78 THEN - 91 + - 29 WHEN 60 THEN + 1 * 72 END WHEN 3 * - COUNT ( * ) THEN NULL WHEN 58 THEN NULL WHEN - 83 / - 0 THEN NULL ELSE 88 END ) * COUNT ( * ) - 60
 ----
@@ -29559,6 +29563,7 @@ SELECT ALL 65 DIV 89 * COALESCE ( - 43, 2 + 56 + + AVG ( ALL - + 29 ) * - 88 - 1
 78
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-3256
 SELECT ALL 65 / 89 * COALESCE ( - 43, 2 + 56 + + AVG ( ALL - + 29 ) * - 88 - 10 * - 57 / 15 ) / + 48 + + 78 AS col1
 ----
@@ -30193,6 +30198,7 @@ SELECT ALL 49 AS col2, NULLIF ( + + 31, + ( + AVG ( - 3 ) ) ) DIV - - 41 + + 6 +
 37
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query II rowsort label-3329
 SELECT ALL 49 AS col2, NULLIF ( + + 31, + ( + AVG ( - 3 ) ) ) / - - 41 + + 6 + - - 31
 ----
@@ -30435,6 +30441,7 @@ SELECT - - 69 DIV - COALESCE ( - 14, + 45 * 38 * ( + 88 ) + + - 23 * + + COALESC
 -6860
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-3355
 SELECT - - 69 / - COALESCE ( - 14, + 45 * 38 * ( + 88 ) + + - 23 * + + COALESCE ( - 98, 43 * 96, + 41 * AVG ( ALL - 88 / 49 ), - ( 79 ) + 73 ) ) + 88 * - 78 AS col2
 ----
@@ -45437,6 +45444,7 @@ SELECT ALL 14 DIV - CASE - 60 WHEN + 58 THEN - AVG ( DISTINCT + + 51 ) ELSE 29 E
 23
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-5003
 SELECT ALL 14 / - CASE - 60 WHEN + 58 THEN - AVG ( DISTINCT + + 51 ) ELSE 29 END + + 23 AS col1
 ----
@@ -52174,6 +52182,7 @@ SELECT DISTINCT - COUNT( * ) - + + 18 * - - 42 + - - 99 - ( 43 ) DIV COALESCE ( 
 -658
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-5752
 SELECT DISTINCT - COUNT ( * ) - + + 18 * - - 42 + - - 99 - ( 43 ) / COALESCE ( + + 52, 73 + + - NULLIF ( + ( + NULLIF ( - COUNT ( * ), - CAST ( NULL AS INTEGER ) * - + 76 * - 92 ) ), + 27 / + + 32 * - AVG ( - + 95 ) + - - 50 * + 13 * - 66 + CAST ( NULL AS INTEGER ) + - 41 ) ) * 84 AS col1
 ----
@@ -87913,6 +87922,7 @@ SELECT - MAX( ALL + 37 ) + + 27 * COUNT( * ) DIV + COALESCE ( + 26, - AVG ( ALL 
 -36
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-9669
 SELECT - MAX ( ALL + 37 ) + + 27 * COUNT ( * ) / + COALESCE ( + 26, - AVG ( ALL + - 51 ) ) AS col1
 ----

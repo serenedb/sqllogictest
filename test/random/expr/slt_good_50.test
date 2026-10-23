@@ -10481,6 +10481,7 @@ SELECT - 26 - + ( + - 61 ) DIV CASE 70 WHEN COUNT( * ) THEN - + CASE - - 56 WHEN
 -29
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-1119
 SELECT - 26 - + ( + - 61 ) / CASE 70 WHEN COUNT ( * ) THEN - + CASE - - 56 WHEN CAST ( 1 AS INTEGER ) / - + 26 + + 31 + COUNT ( * ) THEN NULL ELSE + 19 * 35 + - AVG ( 6 ) END + - 78 WHEN ( - 98 ) * + 27 + 91 * 77 THEN NULL ELSE + 20 - + 40 END AS col2
 ----
@@ -15843,6 +15844,7 @@ SELECT + + 71 DIV + COALESCE ( + NULLIF ( - + 74, - 2 - + 71 + - COALESCE ( - CA
 0
 
 skipif mysql # not compatible
+skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-1701
 SELECT + + 71 / + COALESCE ( + NULLIF ( - + 74, - 2 - + 71 + - COALESCE ( - CAST ( NULL AS INTEGER ), - CAST ( + - 35 AS REAL ) + 92 + - + 41 - + 16 * - 28 ) ), - - 7 / + 62, - 33 )
 ----
@@ -34064,6 +34066,7 @@ NULL
 
 skipif mysql # not compatible
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query II rowsort label-3676
 SELECT DISTINCT + 10 AS col2, - 79 + 23 - + COUNT ( * ) + 35 / + 0 * CAST ( NULL AS INTEGER )
 ----
@@ -62557,6 +62560,7 @@ NULL
 
 skipif mysql # not compatible
 skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # returns a result where PostgreSQL's constant folding raises: serenedb/serenedb#1899
 query I rowsort label-6735
 SELECT 62 / - COALESCE ( - 0, 85 + - 99 + COUNT ( * ), + 82 * + NULLIF ( + CAST ( NULL AS INTEGER ), + 3 / - 74 / - 31 + - 67 * + 45 ) ) * CAST ( NULL AS REAL )
 ----
@@ -76344,6 +76348,7 @@ SELECT - - COALESCE ( MIN( DISTINCT + 1 ), 37 + + - 38 + - AVG ( 78 ) * 10, + 95
 NULL
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-8230
 SELECT - - COALESCE ( MIN ( DISTINCT + 1 ), 37 + + - 38 + - AVG ( 78 ) * 10, + 95 ) / + 78, - 98 + + 80 + + + CAST ( NULL AS REAL ) * - 65 / COUNT ( * ) AS col1
 ----
