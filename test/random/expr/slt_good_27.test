@@ -60182,6 +60182,7 @@ SELECT DISTINCT + 31 + + NULLIF ( - CAST( NULL AS DECIMAL ), - + 93 + - 22 / CAS
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-6654
 SELECT DISTINCT + 31 + + NULLIF ( - CAST ( NULL AS REAL ), - + 93 + - 22 / CASE COUNT ( * ) WHEN - NULLIF ( + 11, - 22 * 52 + 20 / + COALESCE ( - COALESCE ( 0, - 31 / 65 ), - 8 ) ) THEN - COUNT ( * ) ELSE NULL END ) AS col1
 ----
@@ -62896,6 +62897,7 @@ SELECT ALL - CASE COUNT( DISTINCT + 2 ) WHEN + 13 THEN - 79 * - 91 * - 73 * 67 *
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query I rowsort label-6951
 SELECT ALL - CASE COUNT ( DISTINCT + 2 ) WHEN + 13 THEN - 79 * - 91 * - 73 * 67 * 94 + - + CAST ( NULL AS INTEGER ) ELSE NULL END * - - 69 + + 39 + - COUNT ( DISTINCT 8 )
 ----
@@ -90778,6 +90780,7 @@ SELECT - - COALESCE ( + + COALESCE ( + + COUNT( * ), - - 40 DIV - ( + - NULLIF (
 -38
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-9987
 SELECT - - COALESCE ( + + COALESCE ( + + COUNT ( * ), - - 40 / - ( + - NULLIF ( ( + 0 ), 63 ) ) * - 55 ), 50 + MAX ( DISTINCT + 45 ), - - 19 ) * - 38 AS col0
 ----

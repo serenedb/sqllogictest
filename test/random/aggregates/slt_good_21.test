@@ -477,6 +477,8 @@ SELECT DISTINCT + AVG ( - col2 ) / + CAST ( NULL AS INTEGER ) AS col1 FROM tab1
 NULL
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort
 SELECT DISTINCT + 33 + col1 col0 FROM tab0 WHERE NOT 35 / 0 = ( NULL )
 ----

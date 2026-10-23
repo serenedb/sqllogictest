@@ -1186,6 +1186,7 @@ NULL
 -1
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query II rowsort label-125
 SELECT CASE - + 74 WHEN - 19 * + COUNT ( * ) * ( + + 1 ) + 85 - + + ( - 1 ) THEN 80 / - CAST ( 0 AS INTEGER ) END * - 69 * + - AVG ( 66 ) + 46 AS col2, ( - COUNT ( * ) ) AS col0
 ----

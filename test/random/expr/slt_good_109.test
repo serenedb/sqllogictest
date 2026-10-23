@@ -27987,6 +27987,7 @@ SELECT DISTINCT - 11 * - + ( CASE CASE + 13 WHEN + 27 * 78 THEN - 91 + - 29 WHEN
 908
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-3083
 SELECT DISTINCT - 11 * - + ( CASE CASE + 13 WHEN + 27 * 78 THEN - 91 + - 29 WHEN 60 THEN + 1 * 72 END WHEN 3 * - COUNT ( * ) THEN NULL WHEN 58 THEN NULL WHEN - 83 / - 0 THEN NULL ELSE 88 END ) * COUNT ( * ) - 60
 ----

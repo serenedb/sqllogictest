@@ -38669,6 +38669,7 @@ SELECT ALL + 37 * + CASE + + 19 WHEN - COUNT( * ) THEN 30 DIV + ( CASE + 89 WHEN
 2997
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-4225
 SELECT ALL + 37 * + CASE + + 19 WHEN - COUNT ( * ) THEN 30 / + ( CASE + 89 WHEN COUNT ( * ) THEN + 36 + + ( - - 44 ) - + 53 * + - 39 / 0 END ) + MAX ( DISTINCT + 53 ) WHEN + 0 + MIN ( 2 ) + + 85 * - 35 / MAX ( DISTINCT - - 50 ) THEN NULL ELSE + 81 END
 ----

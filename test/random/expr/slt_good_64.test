@@ -50467,6 +50467,7 @@ SELECT + 43 + + 57 - + 32 / - 0 * - CAST( NULL AS DECIMAL ) AS col1
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-5397
 SELECT + 43 + + 57 - + 32 / - 0 * - CAST ( NULL AS REAL ) AS col1
 ----

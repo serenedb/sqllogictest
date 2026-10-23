@@ -55711,6 +55711,8 @@ NULL
 
 skipif mysql # not compatible
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-6055
 SELECT ALL 8 / - COUNT ( * ) * MAX ( ALL 11 ) * MIN ( DISTINCT + col0 ) AS col2 FROM tab0 cor0 WHERE - col1 * + + col1 IN ( col0 )
 ----

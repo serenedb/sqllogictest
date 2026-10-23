@@ -25622,6 +25622,7 @@ SELECT + - CASE + ( - - 51 ) WHEN - 64 + - COUNT( * ) - - COUNT( * ) THEN - 19 *
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-2745
 SELECT + - CASE + ( - - 51 ) WHEN - 64 + - COUNT ( * ) - - COUNT ( * ) THEN - 19 * - 72 / - 0 * + 58 * + - 78 * - 62 - - COUNT ( * ) * - COUNT ( - 1 ) END AS col0
 ----

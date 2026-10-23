@@ -1081,6 +1081,8 @@ SELECT ALL - ( + 0 ) * - 48 + - 49 + + + col1 * + 27 * - - ( - 93 ) * - + 49 * -
 
 skipif mysql # not compatible
 skipif postgresql # PostgreSQL does not promote INTEGER (32-bit) results
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query I rowsort label-110
 SELECT ALL - ( + 0 ) * - 48 + - 49 + + + col1 * + 27 * - - ( - 93 ) * - + 49 * - 87 * + col0 / - + col0 AS col1 FROM tab1 AS cor0
 ----

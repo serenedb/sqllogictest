@@ -17444,6 +17444,8 @@ SELECT - 20 * 35 * - 85 * - - 34 * + - 14 * - 78 / - 61 + - 68 + + 62 + + 60 * C
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query I rowsort label-1856
 SELECT - 20 * 35 * - 85 * - - 34 * + - 14 * - 78 / - 61 + - 68 + + 62 + + 60 * COUNT ( DISTINCT 41 ) + MIN ( 5 ) * + ( - - 1 ) + 18 * - CASE CAST ( - - 12 AS INTEGER ) WHEN + 49 THEN - 48 WHEN CAST ( + COUNT ( * ) AS INTEGER ) THEN - 47 END
 ----
@@ -40251,6 +40253,7 @@ SELECT 73 + ( - + 85 ) AS col0, CASE - ( + + 50 ) WHEN 36 + + CASE - - NULLIF ( 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query II rowsort label-4310
 SELECT 73 + ( - + 85 ) AS col0, CASE - ( + + 50 ) WHEN 36 + + CASE - - NULLIF ( + + 92, MIN ( DISTINCT 17 ) + + 54 ) WHEN 43 + + 3 THEN 57 * 30 * - 8 WHEN - + 94 * - 23 THEN - + 30 / + - 88 / CAST ( 0 AS INTEGER ) END THEN + + ( + CAST ( + 63 AS INTEGER ) ) END * 86 + - COUNT ( * ) AS col0
 ----
@@ -51854,6 +51857,7 @@ NULL
 -21
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query II rowsort label-5556
 SELECT DISTINCT - CASE + 10 WHEN - 70 THEN - 76 * + + 55 + + 28 / + 92 - + 3 * + CAST ( NULL AS INTEGER ) WHEN COUNT ( * ) THEN + 70 * + - 30 * - 3 * + ( + + 60 ) / - 0 + - + COUNT ( + + 30 ) + - - ( - + 33 ) * - 56 END * 92 * + 44 + - - COUNT ( * ) col1, - 23 + 2
 ----

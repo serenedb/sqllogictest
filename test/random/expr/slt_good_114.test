@@ -80374,6 +80374,7 @@ SELECT ALL 42 / - 0 * - + CAST( NULL AS SIGNED ) - + COUNT( * ) + - 1 / + 88 * +
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-8609
 SELECT ALL 42 / - 0 * - + CAST ( NULL AS INTEGER ) - + COUNT ( * ) + - 1 / + 88 * + 95 * + 3 - - - 26 * 49 / + COUNT ( * )
 ----

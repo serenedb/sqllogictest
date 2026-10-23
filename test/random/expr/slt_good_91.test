@@ -31227,6 +31227,7 @@ SELECT CASE - + 38 WHEN + COUNT( * ) * COUNT( * ) + - CAST( NULL AS DECIMAL ) * 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query I rowsort label-3313
 SELECT CASE - + 38 WHEN + COUNT ( * ) * COUNT ( * ) + - CAST ( NULL AS REAL ) * - - 81 THEN NULL WHEN - + NULLIF ( + CASE - - 23 WHEN + - 38 THEN + COUNT ( * ) + - 9 END, + 70 + + CAST ( MIN ( DISTINCT + 83 ) AS INTEGER ) + - 81 * + - 27 * - 32 * - 83 * 57 * - 87 ) / 32 - + 27 THEN 54 + + 55 END
 ----
@@ -84507,6 +84508,7 @@ SELECT NULLIF ( - 99, + COUNT( * ) * - CASE + - 63 WHEN - NULLIF ( - COUNT( * ),
 -99
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-9016
 SELECT NULLIF ( - 99, + COUNT ( * ) * - CASE + - 63 WHEN - NULLIF ( - COUNT ( * ), + - 51 + + 18 ) THEN + 42 + + 81 + 92 / - 0 * + SUM ( 79 ) * - - AVG ( DISTINCT - 38 ) END * + 58 + 28 + - SUM ( ALL 74 - 19 * 43 ) * COUNT ( * ) )
 ----

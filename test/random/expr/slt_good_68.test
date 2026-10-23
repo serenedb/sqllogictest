@@ -11238,6 +11238,7 @@ SELECT DISTINCT + - COALESCE ( - COUNT( * ), 8 DIV + 0 ) + + ( 8 ) * - 40 AS col
 -319
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-1205
 SELECT DISTINCT + - COALESCE ( - COUNT ( * ), 8 / + 0 ) + + ( 8 ) * - 40 AS col2
 ----

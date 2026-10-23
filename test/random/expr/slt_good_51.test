@@ -68631,6 +68631,7 @@ SELECT + CASE 82 WHEN COUNT( DISTINCT 26 ) * - 32 THEN + 86 + 87 * - 56 * + + 20
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query I rowsort label-7351
 SELECT + CASE 82 WHEN COUNT ( DISTINCT 26 ) * - 32 THEN + 86 + 87 * - 56 * + + 20 * + 79 * 22 * - + 57 ELSE NULL END
 ----

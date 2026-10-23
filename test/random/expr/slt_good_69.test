@@ -2623,6 +2623,7 @@ SELECT - 65 * - 31 / + 0 / + 33 / + CASE WHEN ( 55 > NULL ) THEN + 32 END - 22 +
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-276
 SELECT - 65 * - 31 / + 0 / + 33 / + CASE WHEN ( 55 > NULL ) THEN + 32 END - 22 + CAST ( NULL AS REAL )
 ----
@@ -35796,6 +35797,7 @@ SELECT ALL + CASE WHEN NOT NULL <> NULL THEN 91 WHEN NOT ( NOT + SUM( ALL 79 ) =
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-3826
 SELECT ALL + CASE WHEN NOT NULL <> NULL THEN 91 WHEN NOT ( NOT + SUM ( ALL 79 ) = - + 60 ) THEN - 64 / 0 + - 83 - 46 END
 ----

@@ -85,6 +85,8 @@ SELECT count(*) FROM t1 WHERE x=4
 # occurrence is ignored.
 
 skipif mssql
+skipif postgres # PostgreSQL does not assign a column twice in one UPDATE
+skipif serenedb # PostgreSQL does not assign a column twice in one UPDATE
 statement ok
 UPDATE t1 SET x=3, x=4, x=5
 

@@ -15844,6 +15844,8 @@ SELECT 57 * - - 12 * + + 83 + - 74 + - + CASE + ( COUNT( * ) ) WHEN + 60 THEN + 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-1670
 SELECT 57 * - - 12 * + + 83 + - 74 + - + CASE + ( COUNT ( * ) ) WHEN + 60 THEN + CAST ( NULL AS INTEGER ) ELSE NULL END + COUNT ( ALL - 4 + 61 / 0 ) * 29 * 28
 ----

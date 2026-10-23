@@ -55005,6 +55005,7 @@ NULL
 -36
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query II rowsort label-5867
 SELECT ALL - ( CASE + + 91 WHEN - COUNT ( * ) + - 86 / + - ( - - 90 ) THEN - 38 / 0 END ), + MIN ( ALL - 36 ) col0
 ----

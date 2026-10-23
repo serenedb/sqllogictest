@@ -34063,6 +34063,7 @@ SELECT DISTINCT + 10 AS col2, - 79 + 23 - + COUNT( * ) + 35 / + 0 * CAST( NULL A
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query II rowsort label-3676
 SELECT DISTINCT + 10 AS col2, - 79 + 23 - + COUNT ( * ) + 35 / + 0 * CAST ( NULL AS INTEGER )
 ----
@@ -62555,6 +62556,7 @@ SELECT 62 / - COALESCE ( - 0, 85 + - 99 + COUNT( * ), + 82 * + NULLIF ( + CAST( 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-6735
 SELECT 62 / - COALESCE ( - 0, 85 + - 99 + COUNT ( * ), + 82 * + NULLIF ( + CAST ( NULL AS INTEGER ), + 3 / - 74 / - 31 + - 67 * + 45 ) ) * CAST ( NULL AS REAL )
 ----

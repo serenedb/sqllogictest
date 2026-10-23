@@ -73835,6 +73835,7 @@ SELECT DISTINCT - NULLIF ( + - NULLIF ( - CASE + 86 WHEN - - 92 * SUM( - 51 ) - 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-7875
 SELECT DISTINCT - NULLIF ( + - NULLIF ( - CASE + 86 WHEN - - 92 * SUM ( - 51 ) - + 68 + - COUNT ( * ) - - - 78 / + - 96 + + COALESCE ( + COUNT ( * ), + COUNT ( * ) * AVG ( 87 ) + 90 / + NULLIF ( 11 / 98, 46 ) ) THEN SUM ( + 14 ) * + COUNT ( * ) - 9 WHEN - 18 * 44 THEN NULL END, - 44 + - COALESCE ( + 70, + COUNT ( * ) ) ), 81 * - 9 )
 ----

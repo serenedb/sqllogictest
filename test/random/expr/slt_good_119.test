@@ -37870,6 +37870,7 @@ SELECT DISTINCT - 20 * - CASE 73 WHEN + + NULLIF ( + SUM( - ( + 39 ) ), MAX( 45 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-4030
 SELECT DISTINCT - 20 * - CASE 73 WHEN + + NULLIF ( + SUM ( - ( + 39 ) ), MAX ( 45 ) + ( 21 ) ) + - 36 THEN - 57 / - COALESCE ( + 50 / 55, 58 * + 38, 21 ) WHEN - 28 + + 80 THEN NULL WHEN + NULLIF ( + 91, CASE + ( + 54 ) WHEN NULLIF ( + SUM ( 11 ), MAX ( DISTINCT + 11 ) ) + + 41 THEN + CAST ( + ( ( 11 ) ) AS INTEGER ) ELSE NULL END * 26 ) * ( + COUNT ( * ) ) THEN NULL ELSE NULL END + 94
 ----

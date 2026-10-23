@@ -25397,6 +25397,7 @@ SELECT ALL + 59 * - COALESCE ( COUNT( ALL + 82 ), + - 11 * 98 DIV 0 + COUNT( * )
 -59
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-2709
 SELECT ALL + 59 * - COALESCE ( COUNT ( ALL + 82 ), + - 11 * 98 / 0 + COUNT ( * ) + - - 11 + + - 96 + - ( + MIN ( DISTINCT 82 ) ) * + 86 * + 11 ) + - + 0
 ----
@@ -82554,6 +82555,7 @@ SELECT ALL - 94 * COALESCE ( - + 65, + 60 ) + 3 AS col1
 ----
 6113
 
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort
 SELECT ALL - 29 * + 42 - + + 30 / - - 0 / CASE + 46 WHEN - 96 + - + 73 THEN NULL WHEN 94 THEN - NULLIF ( 37, 90 ) END - - 97
 ----

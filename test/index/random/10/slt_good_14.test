@@ -1044,26 +1044,36 @@ SELECT * FROM tab4 AS cor0 WHERE NULL BETWEEN - col4 AND - + ( + - col4 )
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-175
 SELECT + 73 col3 FROM tab0 AS cor0 WHERE ( NOT + col5 IS NOT NULL )
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-175
 SELECT + 73 col3 FROM tab1 AS cor0 WHERE ( NOT + col5 IS NOT NULL )
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-175
 SELECT + 73 col3 FROM tab2 AS cor0 WHERE ( NOT + col5 IS NOT NULL )
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-175
 SELECT + 73 col3 FROM tab3 AS cor0 WHERE ( NOT + col5 IS NOT NULL )
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-175
 SELECT + 73 col3 FROM tab4 AS cor0 WHERE ( NOT + col5 IS NOT NULL )
 ----
@@ -1348,42 +1358,62 @@ query I rowsort label-210
 SELECT DISTINCT - col0 AS col4 FROM tab4 WHERE + col1 * + - CAST ( NULL AS INTEGER ) < col4
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-215
 SELECT DISTINCT col1 * - col0 AS col4 FROM tab0 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-215
 SELECT DISTINCT col1 * - col0 AS col4 FROM tab1 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-215
 SELECT DISTINCT col1 * - col0 AS col4 FROM tab2 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-215
 SELECT DISTINCT col1 * - col0 AS col4 FROM tab3 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-215
 SELECT DISTINCT col1 * - col0 AS col4 FROM tab4 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-220
 SELECT + + col5 AS col4, - col3 AS col3 FROM tab0 WHERE NULL NOT BETWEEN NULL AND NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-220
 SELECT + + col5 AS col4, - col3 AS col3 FROM tab1 WHERE NULL NOT BETWEEN NULL AND NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-220
 SELECT + + col5 AS col4, - col3 AS col3 FROM tab2 WHERE NULL NOT BETWEEN NULL AND NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-220
 SELECT + + col5 AS col4, - col3 AS col3 FROM tab3 WHERE NULL NOT BETWEEN NULL AND NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-220
 SELECT + + col5 AS col4, - col3 AS col3 FROM tab4 WHERE NULL NOT BETWEEN NULL AND NULL
 ----
@@ -2138,22 +2168,32 @@ SELECT + - 89 AS col4 FROM tab4 WHERE NOT - 50 < + + col4 + - col0
 -89
 -89
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-340
 SELECT + col2 FROM tab0 AS cor0 WHERE NOT + 46 NOT IN ( + col4 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-340
 SELECT + col2 FROM tab1 AS cor0 WHERE NOT + 46 NOT IN ( + col4 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-340
 SELECT + col2 FROM tab2 AS cor0 WHERE NOT + 46 NOT IN ( + col4 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-340
 SELECT + col2 FROM tab3 AS cor0 WHERE NOT + 46 NOT IN ( + col4 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-340
 SELECT + col2 FROM tab4 AS cor0 WHERE NOT + 46 NOT IN ( + col4 )
 ----
@@ -2823,22 +2863,32 @@ SELECT - - COUNT ( ALL + col3 ) FROM tab4 AS cor0 WHERE NOT - 93 IS NULL
 ----
 10
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-460
 SELECT ALL + col5 FROM tab0 WHERE NULL <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-460
 SELECT ALL + col5 FROM tab1 WHERE NULL <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-460
 SELECT ALL + col5 FROM tab2 WHERE NULL <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-460
 SELECT ALL + col5 FROM tab3 WHERE NULL <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-460
 SELECT ALL + col5 FROM tab4 WHERE NULL <> NULL
 ----
@@ -2908,22 +2958,32 @@ query IIIIIII rowsort label-475
 SELECT * FROM tab4 WHERE NOT col3 <> + col1
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-480
 SELECT ALL + col2 AS col5 FROM tab0 WHERE NOT + - col3 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-480
 SELECT ALL + col2 AS col5 FROM tab1 WHERE NOT + - col3 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-480
 SELECT ALL + col2 AS col5 FROM tab2 WHERE NOT + - col3 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-480
 SELECT ALL + col2 AS col5 FROM tab3 WHERE NOT + - col3 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-480
 SELECT ALL + col2 AS col5 FROM tab4 WHERE NOT + - col3 IS NOT NULL
 ----
@@ -3858,22 +3918,32 @@ query I rowsort label-640
 SELECT col5 AS col2 FROM tab4 WHERE NOT 22 <= NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-645
 SELECT + col2 AS col3 FROM tab0 WHERE NOT NULL <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-645
 SELECT + col2 AS col3 FROM tab1 WHERE NOT NULL <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-645
 SELECT + col2 AS col3 FROM tab2 WHERE NOT NULL <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-645
 SELECT + col2 AS col3 FROM tab3 WHERE NOT NULL <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-645
 SELECT + col2 AS col3 FROM tab4 WHERE NOT NULL <> NULL
 ----
@@ -4823,22 +4893,32 @@ query IIIIIII rowsort label-810
 SELECT ALL * FROM tab4 AS cor0 WHERE NOT 77 + - + col0 + col0 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-815
 SELECT + col5 FROM tab0 AS cor0 WHERE NULL BETWEEN ( col1 ) AND - 62
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-815
 SELECT + col5 FROM tab1 AS cor0 WHERE NULL BETWEEN ( col1 ) AND - 62
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-815
 SELECT + col5 FROM tab2 AS cor0 WHERE NULL BETWEEN ( col1 ) AND - 62
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-815
 SELECT + col5 FROM tab3 AS cor0 WHERE NULL BETWEEN ( col1 ) AND - 62
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-815
 SELECT + col5 FROM tab4 AS cor0 WHERE NULL BETWEEN ( col1 ) AND - 62
 ----
@@ -5963,22 +6043,32 @@ query I rowsort label-1015
 SELECT DISTINCT - col4 AS col4 FROM tab4 WHERE NULL IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1020
 SELECT + 63 - - 66 FROM tab0 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1020
 SELECT + 63 - - 66 FROM tab1 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1020
 SELECT + 63 - - 66 FROM tab2 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1020
 SELECT + 63 - - 66 FROM tab3 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1020
 SELECT + 63 - - 66 FROM tab4 WHERE NOT + col2 IS NOT NULL
 ----
@@ -7909,26 +7999,36 @@ SELECT ALL * FROM tab4 AS cor0 WHERE 65 * - 64 < NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1350
 SELECT + col5 col0 FROM tab0 AS cor0 WHERE NOT NULL BETWEEN col3 + - - col3 * + + col1 AND NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1350
 SELECT + col5 col0 FROM tab1 AS cor0 WHERE NOT NULL BETWEEN col3 + - - col3 * + + col1 AND NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1350
 SELECT + col5 col0 FROM tab2 AS cor0 WHERE NOT NULL BETWEEN col3 + - - col3 * + + col1 AND NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1350
 SELECT + col5 col0 FROM tab3 AS cor0 WHERE NOT NULL BETWEEN col3 + - - col3 * + + col1 AND NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1350
 SELECT + col5 col0 FROM tab4 AS cor0 WHERE NOT NULL BETWEEN col3 + - - col3 * + + col1 AND NULL
 ----
@@ -8513,26 +8613,36 @@ query IIIIIII rowsort label-1460
 SELECT ALL * FROM tab4 WHERE - 27 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-1465
 SELECT + + col2 AS col3, + 28 AS col1 FROM tab0 WHERE NOT NULL IS NOT NULL
 ----
 20 values hashing to 419fe1423463ef1bca204ca50efb12f4
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-1465
 SELECT + + col2 AS col3, + 28 AS col1 FROM tab1 WHERE NOT NULL IS NOT NULL
 ----
 20 values hashing to 419fe1423463ef1bca204ca50efb12f4
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-1465
 SELECT + + col2 AS col3, + 28 AS col1 FROM tab2 WHERE NOT NULL IS NOT NULL
 ----
 20 values hashing to 419fe1423463ef1bca204ca50efb12f4
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-1465
 SELECT + + col2 AS col3, + 28 AS col1 FROM tab3 WHERE NOT NULL IS NOT NULL
 ----
 20 values hashing to 419fe1423463ef1bca204ca50efb12f4
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-1465
 SELECT + + col2 AS col3, + 28 AS col1 FROM tab4 WHERE NOT NULL IS NOT NULL
 ----
@@ -8653,22 +8763,32 @@ query I rowsort label-1485
 SELECT col0 FROM tab4 AS cor0 WHERE NOT NULL < - CAST ( + col3 AS INTEGER )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1490
 SELECT + + col5 AS col2 FROM tab0 AS cor0 WHERE NOT col1 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1490
 SELECT + + col5 AS col2 FROM tab1 AS cor0 WHERE NOT col1 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1490
 SELECT + + col5 AS col2 FROM tab2 AS cor0 WHERE NOT col1 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1490
 SELECT + + col5 AS col2 FROM tab3 AS cor0 WHERE NOT col1 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1490
 SELECT + + col5 AS col2 FROM tab4 AS cor0 WHERE NOT col1 IS NOT NULL
 ----
@@ -9638,22 +9758,32 @@ query I rowsort label-1655
 SELECT col0 FROM tab4 WHERE NOT + 93 * col3 + 23 NOT BETWEEN NULL AND + col1
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1660
 SELECT + col5 FROM tab0 WHERE + 78 IN ( - 8 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1660
 SELECT + col5 FROM tab1 WHERE + 78 IN ( - 8 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1660
 SELECT + col5 FROM tab2 WHERE + 78 IN ( - 8 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1660
 SELECT + col5 FROM tab3 WHERE + 78 IN ( - 8 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1660
 SELECT + col5 FROM tab4 WHERE + 78 IN ( - 8 )
 ----
@@ -9743,22 +9873,32 @@ query IIIIIII rowsort label-1670
 SELECT * FROM tab4 WHERE ( NULL ) > - 97
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1675
 SELECT + col2 AS col0 FROM tab0 WHERE ( - 83 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1675
 SELECT + col2 AS col0 FROM tab1 WHERE ( - 83 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1675
 SELECT + col2 AS col0 FROM tab2 WHERE ( - 83 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1675
 SELECT + col2 AS col0 FROM tab3 WHERE ( - 83 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1675
 SELECT + col2 AS col0 FROM tab4 WHERE ( - 83 ) IS NULL
 ----
@@ -10168,26 +10308,36 @@ query I rowsort label-1745
 SELECT + 86 + 74 FROM tab4 WHERE NOT col4 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1750
 SELECT + + col2 FROM tab0 WHERE NOT col4 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1750
 SELECT + + col2 FROM tab1 WHERE NOT col4 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1750
 SELECT + + col2 FROM tab2 WHERE NOT col4 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1750
 SELECT + + col2 FROM tab3 WHERE NOT col4 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1750
 SELECT + + col2 FROM tab4 WHERE NOT col4 IS NULL
 ----
@@ -11038,22 +11188,32 @@ SELECT DISTINCT 73 * - 20 FROM tab4 WHERE ( NULL ) IS NULL
 ----
 -1460
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1880
 SELECT + col5 AS col0 FROM tab0 AS cor0 WHERE NOT + col4 NOT BETWEEN NULL AND + col4 * - 95
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1880
 SELECT + col5 AS col0 FROM tab1 AS cor0 WHERE NOT + col4 NOT BETWEEN NULL AND + col4 * - 95
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1880
 SELECT + col5 AS col0 FROM tab2 AS cor0 WHERE NOT + col4 NOT BETWEEN NULL AND + col4 * - 95
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1880
 SELECT + col5 AS col0 FROM tab3 AS cor0 WHERE NOT + col4 NOT BETWEEN NULL AND + col4 * - 95
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1880
 SELECT + col5 AS col0 FROM tab4 AS cor0 WHERE NOT + col4 NOT BETWEEN NULL AND + col4 * - 95
 ----
@@ -11243,26 +11403,36 @@ SELECT - ( col0 ) * - + col0 AS col1 FROM tab4 WHERE col4 / + - 28 IS NOT NULL
 ----
 10 values hashing to a712b9c923c6c0cd0e1f3373dc10b905
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1920
 SELECT + col2 AS col5 FROM tab0 WHERE - col4 + + + ( + + ( + 83 ) ) - col0 NOT BETWEEN col0 AND ( NULL )
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1920
 SELECT + col2 AS col5 FROM tab1 WHERE - col4 + + + ( + + ( + 83 ) ) - col0 NOT BETWEEN col0 AND ( NULL )
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1920
 SELECT + col2 AS col5 FROM tab2 WHERE - col4 + + + ( + + ( + 83 ) ) - col0 NOT BETWEEN col0 AND ( NULL )
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1920
 SELECT + col2 AS col5 FROM tab3 WHERE - col4 + + + ( + + ( + 83 ) ) - col0 NOT BETWEEN col0 AND ( NULL )
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-1920
 SELECT + col2 AS col5 FROM tab4 WHERE - col4 + + + ( + + ( + 83 ) ) - col0 NOT BETWEEN col0 AND ( NULL )
 ----
@@ -13284,6 +13454,8 @@ SELECT + col5 FROM tab0 WHERE + col3 + - - CAST( NULL AS SIGNED ) NOT BETWEEN + 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2315
 SELECT + col5 FROM tab0 WHERE + col3 + - - CAST ( NULL AS INTEGER ) NOT BETWEEN + col0 AND NULL
 ----
@@ -13294,6 +13466,8 @@ SELECT + col5 FROM tab1 WHERE + col3 + - - CAST( NULL AS SIGNED ) NOT BETWEEN + 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2315
 SELECT + col5 FROM tab1 WHERE + col3 + - - CAST ( NULL AS INTEGER ) NOT BETWEEN + col0 AND NULL
 ----
@@ -13304,6 +13478,8 @@ SELECT + col5 FROM tab2 WHERE + col3 + - - CAST( NULL AS SIGNED ) NOT BETWEEN + 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2315
 SELECT + col5 FROM tab2 WHERE + col3 + - - CAST ( NULL AS INTEGER ) NOT BETWEEN + col0 AND NULL
 ----
@@ -13314,6 +13490,8 @@ SELECT + col5 FROM tab3 WHERE + col3 + - - CAST( NULL AS SIGNED ) NOT BETWEEN + 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2315
 SELECT + col5 FROM tab3 WHERE + col3 + - - CAST ( NULL AS INTEGER ) NOT BETWEEN + col0 AND NULL
 ----
@@ -13324,6 +13502,8 @@ SELECT + col5 FROM tab4 WHERE + col3 + - - CAST( NULL AS SIGNED ) NOT BETWEEN + 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2315
 SELECT + col5 FROM tab4 WHERE + col3 + - - CAST ( NULL AS INTEGER ) NOT BETWEEN + col0 AND NULL
 ----
@@ -13583,47 +13763,67 @@ query I rowsort label-2350
 SELECT 87 FROM tab4 AS cor0 WHERE NOT - col4 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2355
 SELECT + col5 FROM tab0 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2355
 SELECT + col5 FROM tab1 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2355
 SELECT + col5 FROM tab2 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2355
 SELECT + col5 FROM tab3 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2355
 SELECT + col5 FROM tab4 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-2360
 SELECT ALL + col5 col0, ( 55 ) FROM tab0 AS cor0 WHERE 39 BETWEEN - col3 AND - col4 + - 26
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-2360
 SELECT ALL + col5 col0, ( 55 ) FROM tab1 AS cor0 WHERE 39 BETWEEN - col3 AND - col4 + - 26
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-2360
 SELECT ALL + col5 col0, ( 55 ) FROM tab2 AS cor0 WHERE 39 BETWEEN - col3 AND - col4 + - 26
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-2360
 SELECT ALL + col5 col0, ( 55 ) FROM tab3 AS cor0 WHERE 39 BETWEEN - col3 AND - col4 + - 26
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-2360
 SELECT ALL + col5 col0, ( 55 ) FROM tab4 AS cor0 WHERE 39 BETWEEN - col3 AND - col4 + - 26
 ----
@@ -13879,6 +14079,8 @@ SELECT - - CAST( NULL AS SIGNED ) AS col5, + col5 AS col3 FROM tab0 WHERE NOT + 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-2395
 SELECT - - CAST ( NULL AS INTEGER ) AS col5, + col5 AS col3 FROM tab0 WHERE NOT + ( col2 ) IS NOT NULL
 ----
@@ -13889,6 +14091,8 @@ SELECT - - CAST( NULL AS SIGNED ) AS col5, + col5 AS col3 FROM tab1 WHERE NOT + 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-2395
 SELECT - - CAST ( NULL AS INTEGER ) AS col5, + col5 AS col3 FROM tab1 WHERE NOT + ( col2 ) IS NOT NULL
 ----
@@ -13899,6 +14103,8 @@ SELECT - - CAST( NULL AS SIGNED ) AS col5, + col5 AS col3 FROM tab2 WHERE NOT + 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-2395
 SELECT - - CAST ( NULL AS INTEGER ) AS col5, + col5 AS col3 FROM tab2 WHERE NOT + ( col2 ) IS NOT NULL
 ----
@@ -13909,6 +14115,8 @@ SELECT - - CAST( NULL AS SIGNED ) AS col5, + col5 AS col3 FROM tab3 WHERE NOT + 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-2395
 SELECT - - CAST ( NULL AS INTEGER ) AS col5, + col5 AS col3 FROM tab3 WHERE NOT + ( col2 ) IS NOT NULL
 ----
@@ -13919,6 +14127,8 @@ SELECT - - CAST( NULL AS SIGNED ) AS col5, + col5 AS col3 FROM tab4 WHERE NOT + 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-2395
 SELECT - - CAST ( NULL AS INTEGER ) AS col5, + col5 AS col3 FROM tab4 WHERE NOT + ( col2 ) IS NOT NULL
 ----
@@ -13983,22 +14193,32 @@ SELECT DISTINCT - COUNT ( DISTINCT - CAST ( col0 AS INTEGER ) ) + - + 97 AS col0
 ----
 -97
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2405
 SELECT ALL 7 + - - ( + col4 ) FROM tab0 AS cor0 WHERE NOT ( + col2 ) IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2405
 SELECT ALL 7 + - - ( + col4 ) FROM tab1 AS cor0 WHERE NOT ( + col2 ) IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2405
 SELECT ALL 7 + - - ( + col4 ) FROM tab2 AS cor0 WHERE NOT ( + col2 ) IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2405
 SELECT ALL 7 + - - ( + col4 ) FROM tab3 AS cor0 WHERE NOT ( + col2 ) IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2405
 SELECT ALL 7 + - - ( + col4 ) FROM tab4 AS cor0 WHERE NOT ( + col2 ) IS NOT NULL
 ----
@@ -15053,22 +15273,32 @@ SELECT 53 + + CAST ( NULL AS INTEGER ) AS col2 FROM tab4 cor0 WHERE col0 IS NOT 
 ----
 10 values hashing to db761b746c7d0f18810c20311a9f8974
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2590
 SELECT ALL + + col2 AS col3 FROM tab0 AS cor0 WHERE ( NULL ) > NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2590
 SELECT ALL + + col2 AS col3 FROM tab1 AS cor0 WHERE ( NULL ) > NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2590
 SELECT ALL + + col2 AS col3 FROM tab2 AS cor0 WHERE ( NULL ) > NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2590
 SELECT ALL + + col2 AS col3 FROM tab3 AS cor0 WHERE ( NULL ) > NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2590
 SELECT ALL + + col2 AS col3 FROM tab4 AS cor0 WHERE ( NULL ) > NULL
 ----
@@ -16493,22 +16723,32 @@ query I rowsort label-2845
 SELECT col3 AS col0 FROM tab4 WHERE NOT + col0 NOT IN ( + col3 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2850
 SELECT + col5 FROM tab0 WHERE NOT NULL <= ( NULL )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2850
 SELECT + col5 FROM tab1 WHERE NOT NULL <= ( NULL )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2850
 SELECT + col5 FROM tab2 WHERE NOT NULL <= ( NULL )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2850
 SELECT + col5 FROM tab3 WHERE NOT NULL <= ( NULL )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-2850
 SELECT + col5 FROM tab4 WHERE NOT NULL <= ( NULL )
 ----
@@ -17608,22 +17848,32 @@ query I rowsort label-3045
 SELECT DISTINCT 32 FROM tab4 AS cor0 WHERE NOT ( NULL ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3050
 SELECT + + col1 FROM tab0 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3050
 SELECT + + col1 FROM tab1 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3050
 SELECT + + col1 FROM tab2 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3050
 SELECT + + col1 FROM tab3 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3050
 SELECT + + col1 FROM tab4 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
@@ -17978,22 +18228,32 @@ query II rowsort label-3105
 SELECT CAST ( NULL AS INTEGER ), + col4 FROM tab4 AS cor0 WHERE NULL <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3110
 SELECT + col2 AS col1 FROM tab0 WHERE NOT NULL NOT IN ( + - col4, col0 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3110
 SELECT + col2 AS col1 FROM tab1 WHERE NOT NULL NOT IN ( + - col4, col0 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3110
 SELECT + col2 AS col1 FROM tab2 WHERE NOT NULL NOT IN ( + - col4, col0 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3110
 SELECT + col2 AS col1 FROM tab3 WHERE NOT NULL NOT IN ( + - col4, col0 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3110
 SELECT + col2 AS col1 FROM tab4 WHERE NOT NULL NOT IN ( + - col4, col0 )
 ----
@@ -18988,26 +19248,36 @@ query I rowsort label-3285
 SELECT DISTINCT + 54 FROM tab4 cor0 WHERE ( NULL ) IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3290
 SELECT col2 FROM tab0 WHERE NOT ( + col2 ) IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3290
 SELECT col2 FROM tab1 WHERE NOT ( + col2 ) IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3290
 SELECT col2 FROM tab2 WHERE NOT ( + col2 ) IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3290
 SELECT col2 FROM tab3 WHERE NOT ( + col2 ) IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3290
 SELECT col2 FROM tab4 WHERE NOT ( + col2 ) IS NULL
 ----
@@ -19073,22 +19343,32 @@ query I rowsort label-3305
 SELECT ALL + 71 + col1 AS col3 FROM tab4 cor0 WHERE NULL IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3310
 SELECT + col5 AS col5 FROM tab0 WHERE NOT + col3 + + col1 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3310
 SELECT + col5 AS col5 FROM tab1 WHERE NOT + col3 + + col1 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3310
 SELECT + col5 AS col5 FROM tab2 WHERE NOT + col3 + + col1 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3310
 SELECT + col5 AS col5 FROM tab3 WHERE NOT + col3 + + col1 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3310
 SELECT + col5 AS col5 FROM tab4 WHERE NOT + col3 + + col1 IS NOT NULL
 ----
@@ -20173,26 +20453,36 @@ SELECT DISTINCT col3 FROM tab4 cor0 WHERE NULL IS NULL
 ----
 10 values hashing to 8f77761f03c4df6cbdb37380c9fd0f1c
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-3510
 SELECT ALL + + col2, + col0 FROM tab0 AS cor0 WHERE + col0 IS NOT NULL
 ----
 20 values hashing to e0f30a708d2ca789888fe1b58316f21d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-3510
 SELECT ALL + + col2, + col0 FROM tab1 AS cor0 WHERE + col0 IS NOT NULL
 ----
 20 values hashing to e0f30a708d2ca789888fe1b58316f21d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-3510
 SELECT ALL + + col2, + col0 FROM tab2 AS cor0 WHERE + col0 IS NOT NULL
 ----
 20 values hashing to e0f30a708d2ca789888fe1b58316f21d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-3510
 SELECT ALL + + col2, + col0 FROM tab3 AS cor0 WHERE + col0 IS NOT NULL
 ----
 20 values hashing to e0f30a708d2ca789888fe1b58316f21d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-3510
 SELECT ALL + + col2, + col0 FROM tab4 AS cor0 WHERE + col0 IS NOT NULL
 ----
@@ -20248,26 +20538,36 @@ SELECT ALL col0 * + - 38 AS col4 FROM tab4 WHERE NULL IS NULL
 ----
 10 values hashing to 0cd141519b79516d55dac0dc8baad2f8
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3525
 SELECT AVG ( ALL - - 71 ) FROM tab0 cor0 WHERE NOT + ( col5 ) IS NOT NULL
 ----
 NULL
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3525
 SELECT AVG ( ALL - - 71 ) FROM tab1 cor0 WHERE NOT + ( col5 ) IS NOT NULL
 ----
 NULL
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3525
 SELECT AVG ( ALL - - 71 ) FROM tab2 cor0 WHERE NOT + ( col5 ) IS NOT NULL
 ----
 NULL
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3525
 SELECT AVG ( ALL - - 71 ) FROM tab3 cor0 WHERE NOT + ( col5 ) IS NOT NULL
 ----
 NULL
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3525
 SELECT AVG ( ALL - - 71 ) FROM tab4 cor0 WHERE NOT + ( col5 ) IS NOT NULL
 ----
@@ -20723,22 +21023,32 @@ query IIIIIII rowsort label-3610
 SELECT * FROM tab4 WHERE ( - 55 ) NOT IN ( - CAST ( NULL AS INTEGER ) + col3 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3615
 SELECT + col2 FROM tab0 WHERE NOT col4 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3615
 SELECT + col2 FROM tab1 WHERE NOT col4 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3615
 SELECT + col2 FROM tab2 WHERE NOT col4 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3615
 SELECT + col2 FROM tab3 WHERE NOT col4 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3615
 SELECT + col2 FROM tab4 WHERE NOT col4 IS NOT NULL
 ----
@@ -20958,22 +21268,32 @@ SELECT + CAST ( NULL AS INTEGER ) FROM tab4 AS cor0 WHERE ( NULL ) IS NULL
 ----
 10 values hashing to db761b746c7d0f18810c20311a9f8974
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3650
 SELECT ( + col5 ) AS col3 FROM tab0 AS cor0 WHERE col4 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3650
 SELECT ( + col5 ) AS col3 FROM tab1 AS cor0 WHERE col4 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3650
 SELECT ( + col5 ) AS col3 FROM tab2 AS cor0 WHERE col4 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3650
 SELECT ( + col5 ) AS col3 FROM tab3 AS cor0 WHERE col4 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-3650
 SELECT ( + col5 ) AS col3 FROM tab4 AS cor0 WHERE col4 IS NULL
 ----
@@ -22093,22 +22413,32 @@ query I rowsort label-3855
 SELECT + + col3 AS col3 FROM tab4 AS cor0 WHERE + col0 * + 60 * - col3 NOT BETWEEN NULL AND col1 * + + col3
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-3860
 SELECT * FROM tab0 WHERE NOT + ( col2 ) IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-3860
 SELECT * FROM tab1 WHERE NOT + ( col2 ) IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-3860
 SELECT * FROM tab2 WHERE NOT + ( col2 ) IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-3860
 SELECT * FROM tab3 WHERE NOT + ( col2 ) IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-3860
 SELECT * FROM tab4 WHERE NOT + ( col2 ) IS NOT NULL
 ----
@@ -22304,26 +22634,36 @@ SELECT ALL * FROM tab4 AS cor0 WHERE NOT 4 * - - col0 * - col1 / + col4 IS NOT N
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query III rowsort label-3905
 SELECT ALL + col5 AS col5, 99 AS col1, 86 col1 FROM tab0 AS cor0 WHERE NOT NULL < + col0 - 46 + + 28 + + + 12 * + + 23
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query III rowsort label-3905
 SELECT ALL + col5 AS col5, 99 AS col1, 86 col1 FROM tab1 AS cor0 WHERE NOT NULL < + col0 - 46 + + 28 + + + 12 * + + 23
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query III rowsort label-3905
 SELECT ALL + col5 AS col5, 99 AS col1, 86 col1 FROM tab2 AS cor0 WHERE NOT NULL < + col0 - 46 + + 28 + + + 12 * + + 23
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query III rowsort label-3905
 SELECT ALL + col5 AS col5, 99 AS col1, 86 col1 FROM tab3 AS cor0 WHERE NOT NULL < + col0 - 46 + + 28 + + + 12 * + + 23
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query III rowsort label-3905
 SELECT ALL + col5 AS col5, 99 AS col1, 86 col1 FROM tab4 AS cor0 WHERE NOT NULL < + col0 - 46 + + 28 + + + 12 * + + 23
 ----
@@ -23663,26 +24003,36 @@ query I rowsort label-4140
 SELECT - 74 AS col4 FROM tab4 WHERE NULL IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4145
 SELECT + + col2 FROM tab0 AS cor0 WHERE NOT - col0 > - - col3
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4145
 SELECT + + col2 FROM tab1 AS cor0 WHERE NOT - col0 > - - col3
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4145
 SELECT + + col2 FROM tab2 AS cor0 WHERE NOT - col0 > - - col3
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4145
 SELECT + + col2 FROM tab3 AS cor0 WHERE NOT - col0 > - - col3
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4145
 SELECT + + col2 FROM tab4 AS cor0 WHERE NOT - col0 > - - col3
 ----
@@ -24748,26 +25098,36 @@ query I rowsort label-4290
 SELECT + col0 FROM tab4 WHERE NOT col4 <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4295
 SELECT ALL + col2 FROM tab0 AS cor0 WHERE col0 IS NOT NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4295
 SELECT ALL + col2 FROM tab1 AS cor0 WHERE col0 IS NOT NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4295
 SELECT ALL + col2 FROM tab2 AS cor0 WHERE col0 IS NOT NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4295
 SELECT ALL + col2 FROM tab3 AS cor0 WHERE col0 IS NOT NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4295
 SELECT ALL + col2 FROM tab4 AS cor0 WHERE col0 IS NOT NULL
 ----
@@ -25868,22 +26228,32 @@ query IIIIIII rowsort label-4465
 SELECT ALL * FROM tab4 WHERE NOT NULL <> - - col0
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4470
 SELECT ( + + col2 ) FROM tab0 WHERE NULL IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4470
 SELECT ( + + col2 ) FROM tab1 WHERE NULL IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4470
 SELECT ( + + col2 ) FROM tab2 WHERE NULL IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4470
 SELECT ( + + col2 ) FROM tab3 WHERE NULL IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4470
 SELECT ( + + col2 ) FROM tab4 WHERE NULL IS NOT NULL
 ----
@@ -26439,6 +26809,8 @@ SELECT + col2 FROM tab0 WHERE + col4 NOT IN ( + + CAST( NULL AS SIGNED ) * + col
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4565
 SELECT + col2 FROM tab0 WHERE + col4 NOT IN ( + + CAST ( NULL AS INTEGER ) * + col4 )
 ----
@@ -26449,6 +26821,8 @@ SELECT + col2 FROM tab1 WHERE + col4 NOT IN ( + + CAST( NULL AS SIGNED ) * + col
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4565
 SELECT + col2 FROM tab1 WHERE + col4 NOT IN ( + + CAST ( NULL AS INTEGER ) * + col4 )
 ----
@@ -26459,6 +26833,8 @@ SELECT + col2 FROM tab2 WHERE + col4 NOT IN ( + + CAST( NULL AS SIGNED ) * + col
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4565
 SELECT + col2 FROM tab2 WHERE + col4 NOT IN ( + + CAST ( NULL AS INTEGER ) * + col4 )
 ----
@@ -26469,6 +26845,8 @@ SELECT + col2 FROM tab3 WHERE + col4 NOT IN ( + + CAST( NULL AS SIGNED ) * + col
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4565
 SELECT + col2 FROM tab3 WHERE + col4 NOT IN ( + + CAST ( NULL AS INTEGER ) * + col4 )
 ----
@@ -26479,6 +26857,8 @@ SELECT + col2 FROM tab4 WHERE + col4 NOT IN ( + + CAST( NULL AS SIGNED ) * + col
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-4565
 SELECT + col2 FROM tab4 WHERE + col4 NOT IN ( + + CAST ( NULL AS INTEGER ) * + col4 )
 ----
@@ -27703,22 +28083,32 @@ query I rowsort label-4765
 SELECT + + col1 FROM tab4 AS cor0 WHERE NOT NULL BETWEEN + 10 - 19 AND NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-4770
 SELECT ALL * FROM tab0 AS cor0 WHERE NOT ( NOT + ( col2 ) IS NULL )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-4770
 SELECT ALL * FROM tab1 AS cor0 WHERE NOT ( NOT + ( col2 ) IS NULL )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-4770
 SELECT ALL * FROM tab2 AS cor0 WHERE NOT ( NOT + ( col2 ) IS NULL )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-4770
 SELECT ALL * FROM tab3 AS cor0 WHERE NOT ( NOT + ( col2 ) IS NULL )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-4770
 SELECT ALL * FROM tab4 AS cor0 WHERE NOT ( NOT + ( col2 ) IS NULL )
 ----
@@ -28546,6 +28936,8 @@ SELECT DISTINCT - 58 DIV COUNT( * ), + COUNT( ALL - + ( col1 ) ) AS col4 FROM ta
 10
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-4915
 SELECT DISTINCT - 58 / COUNT ( * ), + COUNT ( ALL - + ( col1 ) ) AS col4 FROM tab0 AS cor0 WHERE NOT + col5 IS NULL AND ( 83 ) IS NOT NULL
 ----
@@ -28560,6 +28952,8 @@ SELECT DISTINCT - 58 DIV COUNT( * ), + COUNT( ALL - + ( col1 ) ) AS col4 FROM ta
 10
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-4915
 SELECT DISTINCT - 58 / COUNT ( * ), + COUNT ( ALL - + ( col1 ) ) AS col4 FROM tab1 AS cor0 WHERE NOT + col5 IS NULL AND ( 83 ) IS NOT NULL
 ----
@@ -28574,6 +28968,8 @@ SELECT DISTINCT - 58 DIV COUNT( * ), + COUNT( ALL - + ( col1 ) ) AS col4 FROM ta
 10
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-4915
 SELECT DISTINCT - 58 / COUNT ( * ), + COUNT ( ALL - + ( col1 ) ) AS col4 FROM tab2 AS cor0 WHERE NOT + col5 IS NULL AND ( 83 ) IS NOT NULL
 ----
@@ -28588,6 +28984,8 @@ SELECT DISTINCT - 58 DIV COUNT( * ), + COUNT( ALL - + ( col1 ) ) AS col4 FROM ta
 10
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-4915
 SELECT DISTINCT - 58 / COUNT ( * ), + COUNT ( ALL - + ( col1 ) ) AS col4 FROM tab3 AS cor0 WHERE NOT + col5 IS NULL AND ( 83 ) IS NOT NULL
 ----
@@ -28602,6 +29000,8 @@ SELECT DISTINCT - 58 DIV COUNT( * ), + COUNT( ALL - + ( col1 ) ) AS col4 FROM ta
 10
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-4915
 SELECT DISTINCT - 58 / COUNT ( * ), + COUNT ( ALL - + ( col1 ) ) AS col4 FROM tab4 AS cor0 WHERE NOT + col5 IS NULL AND ( 83 ) IS NOT NULL
 ----
@@ -29343,26 +29743,36 @@ SELECT - 56 * COUNT ( * ) * 86 * - + 61 AS col2 FROM tab4 AS cor0 WHERE + col4 <
 ----
 2937760
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5040
 SELECT + col2 AS col5 FROM tab0 AS cor0 WHERE ( NULL ) IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5040
 SELECT + col2 AS col5 FROM tab1 AS cor0 WHERE ( NULL ) IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5040
 SELECT + col2 AS col5 FROM tab2 AS cor0 WHERE ( NULL ) IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5040
 SELECT + col2 AS col5 FROM tab3 AS cor0 WHERE ( NULL ) IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5040
 SELECT + col2 AS col5 FROM tab4 AS cor0 WHERE ( NULL ) IS NULL
 ----
@@ -29533,22 +29943,32 @@ query II rowsort label-5070
 SELECT ALL col5 AS col4, - col0 AS col5 FROM tab4 AS cor0 WHERE NOT NULL IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5075
 SELECT + col5 FROM tab0 AS cor0 WHERE NOT NULL = NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5075
 SELECT + col5 FROM tab1 AS cor0 WHERE NOT NULL = NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5075
 SELECT + col5 FROM tab2 AS cor0 WHERE NOT NULL = NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5075
 SELECT + col5 FROM tab3 AS cor0 WHERE NOT NULL = NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5075
 SELECT + col5 FROM tab4 AS cor0 WHERE NOT NULL = NULL
 ----
@@ -30598,6 +31018,8 @@ query IIIIIII rowsort label-5275
 SELECT ALL * FROM tab4 AS cor0 WHERE NULL NOT IN ( col3 + + ( + - col3 ), col1, + 57 * - - col0, 88, + + 32 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5280
 SELECT ALL + col5 AS col3 FROM tab0 WHERE - + col1 NOT BETWEEN NULL AND - col3
 ----
@@ -30605,6 +31027,8 @@ SELECT ALL + col5 AS col3 FROM tab0 WHERE - + col1 NOT BETWEEN NULL AND - col3
 0
 0
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5280
 SELECT ALL + col5 AS col3 FROM tab1 WHERE - + col1 NOT BETWEEN NULL AND - col3
 ----
@@ -30612,6 +31036,8 @@ SELECT ALL + col5 AS col3 FROM tab1 WHERE - + col1 NOT BETWEEN NULL AND - col3
 0
 0
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5280
 SELECT ALL + col5 AS col3 FROM tab2 WHERE - + col1 NOT BETWEEN NULL AND - col3
 ----
@@ -30619,6 +31045,8 @@ SELECT ALL + col5 AS col3 FROM tab2 WHERE - + col1 NOT BETWEEN NULL AND - col3
 0
 0
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5280
 SELECT ALL + col5 AS col3 FROM tab3 WHERE - + col1 NOT BETWEEN NULL AND - col3
 ----
@@ -30626,6 +31054,8 @@ SELECT ALL + col5 AS col3 FROM tab3 WHERE - + col1 NOT BETWEEN NULL AND - col3
 0
 0
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5280
 SELECT ALL + col5 AS col3 FROM tab4 WHERE - + col1 NOT BETWEEN NULL AND - col3
 ----
@@ -31843,26 +32273,36 @@ query IIIIIII rowsort label-5470
 SELECT * FROM tab4 AS cor0 WHERE NOT + col0 <> + + col4
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5475
 SELECT - col3 AS col4 FROM tab0 WHERE NOT + col5 IS NULL
 ----
 10 values hashing to 8eb0287c3c0b5c487b62fc67edadb060
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5475
 SELECT - col3 AS col4 FROM tab1 WHERE NOT + col5 IS NULL
 ----
 10 values hashing to 8eb0287c3c0b5c487b62fc67edadb060
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5475
 SELECT - col3 AS col4 FROM tab2 WHERE NOT + col5 IS NULL
 ----
 10 values hashing to 8eb0287c3c0b5c487b62fc67edadb060
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5475
 SELECT - col3 AS col4 FROM tab3 WHERE NOT + col5 IS NULL
 ----
 10 values hashing to 8eb0287c3c0b5c487b62fc67edadb060
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5475
 SELECT - col3 AS col4 FROM tab4 WHERE NOT + col5 IS NULL
 ----
@@ -32693,22 +33133,32 @@ query I rowsort label-5605
 SELECT DISTINCT - col4 FROM tab4 WHERE 42 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5610
 SELECT ALL col4 * + col0 AS col0 FROM tab0 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5610
 SELECT ALL col4 * + col0 AS col0 FROM tab1 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5610
 SELECT ALL col4 * + col0 AS col0 FROM tab2 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5610
 SELECT ALL col4 * + col0 AS col0 FROM tab3 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-5610
 SELECT ALL col4 * + col0 AS col0 FROM tab4 WHERE + col5 IS NULL
 ----
@@ -32828,22 +33278,32 @@ query IIIIIII rowsort label-5635
 SELECT * FROM tab4 WHERE NOT ( col0 ) + + col1 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-5640
 SELECT * FROM tab0 WHERE ( + col5 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-5640
 SELECT * FROM tab1 WHERE ( + col5 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-5640
 SELECT * FROM tab2 WHERE ( + col5 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-5640
 SELECT * FROM tab3 WHERE ( + col5 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-5640
 SELECT * FROM tab4 WHERE ( + col5 ) IS NULL
 ----
@@ -34943,22 +35403,32 @@ SELECT + - col3 / - col0 + 59 FROM tab4 AS cor0 WHERE NOT 58 * + + col4 + col3 *
 ----
 10 values hashing to 11a297ae0ce68d006cc229c2a611698b
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6010
 SELECT ALL + col5 AS col4 FROM tab0 WHERE + col3 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6010
 SELECT ALL + col5 AS col4 FROM tab1 WHERE + col3 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6010
 SELECT ALL + col5 AS col4 FROM tab2 WHERE + col3 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6010
 SELECT ALL + col5 AS col4 FROM tab3 WHERE + col3 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6010
 SELECT ALL + col5 AS col4 FROM tab4 WHERE + col3 IS NULL
 ----
@@ -35193,26 +35663,36 @@ query I rowsort label-6055
 SELECT ALL CAST ( NULL AS REAL ) FROM tab4 AS cor0 WHERE NOT NULL IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6060
 SELECT + col5 AS col0 FROM tab0 cor0 WHERE ( col4 ) IS NOT NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6060
 SELECT + col5 AS col0 FROM tab1 cor0 WHERE ( col4 ) IS NOT NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6060
 SELECT + col5 AS col0 FROM tab2 cor0 WHERE ( col4 ) IS NOT NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6060
 SELECT + col5 AS col0 FROM tab3 cor0 WHERE ( col4 ) IS NOT NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6060
 SELECT + col5 AS col0 FROM tab4 cor0 WHERE ( col4 ) IS NOT NULL
 ----
@@ -35938,22 +36418,32 @@ SELECT ALL col5 AS col5 FROM tab4 AS cor0 WHERE 72 * col0 IS NOT NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-6170
 SELECT ALL + - 29, - 92 FROM tab0 AS cor0 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-6170
 SELECT ALL + - 29, - 92 FROM tab1 AS cor0 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-6170
 SELECT ALL + - 29, - 92 FROM tab2 AS cor0 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-6170
 SELECT ALL + - 29, - 92 FROM tab3 AS cor0 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-6170
 SELECT ALL + - 29, - 92 FROM tab4 AS cor0 WHERE + col5 IS NULL
 ----
@@ -38063,22 +38553,32 @@ query IIIIIII rowsort label-6535
 SELECT * FROM tab4 WHERE NOT ( NULL ) <> ( - col1 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6540
 SELECT ( + col5 ) AS col0 FROM tab0 WHERE NOT 42 <> - col3
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6540
 SELECT ( + col5 ) AS col0 FROM tab1 WHERE NOT 42 <> - col3
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6540
 SELECT ( + col5 ) AS col0 FROM tab2 WHERE NOT 42 <> - col3
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6540
 SELECT ( + col5 ) AS col0 FROM tab3 WHERE NOT 42 <> - col3
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6540
 SELECT ( + col5 ) AS col0 FROM tab4 WHERE NOT 42 <> - col3
 ----
@@ -38273,26 +38773,36 @@ query IIIIIII rowsort label-6580
 SELECT * FROM tab4 WHERE NOT + 39 / - col1 <> - col3
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6585
 SELECT + col2 FROM tab0 WHERE + col4 <> col1 * + col0
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6585
 SELECT + col2 FROM tab1 WHERE + col4 <> col1 * + col0
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6585
 SELECT + col2 FROM tab2 WHERE + col4 <> col1 * + col0
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6585
 SELECT + col2 FROM tab3 WHERE + col4 <> col1 * + col0
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6585
 SELECT + col2 FROM tab4 WHERE + col4 <> col1 * + col0
 ----
@@ -39424,6 +39934,8 @@ SELECT ALL + + ( col4 ) / CAST( NULL AS SIGNED ) + - - col0 FROM tab0 WHERE NOT 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6790
 SELECT ALL + + ( col4 ) / CAST ( NULL AS INTEGER ) + - - col0 FROM tab0 WHERE NOT + col2 IS NOT NULL
 ----
@@ -39434,6 +39946,8 @@ SELECT ALL + + ( col4 ) / CAST( NULL AS SIGNED ) + - - col0 FROM tab1 WHERE NOT 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6790
 SELECT ALL + + ( col4 ) / CAST ( NULL AS INTEGER ) + - - col0 FROM tab1 WHERE NOT + col2 IS NOT NULL
 ----
@@ -39444,6 +39958,8 @@ SELECT ALL + + ( col4 ) / CAST( NULL AS SIGNED ) + - - col0 FROM tab2 WHERE NOT 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6790
 SELECT ALL + + ( col4 ) / CAST ( NULL AS INTEGER ) + - - col0 FROM tab2 WHERE NOT + col2 IS NOT NULL
 ----
@@ -39454,6 +39970,8 @@ SELECT ALL + + ( col4 ) / CAST( NULL AS SIGNED ) + - - col0 FROM tab3 WHERE NOT 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6790
 SELECT ALL + + ( col4 ) / CAST ( NULL AS INTEGER ) + - - col0 FROM tab3 WHERE NOT + col2 IS NOT NULL
 ----
@@ -39464,6 +39982,8 @@ SELECT ALL + + ( col4 ) / CAST( NULL AS SIGNED ) + - - col0 FROM tab4 WHERE NOT 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6790
 SELECT ALL + + ( col4 ) / CAST ( NULL AS INTEGER ) + - - col0 FROM tab4 WHERE NOT + col2 IS NOT NULL
 ----
@@ -39863,22 +40383,32 @@ query IIIIIII rowsort label-6865
 SELECT * FROM tab4 AS cor0 WHERE NULL NOT BETWEEN ( NULL ) AND + 66
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6870
 SELECT + col5 AS col0 FROM tab0 WHERE NOT - + 29 <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6870
 SELECT + col5 AS col0 FROM tab1 WHERE NOT - + 29 <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6870
 SELECT + col5 AS col0 FROM tab2 WHERE NOT - + 29 <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6870
 SELECT + col5 AS col0 FROM tab3 WHERE NOT - + 29 <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-6870
 SELECT + col5 AS col0 FROM tab4 WHERE NOT - + 29 <> NULL
 ----
@@ -41318,22 +41848,32 @@ query IIIIIII rowsort label-7140
 SELECT ALL * FROM tab4 AS cor0 WHERE NOT NULL = 19
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7145
 SELECT - col3 AS col5 FROM tab0 WHERE + col2 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7145
 SELECT - col3 AS col5 FROM tab1 WHERE + col2 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7145
 SELECT - col3 AS col5 FROM tab2 WHERE + col2 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7145
 SELECT - col3 AS col5 FROM tab3 WHERE + col2 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7145
 SELECT - col3 AS col5 FROM tab4 WHERE + col2 IS NULL
 ----
@@ -41955,6 +42495,8 @@ SELECT ALL + col5 AS col5 FROM tab0 AS cor0 WHERE CAST( + - col1 AS SIGNED ) IS 
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7245
 SELECT ALL + col5 AS col5 FROM tab0 AS cor0 WHERE CAST ( + - col1 AS INTEGER ) IS NOT NULL
 ----
@@ -41967,6 +42509,8 @@ SELECT ALL + col5 AS col5 FROM tab1 AS cor0 WHERE CAST( + - col1 AS SIGNED ) IS 
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7245
 SELECT ALL + col5 AS col5 FROM tab1 AS cor0 WHERE CAST ( + - col1 AS INTEGER ) IS NOT NULL
 ----
@@ -41979,6 +42523,8 @@ SELECT ALL + col5 AS col5 FROM tab2 AS cor0 WHERE CAST( + - col1 AS SIGNED ) IS 
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7245
 SELECT ALL + col5 AS col5 FROM tab2 AS cor0 WHERE CAST ( + - col1 AS INTEGER ) IS NOT NULL
 ----
@@ -41991,6 +42537,8 @@ SELECT ALL + col5 AS col5 FROM tab3 AS cor0 WHERE CAST( + - col1 AS SIGNED ) IS 
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7245
 SELECT ALL + col5 AS col5 FROM tab3 AS cor0 WHERE CAST ( + - col1 AS INTEGER ) IS NOT NULL
 ----
@@ -42003,6 +42551,8 @@ SELECT ALL + col5 AS col5 FROM tab4 AS cor0 WHERE CAST( + - col1 AS SIGNED ) IS 
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7245
 SELECT ALL + col5 AS col5 FROM tab4 AS cor0 WHERE CAST ( + - col1 AS INTEGER ) IS NOT NULL
 ----
@@ -44903,22 +45453,32 @@ query IIIIIII rowsort label-7740
 SELECT ALL * FROM tab4 WHERE NOT ( + - col1 ) <> NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7745
 SELECT + + col2 AS col1 FROM tab0 AS cor0 WHERE NOT NULL BETWEEN NULL AND 99
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7745
 SELECT + + col2 AS col1 FROM tab1 AS cor0 WHERE NOT NULL BETWEEN NULL AND 99
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7745
 SELECT + + col2 AS col1 FROM tab2 AS cor0 WHERE NOT NULL BETWEEN NULL AND 99
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7745
 SELECT + + col2 AS col1 FROM tab3 AS cor0 WHERE NOT NULL BETWEEN NULL AND 99
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7745
 SELECT + + col2 AS col1 FROM tab4 AS cor0 WHERE NOT NULL BETWEEN NULL AND 99
 ----
@@ -45448,22 +46008,32 @@ query I rowsort label-7850
 SELECT ALL col1 + - + col1 FROM tab4 AS cor0 WHERE NOT ( + col0 ) IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7855
 SELECT ALL + col2 FROM tab0 WHERE NULL <= 60
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7855
 SELECT ALL + col2 FROM tab1 WHERE NULL <= 60
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7855
 SELECT ALL + col2 FROM tab2 WHERE NULL <= 60
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7855
 SELECT ALL + col2 FROM tab3 WHERE NULL <= 60
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7855
 SELECT ALL + col2 FROM tab4 WHERE NULL <= 60
 ----
@@ -46324,26 +46894,36 @@ SELECT ALL * FROM tab4 AS cor0 WHERE NOT NULL NOT BETWEEN - 17 * col0 AND NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7985
 SELECT ALL + col5 col4 FROM tab0 AS cor0 WHERE NOT ( NOT ( NOT col3 - + - col4 / - + ( - 54 ) * - 6 NOT BETWEEN col3 AND ( NULL ) ) )
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7985
 SELECT ALL + col5 col4 FROM tab1 AS cor0 WHERE NOT ( NOT ( NOT col3 - + - col4 / - + ( - 54 ) * - 6 NOT BETWEEN col3 AND ( NULL ) ) )
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7985
 SELECT ALL + col5 col4 FROM tab2 AS cor0 WHERE NOT ( NOT ( NOT col3 - + - col4 / - + ( - 54 ) * - 6 NOT BETWEEN col3 AND ( NULL ) ) )
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7985
 SELECT ALL + col5 col4 FROM tab3 AS cor0 WHERE NOT ( NOT ( NOT col3 - + - col4 / - + ( - 54 ) * - 6 NOT BETWEEN col3 AND ( NULL ) ) )
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-7985
 SELECT ALL + col5 col4 FROM tab4 AS cor0 WHERE NOT ( NOT ( NOT col3 - + - col4 / - + ( - 54 ) * - 6 NOT BETWEEN col3 AND ( NULL ) ) )
 ----
@@ -46818,26 +47398,36 @@ query I rowsort label-8075
 SELECT + 58 AS col4 FROM tab4 AS cor0 WHERE ( + col1 NOT BETWEEN NULL AND NULL )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8080
 SELECT + + col2 FROM tab0 cor0 WHERE NOT ( NOT ( - col4 + ( - col0 ) IS NOT NULL ) )
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8080
 SELECT + + col2 FROM tab1 cor0 WHERE NOT ( NOT ( - col4 + ( - col0 ) IS NOT NULL ) )
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8080
 SELECT + + col2 FROM tab2 cor0 WHERE NOT ( NOT ( - col4 + ( - col0 ) IS NOT NULL ) )
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8080
 SELECT + + col2 FROM tab3 cor0 WHERE NOT ( NOT ( - col4 + ( - col0 ) IS NOT NULL ) )
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8080
 SELECT + + col2 FROM tab4 cor0 WHERE NOT ( NOT ( - col4 + ( - col0 ) IS NOT NULL ) )
 ----
@@ -46908,26 +47498,36 @@ query I rowsort label-8095
 SELECT + - 28 FROM tab4 WHERE + 14 < NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8100
 SELECT ALL + col2 AS col3 FROM tab0 cor0 WHERE NOT + 97 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8100
 SELECT ALL + col2 AS col3 FROM tab1 cor0 WHERE NOT + 97 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8100
 SELECT ALL + col2 AS col3 FROM tab2 cor0 WHERE NOT + 97 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8100
 SELECT ALL + col2 AS col3 FROM tab3 cor0 WHERE NOT + 97 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8100
 SELECT ALL + col2 AS col3 FROM tab4 cor0 WHERE NOT + 97 IS NULL
 ----
@@ -47178,22 +47778,32 @@ SELECT - MIN ( ALL + 38 ) FROM tab4 AS cor0 WHERE NOT + col1 IS NOT NULL
 ----
 NULL
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8140
 SELECT ALL + + col2 FROM tab0 AS cor0 WHERE col1 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8140
 SELECT ALL + + col2 FROM tab1 AS cor0 WHERE col1 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8140
 SELECT ALL + + col2 FROM tab2 AS cor0 WHERE col1 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8140
 SELECT ALL + + col2 FROM tab3 AS cor0 WHERE col1 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8140
 SELECT ALL + + col2 FROM tab4 AS cor0 WHERE col1 IS NULL
 ----
@@ -47413,22 +48023,32 @@ SELECT ALL + col0 AS col1 FROM tab4 WHERE 12 IS NOT NULL OR NOT NULL IS NOT NULL
 ----
 10 values hashing to baa294f52a76d605cc4677c4281278af
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8195
 SELECT ALL + + col2 AS col1 FROM tab0 WHERE - ( - col1 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8195
 SELECT ALL + + col2 AS col1 FROM tab1 WHERE - ( - col1 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8195
 SELECT ALL + + col2 AS col1 FROM tab2 WHERE - ( - col1 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8195
 SELECT ALL + + col2 AS col1 FROM tab3 WHERE - ( - col1 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8195
 SELECT ALL + + col2 AS col1 FROM tab4 WHERE - ( - col1 ) IS NULL
 ----
@@ -47923,26 +48543,36 @@ query IIIIIII rowsort label-8285
 SELECT ALL * FROM tab4 AS cor0 WHERE 54 - + + col0 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8290
 SELECT ALL + col5 FROM tab0 WHERE NULL IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8290
 SELECT ALL + col5 FROM tab1 WHERE NULL IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8290
 SELECT ALL + col5 FROM tab2 WHERE NULL IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8290
 SELECT ALL + col5 FROM tab3 WHERE NULL IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8290
 SELECT ALL + col5 FROM tab4 WHERE NULL IS NULL
 ----
@@ -49468,22 +50098,32 @@ SELECT - col3 FROM tab4 WHERE + + col1 + + col4 IS NOT NULL
 ----
 10 values hashing to 8eb0287c3c0b5c487b62fc67edadb060
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8560
 SELECT ALL + col5 AS col0 FROM tab0 WHERE NOT NULL IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8560
 SELECT ALL + col5 AS col0 FROM tab1 WHERE NOT NULL IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8560
 SELECT ALL + col5 AS col0 FROM tab2 WHERE NOT NULL IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8560
 SELECT ALL + col5 AS col0 FROM tab3 WHERE NOT NULL IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8560
 SELECT ALL + col5 AS col0 FROM tab4 WHERE NOT NULL IS NULL
 ----
@@ -50590,6 +51230,8 @@ SELECT - CAST( NULL AS SIGNED ) FROM tab0 WHERE NOT + col5 IS NULL
 10 values hashing to db761b746c7d0f18810c20311a9f8974
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8765
 SELECT - CAST ( NULL AS INTEGER ) FROM tab0 WHERE NOT + col5 IS NULL
 ----
@@ -50602,6 +51244,8 @@ SELECT - CAST( NULL AS SIGNED ) FROM tab1 WHERE NOT + col5 IS NULL
 10 values hashing to db761b746c7d0f18810c20311a9f8974
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8765
 SELECT - CAST ( NULL AS INTEGER ) FROM tab1 WHERE NOT + col5 IS NULL
 ----
@@ -50614,6 +51258,8 @@ SELECT - CAST( NULL AS SIGNED ) FROM tab2 WHERE NOT + col5 IS NULL
 10 values hashing to db761b746c7d0f18810c20311a9f8974
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8765
 SELECT - CAST ( NULL AS INTEGER ) FROM tab2 WHERE NOT + col5 IS NULL
 ----
@@ -50626,6 +51272,8 @@ SELECT - CAST( NULL AS SIGNED ) FROM tab3 WHERE NOT + col5 IS NULL
 10 values hashing to db761b746c7d0f18810c20311a9f8974
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8765
 SELECT - CAST ( NULL AS INTEGER ) FROM tab3 WHERE NOT + col5 IS NULL
 ----
@@ -50638,6 +51286,8 @@ SELECT - CAST( NULL AS SIGNED ) FROM tab4 WHERE NOT + col5 IS NULL
 10 values hashing to db761b746c7d0f18810c20311a9f8974
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8765
 SELECT - CAST ( NULL AS INTEGER ) FROM tab4 WHERE NOT + col5 IS NULL
 ----
@@ -50783,22 +51433,32 @@ query IIIIIII rowsort label-8790
 SELECT * FROM tab4 WHERE NOT - col1 = NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-8795
 SELECT + col5, + 44 AS col0 FROM tab0 WHERE NOT NULL IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-8795
 SELECT + col5, + 44 AS col0 FROM tab1 WHERE NOT NULL IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-8795
 SELECT + col5, + 44 AS col0 FROM tab2 WHERE NOT NULL IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-8795
 SELECT + col5, + 44 AS col0 FROM tab3 WHERE NOT NULL IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query II rowsort label-8795
 SELECT + col5, + 44 AS col0 FROM tab4 WHERE NOT NULL IS NULL
 ----
@@ -50908,26 +51568,36 @@ SELECT col2 FROM tab4 AS cor0 WHERE + 37 NOT IN ( - col4 )
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8815
 SELECT + col5 FROM tab0 WHERE NOT + 84 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8815
 SELECT + col5 FROM tab1 WHERE NOT + 84 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8815
 SELECT + col5 FROM tab2 WHERE NOT + 84 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8815
 SELECT + col5 FROM tab3 WHERE NOT + 84 IS NULL
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-8815
 SELECT + col5 FROM tab4 WHERE NOT + 84 IS NULL
 ----
@@ -52693,22 +53363,32 @@ query IIIIIII rowsort label-9120
 SELECT * FROM tab4 AS cor0 WHERE 84 / - col4 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9125
 SELECT DISTINCT col1 AS col3 FROM tab0 AS cor0 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9125
 SELECT DISTINCT col1 AS col3 FROM tab1 AS cor0 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9125
 SELECT DISTINCT col1 AS col3 FROM tab2 AS cor0 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9125
 SELECT DISTINCT col1 AS col3 FROM tab3 AS cor0 WHERE + col5 IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9125
 SELECT DISTINCT col1 AS col3 FROM tab4 AS cor0 WHERE + col5 IS NULL
 ----
@@ -53168,22 +53848,32 @@ query I rowsort label-9215
 SELECT ALL + col3 + col4 AS col5 FROM tab4 WHERE NOT - - col0 IS NOT NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-9220
 SELECT ALL * FROM tab0 AS cor0 WHERE + ( + + col5 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-9220
 SELECT ALL * FROM tab1 AS cor0 WHERE + ( + + col5 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-9220
 SELECT ALL * FROM tab2 AS cor0 WHERE + ( + + col5 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-9220
 SELECT ALL * FROM tab3 AS cor0 WHERE + ( + + col5 ) IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query IIIIIII rowsort label-9220
 SELECT ALL * FROM tab4 AS cor0 WHERE + ( + + col5 ) IS NULL
 ----
@@ -54568,52 +55258,72 @@ query I rowsort label-9465
 SELECT DISTINCT ( + col1 ) FROM tab4 cor0 WHERE NOT NULL IS NULL
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9470
 SELECT + col2 FROM tab0 AS cor0 WHERE NOT + col1 <= 72
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9470
 SELECT + col2 FROM tab1 AS cor0 WHERE NOT + col1 <= 72
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9470
 SELECT + col2 FROM tab2 AS cor0 WHERE NOT + col1 <= 72
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9470
 SELECT + col2 FROM tab3 AS cor0 WHERE NOT + col1 <= 72
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9470
 SELECT + col2 FROM tab4 AS cor0 WHERE NOT + col1 <= 72
 ----
 10 values hashing to b833e3a3ba082b2c0028b4cd08f0834d
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9475
 SELECT + col5 col1 FROM tab0 cor0 WHERE NOT col0 * col0 + + + col3 BETWEEN - 30 AND NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9475
 SELECT + col5 col1 FROM tab1 cor0 WHERE NOT col0 * col0 + + + col3 BETWEEN - 30 AND NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9475
 SELECT + col5 col1 FROM tab2 cor0 WHERE NOT col0 * col0 + + + col3 BETWEEN - 30 AND NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9475
 SELECT + col5 col1 FROM tab3 cor0 WHERE NOT col0 * col0 + + + col3 BETWEEN - 30 AND NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9475
 SELECT + col5 col1 FROM tab4 cor0 WHERE NOT col0 * col0 + + + col3 BETWEEN - 30 AND NULL
 ----
@@ -56579,26 +57289,36 @@ SELECT 92 AS col5 FROM tab4 AS cor0 WHERE NOT ( col2 ) IS NULL
 10 values hashing to db9ab67e921cfa4b481650cf4b48f814
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9815
 SELECT ALL - col4 * - 85 - + 66 col3 FROM tab0 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9815
 SELECT ALL - col4 * - 85 - + 66 col3 FROM tab1 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9815
 SELECT ALL - col4 * - 85 - + 66 col3 FROM tab2 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9815
 SELECT ALL - col4 * - 85 - + 66 col3 FROM tab3 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9815
 SELECT ALL - col4 * - 85 - + 66 col3 FROM tab4 AS cor0 WHERE NOT + col2 IS NOT NULL
 ----
@@ -56723,22 +57443,32 @@ query IIIIIII rowsort label-9835
 SELECT * FROM tab4 WHERE NULL > col4 + - + col3 / col0
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9840
 SELECT + col5 FROM tab0 WHERE + - 43 = ( + col4 + - 55 + - col3 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9840
 SELECT + col5 FROM tab1 WHERE + - 43 = ( + col4 + - 55 + - col3 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9840
 SELECT + col5 FROM tab2 WHERE + - 43 = ( + col4 + - 55 + - col3 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9840
 SELECT + col5 FROM tab3 WHERE + - 43 = ( + col4 + - 55 + - col3 )
 ----
 
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9840
 SELECT + col5 FROM tab4 WHERE + - 43 = ( + col4 + - 55 + - col3 )
 ----
@@ -57359,6 +58089,8 @@ SELECT + ( col5 ) FROM tab0 AS cor0 WHERE - 98 + + col1 * + 34 * - 2 * + CAST( +
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9950
 SELECT + ( col5 ) FROM tab0 AS cor0 WHERE - 98 + + col1 * + 34 * - 2 * + CAST ( + + 75 AS INTEGER ) IS NULL
 ----
@@ -57369,6 +58101,8 @@ SELECT + ( col5 ) FROM tab1 AS cor0 WHERE - 98 + + col1 * + 34 * - 2 * + CAST( +
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9950
 SELECT + ( col5 ) FROM tab1 AS cor0 WHERE - 98 + + col1 * + 34 * - 2 * + CAST ( + + 75 AS INTEGER ) IS NULL
 ----
@@ -57379,6 +58113,8 @@ SELECT + ( col5 ) FROM tab2 AS cor0 WHERE - 98 + + col1 * + 34 * - 2 * + CAST( +
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9950
 SELECT + ( col5 ) FROM tab2 AS cor0 WHERE - 98 + + col1 * + 34 * - 2 * + CAST ( + + 75 AS INTEGER ) IS NULL
 ----
@@ -57389,6 +58125,8 @@ SELECT + ( col5 ) FROM tab3 AS cor0 WHERE - 98 + + col1 * + 34 * - 2 * + CAST( +
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9950
 SELECT + ( col5 ) FROM tab3 AS cor0 WHERE - 98 + + col1 * + 34 * - 2 * + CAST ( + + 75 AS INTEGER ) IS NULL
 ----
@@ -57399,6 +58137,8 @@ SELECT + ( col5 ) FROM tab4 AS cor0 WHERE - 98 + + col1 * + 34 * - 2 * + CAST( +
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL has no unary + for text
+skipif serenedb # PostgreSQL has no unary + for text
 query I rowsort label-9950
 SELECT + ( col5 ) FROM tab4 AS cor0 WHERE - 98 + + col1 * + 34 * - 2 * + CAST ( + + 75 AS INTEGER ) IS NULL
 ----

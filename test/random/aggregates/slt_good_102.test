@@ -8285,6 +8285,8 @@ SELECT - 33 col1 FROM tab2 cor0
 -33
 
 skipif postgresql # PostgreSQL does not promote INTEGER (32-bit) results
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query I rowsort
 SELECT + col2 FROM tab0 AS cor0 WHERE NOT col1 * col2 * - + 86 * - 70 * - - 93 * - + col2 / + 33 > col0 + - col0
 ----
@@ -12190,6 +12192,8 @@ NULL
 
 skipif mysql # not compatible
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-1319
 SELECT + COUNT ( * ) / + COUNT ( * ) * + MAX ( + col0 ) AS col2 FROM tab2 AS cor0 WHERE NOT NULL IS NULL
 ----
@@ -22789,6 +22793,8 @@ SELECT DISTINCT + col2 * + col2 * - col2 * col2 * + col2 DIV + col2 + col0 AS co
 
 skipif mysql # not compatible
 skipif postgresql # PostgreSQL does not promote INTEGER (32-bit) results
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query I rowsort label-2475
 SELECT DISTINCT + col2 * + col2 * - col2 * col2 * + col2 / + col2 + col0 AS col2 FROM tab0
 ----

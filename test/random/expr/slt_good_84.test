@@ -49046,6 +49046,7 @@ SELECT 22 / + COALESCE ( + 0, - - 77 ) * - CAST( NULL AS DECIMAL ) * - 74 + - CO
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-5257
 SELECT 22 / + COALESCE ( + 0, - - 77 ) * - CAST ( NULL AS REAL ) * - 74 + - COALESCE ( - 55, ( - + 30 ) * 49 ) * 46 - - 74 AS col2
 ----
@@ -55941,6 +55942,7 @@ SELECT ALL + 7 * + - NULLIF ( + CAST( - 39 AS SIGNED ), + MAX( - 44 ) + - 44 * C
 273
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-5996
 SELECT ALL + 7 * + - NULLIF ( + CAST ( - 39 AS INTEGER ), + MAX ( - 44 ) + - 44 * COUNT ( + 57 ) * COALESCE ( - - CASE CASE - 23 WHEN COUNT ( * ) + COUNT ( * ) + 91 * NULLIF ( - 76, + 71 ) THEN NULL WHEN + 71 THEN + 26 + - - COUNT ( * ) END WHEN - - AVG ( ALL + 34 ) THEN MIN ( ALL 70 ) WHEN 65 THEN 64 * 49 * + + 89 WHEN - SUM ( + 78 ) THEN NULL ELSE CAST ( COALESCE ( COUNT ( * ), 57 + 91 / 48 ) AS REAL ) * 34 + + 91 * - 37 END, - 47 / 0 ) )
 ----

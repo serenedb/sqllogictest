@@ -67712,6 +67712,8 @@ SELECT ALL * FROM tab0 cor0 WHERE NOT - 66 + + 72 - + col1 + - col2 * + + col0 *
 
 skipif mysql # not compatible
 skipif postgresql # PostgreSQL does not promote INTEGER (32-bit) results
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query III rowsort label-7426
 SELECT ALL * FROM tab0 cor0 WHERE NOT - 66 + + 72 - + col1 + - col2 * + + col0 * - CAST ( 93 AS INTEGER ) * + + col2 * - col0 * - col1 / - 15 IS NULL
 ----

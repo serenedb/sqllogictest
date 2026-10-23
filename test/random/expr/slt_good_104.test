@@ -89824,6 +89824,7 @@ SELECT + 6 * + - CAST( - 32 AS SIGNED ) * NULLIF ( - 54, + 38 / CASE - + 82 WHEN
 -10273
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-9614
 SELECT + 6 * + - CAST ( - 32 AS INTEGER ) * NULLIF ( - 54, + 38 / CASE - + 82 WHEN + - 30 * 66 + + + COUNT ( * ) THEN 20 / + 0 WHEN + 28 THEN NULL ELSE NULL END * + 5 - CAST ( NULL AS INTEGER ) ) + + MAX ( ALL 95 ) + - COUNT ( * ) - - COUNT ( * ) col2
 ----

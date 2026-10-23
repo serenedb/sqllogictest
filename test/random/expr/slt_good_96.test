@@ -59129,6 +59129,7 @@ SELECT ALL + 89 / - 0 * + 85 * - 56 * + + CASE ( + - 29 ) WHEN - - 44 THEN - + 9
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-6298
 SELECT ALL + 89 / - 0 * + 85 * - 56 * + + CASE ( + - 29 ) WHEN - - 44 THEN - + 99 WHEN - 94 THEN MAX ( DISTINCT - - 87 ) END + 14 AS col1
 ----

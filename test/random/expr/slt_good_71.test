@@ -21098,6 +21098,8 @@ SELECT ALL - ( 27 ) * - 92 / + + 0 / CASE + ( + 27 ) WHEN - 36 THEN NULL WHEN - 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-2290
 SELECT ALL - ( 27 ) * - 92 / + + 0 / CASE + ( + 27 ) WHEN - 36 THEN NULL WHEN - NULLIF ( - COUNT ( + 36 ), - 78 ) THEN + 46 ELSE NULL END * + 53 + - - 8
 ----

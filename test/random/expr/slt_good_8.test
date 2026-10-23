@@ -17659,6 +17659,8 @@ SELECT 95 / CASE + MIN( DISTINCT - - 3 ) WHEN - 74 * + - 77 * + 71 * + 93 * + - 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query I rowsort label-1857
 SELECT 95 / CASE + MIN ( DISTINCT - - 3 ) WHEN - 74 * + - 77 * + 71 * + 93 * + - ( - 82 ) / + + 21 + - 2 THEN 64 / 75 WHEN MIN ( DISTINCT + 16 ) THEN NULL ELSE NULL END
 ----

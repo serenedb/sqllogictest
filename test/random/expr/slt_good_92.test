@@ -8166,6 +8166,7 @@ SELECT ALL CASE + 34 WHEN - 40 DIV + + 39 + + COUNT( * ) THEN - - COUNT( - + 48 
 6030
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-872
 SELECT ALL CASE + 34 WHEN - 40 / + + 39 + + COUNT ( * ) THEN - - COUNT ( - + 48 ) ELSE + - ( + COALESCE ( + - CAST ( NULL AS INTEGER ), + COUNT ( ALL + 85 ) + - + 67, COALESCE ( + - CASE COUNT ( * ) WHEN COUNT ( * ) THEN - 65 ELSE - - 6 / + + 0 END, 48, COUNT ( * ) ) * + 83 + ( 47 ) ) ) - - COUNT ( * ) END * 90 AS col0
 ----

@@ -52829,6 +52829,7 @@ SELECT + CASE + COUNT( * ) WHEN - + 87 + 64 THEN - 47 / - 0 * 10 + 27 + 95 ELSE 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-5735
 SELECT + CASE + COUNT ( * ) WHEN - + 87 + 64 THEN - 47 / - 0 * 10 + 27 + 95 ELSE NULL END * 87 AS col1
 ----

@@ -29676,6 +29676,7 @@ SELECT DISTINCT + col2 + + ( - 35 ) AS col1 FROM tab0 cor0
 64
 
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query IIIIII rowsort
 SELECT * FROM tab1 AS cor0 CROSS JOIN tab1 AS cor1 WHERE NOT NULL = 38 / 0
 ----
@@ -38174,6 +38175,8 @@ NULL
 
 skipif mysql # not compatible
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-4077
 SELECT ALL - 30 / - 0 * - AVG ( + - CAST ( NULL AS INTEGER ) ) FROM tab1
 ----

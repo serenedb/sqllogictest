@@ -43038,6 +43038,7 @@ SELECT ALL + 21 * - COALESCE ( - 33, - 4 / - - 42 - + - 68 + - - 40, 29 ) - 90 +
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-4565
 SELECT ALL + 21 * - COALESCE ( - 33, - 4 / - - 42 - + - 68 + - - 40, 29 ) - 90 + - + 11 + - + 19 / + 0 * CAST ( NULL AS INTEGER )
 ----
@@ -64910,6 +64911,7 @@ SELECT + 74 / - 0 * + + ( 10 ) * - 96 * ( CASE 69 WHEN + 60 + + 5 * - 51 THEN 43
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-6902
 SELECT + 74 / - 0 * + + ( 10 ) * - 96 * ( CASE 69 WHEN + 60 + + 5 * - 51 THEN 43 * - - 91 + - - ( - ( 20 ) ) * + - CAST ( NULL AS INTEGER ) + + + 20 END )
 ----

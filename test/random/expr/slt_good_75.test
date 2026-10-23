@@ -20493,6 +20493,8 @@ SELECT ALL 90 * 81, CASE - 90 WHEN + ( - 58 ) * - - 85 * - 90 * - COALESCE ( + -
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query II rowsort label-2171
 SELECT ALL 90 * 81, CASE - 90 WHEN + ( - 58 ) * - - 85 * - 90 * - COALESCE ( + - 74, + MAX ( DISTINCT - 38 ) * + - 97 * + - 26, - 6 ) * 86 * - 30 / - 62 THEN + COUNT ( ALL COALESCE ( + 73, - 23, 37 ) ) - - 75 ELSE NULL END + - 70 AS col1
 ----
@@ -35315,6 +35317,7 @@ SELECT CASE + SUM( DISTINCT + - 69 ) WHEN - COUNT( * ) + + - 55 THEN ( - 19 ) / 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-3762
 SELECT CASE + SUM ( DISTINCT + - 69 ) WHEN - COUNT ( * ) + + - 55 THEN ( - 19 ) / - 0 WHEN + NULLIF ( + 38, - - 39 ) + - COUNT ( * ) THEN NULL WHEN + 31 * - 19 THEN NULL END * + COUNT ( * ) - 40 AS col0
 ----

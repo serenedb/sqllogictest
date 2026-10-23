@@ -32347,6 +32347,7 @@ SELECT - - COALESCE ( + + 15, + 80 ) * + 51 + 45 DIV + COALESCE ( + + COUNT( * )
 810
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-3473
 SELECT - - COALESCE ( + + 15, + 80 ) * + 51 + 45 / + COALESCE ( + + COUNT ( * ), - 79 * - ( 83 / + 0 ) )
 ----

@@ -83428,6 +83428,7 @@ SELECT COALESCE ( COUNT( * ), + 89 DIV + 0 ) * 72 + + 26 col0
 98
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-9006
 SELECT COALESCE ( COUNT ( * ), + 89 / + 0 ) * 72 + + 26 col0
 ----

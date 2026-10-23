@@ -3982,6 +3982,7 @@ SELECT DISTINCT 78 / - COALESCE ( 0, - + ( 73 ) + + CAST( NULL AS SIGNED ) ) * 9
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-410
 SELECT DISTINCT 78 / - COALESCE ( 0, - + ( 73 ) + + CAST ( NULL AS INTEGER ) ) * 91 * - CAST ( NULL AS INTEGER ) * - ( - 62 ) AS col2
 ----

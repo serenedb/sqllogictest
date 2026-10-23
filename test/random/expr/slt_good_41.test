@@ -21464,6 +21464,7 @@ SELECT - NULLIF ( + CASE - 38 WHEN + COUNT( * ) * - 1 THEN NULL WHEN + COUNT( * 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-2314
 SELECT - NULLIF ( + CASE - 38 WHEN + COUNT ( * ) * - 1 THEN NULL WHEN + COUNT ( * ) - 67 THEN 26 / + - 0 + + 42 END, 83 )
 ----
@@ -31337,6 +31338,7 @@ NULL
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query II rowsort label-3378
 SELECT DISTINCT + COUNT ( * ) + 34 - CAST ( NULL AS INTEGER ), CASE + COUNT ( * ) WHEN - + 54 * + - 17 + + 19 * - - 44 THEN NULL WHEN 37 - + 48 THEN 59 * 34 / 0 * - + 5 END AS col2
 ----
@@ -81767,6 +81769,7 @@ SELECT 89 * 47 * + COUNT( * ) - - CASE - 34 WHEN + MAX( 65 ) * 54 THEN - + 14 / 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-8794
 SELECT 89 * 47 * + COUNT ( * ) - - CASE - 34 WHEN + MAX ( 65 ) * 54 THEN - + 14 / + 0 WHEN - 50 - + 77 THEN NULL ELSE NULL END - + 68 / 33 * - 60
 ----

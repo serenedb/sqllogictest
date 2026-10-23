@@ -73625,6 +73625,7 @@ SELECT ALL 12 / + + 0 * - MAX( + CASE - 75 WHEN ( 44 ) * - 15 - - ( - + 55 ) * 8
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-7834
 SELECT ALL 12 / + + 0 * - MAX ( + CASE - 75 WHEN ( 44 ) * - 15 - - ( - + 55 ) * 89 THEN 45 WHEN 67 THEN NULL ELSE NULL END ) + 39 * - 69 AS col2
 ----

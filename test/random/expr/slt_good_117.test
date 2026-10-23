@@ -8106,6 +8106,8 @@ SELECT ALL 53 AS col2, CASE - 55 WHEN - CAST( NULL AS DECIMAL ) + - 10 THEN NULL
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
+skipif serenedb # PostgreSQL raises division by zero where SQLite returns NULL
 query II rowsort label-846
 SELECT ALL 53 AS col2, CASE - 55 WHEN - CAST ( NULL AS REAL ) + - 10 THEN NULL WHEN - + CAST ( + 95 AS INTEGER ) * - MIN ( DISTINCT - + 45 ) + + NULLIF ( COUNT ( * ), + 47 + - - 32 * - ( 33 ) + ( + 34 ) * + 14 ) + + + 68 - - 65 * - 73 * - 6 * + 6 + - NULLIF ( - 72, + + 97 ) THEN + CASE - 97 WHEN + - CASE + 86 WHEN - + 87 THEN + + 91 END THEN + - 31 + + 64 + + COALESCE ( 72, - 54 + + COALESCE ( - 63 - 91, - 83, - 78 * - ( 43 ) ) * 73 ) + + 20 * MAX ( + 38 + + 83 ) * + 70 END + - 3 * 60 ELSE NULL END * COUNT ( - 90 + 47 / + 0 )
 ----

@@ -60262,6 +60262,7 @@ SELECT ALL - 23 / 19 / - 0 / ( - 13 ) * ( - MIN( + CAST( NULL AS SIGNED ) ) ) + 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-6411
 SELECT ALL - 23 / 19 / - 0 / ( - 13 ) * ( - MIN ( + CAST ( NULL AS INTEGER ) ) ) + - ( - + 1 )
 ----

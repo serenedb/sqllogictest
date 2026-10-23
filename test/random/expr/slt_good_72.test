@@ -21458,6 +21458,7 @@ SELECT ALL - MIN( + ( - + ( - 84 ) ) ) + + + 65 - - 80 / - 0 * + 30 * - CAST( NU
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-2301
 SELECT ALL - MIN ( + ( - + ( - 84 ) ) ) + + + 65 - - 80 / - 0 * + 30 * - CAST ( NULL AS REAL ) AS col1
 ----
@@ -77862,6 +77863,7 @@ SELECT COALESCE ( + MIN( ALL - 42 ), + 11 DIV + 0, + 62 ) AS col1
 -42
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-8329
 SELECT COALESCE ( + MIN ( ALL - 42 ), + 11 / + 0, + 62 ) AS col1
 ----

@@ -37285,6 +37285,8 @@ SELECT ALL - MAX( 61 ) AS col0, - 24 * + + 13 * + 98 * - 52 * - 56 * - - 87 * + 
 -91
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query III rowsort label-3986
 SELECT ALL - MAX ( 61 ) AS col0, - 24 * + + 13 * + 98 * - 52 * - 56 * - - 87 * + + 23 * - 0, - + 97 + - 96 / - 14 AS col0
 ----

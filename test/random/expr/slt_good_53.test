@@ -3423,6 +3423,7 @@ SELECT DISTINCT CASE - COUNT( * ) WHEN - 18 * + 19 * - 85 / + + 88 THEN - 92 - -
 45472
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-371
 SELECT DISTINCT CASE - COUNT ( * ) WHEN - 18 * + 19 * - 85 / + + 88 THEN - 92 - - NULLIF ( - NULLIF ( + 75, 44 + + + 77 / 0 ), + - 6 ) - 97 * - + 58 WHEN - 2 + - 3 + - - COUNT ( * ) * + 43 THEN + 58 ELSE + 58 * 14 * + + SUM ( DISTINCT 56 ) END AS col0
 ----
@@ -67735,6 +67736,7 @@ SELECT 96 / + 0 * + CAST( NULL AS SIGNED )
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-7294
 SELECT 96 / + 0 * + CAST ( NULL AS INTEGER )
 ----
@@ -82611,6 +82613,7 @@ SELECT + CASE CAST( NULL AS SIGNED ) WHEN + + 75 + - + SUM( ALL - + 6 ) THEN NUL
 -2162
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-8893
 SELECT + CASE CAST ( NULL AS INTEGER ) WHEN + + 75 + - + SUM ( ALL - + 6 ) THEN NULL WHEN + 62 / + + 0 + + CASE - MAX ( + - 51 ) WHEN + - COUNT ( * ) + 7 + - 60 THEN NULL WHEN - CASE - 99 WHEN + + COUNT ( * ) THEN CASE - + NULLIF ( + NULLIF ( + 91, + 80 ), + - 81 * + 86 ) WHEN + 14 * + - COUNT ( * ) THEN - 87 + + 88 END - - 41 - - 51 - 95 + + 46 * 34 - - - 83 * COUNT ( * ) / - 93 WHEN 30 THEN 77 END / 35 THEN CAST ( NULL AS INTEGER ) END * - 26 THEN NULL ELSE 45 + COUNT ( * ) END * - 47 AS col2
 ----

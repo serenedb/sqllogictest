@@ -47285,6 +47285,7 @@ SELECT + + CASE + + ( + 65 ) WHEN MIN( 6 ) * - + 44 + - 93 + + 73 * - - 70 / + 3
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-5370
 SELECT + + CASE + + ( + 65 ) WHEN MIN ( 6 ) * - + 44 + - 93 + + 73 * - - 70 / + 32 - NULLIF ( + COUNT ( * ), + - COUNT ( * ) ) THEN 2 / - 68 + - 32 / 0 END AS col0
 ----
@@ -51545,6 +51546,8 @@ NULL
 -6
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query III rowsort label-5834
 SELECT + - NULLIF ( CAST ( NULL AS REAL ), - - ( + 87 ) + 95 ) + - - COUNT ( * ) * - + 85 AS col1, - CAST ( - SUM ( DISTINCT + 79 ) AS INTEGER ) + - + CASE - - 4 WHEN + - NULLIF ( + 75, 13 ) + - 98 + - + 96 * - 52 + 87 * + ( - 92 ) * + 34 * 5 * - ( 29 ) * + 92 * + - 81 / NULLIF ( - CASE + 4 WHEN + + 88 THEN + 87 ELSE + CAST ( + + 90 AS REAL ) + 54 END, + - 35 - - + 70 ) + + 89 * + 92 + + + AVG ( DISTINCT - 11 ) THEN NULL ELSE 40 END, - 6 AS col1
 ----
@@ -72219,6 +72222,8 @@ SELECT + 41 + - 61 + - ( + + 35 ) + + 83 - 35 - + + CAST( 55 AS SIGNED ) * + - 7
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query I rowsort label-8151
 SELECT + 41 + - 61 + - ( + + 35 ) + + 83 - 35 - + + CAST ( 55 AS INTEGER ) * + - 70 * - 75 * - 20 * - CASE - 11 WHEN SUM ( ALL - 35 ) * - CASE - ( - 83 ) WHEN 40 THEN + 72 + 2 END THEN NULL ELSE - 73 * 52 END * + CASE 59 WHEN 92 + AVG ( 19 ) THEN 36 / - 77 + + 90 * 96 END
 ----

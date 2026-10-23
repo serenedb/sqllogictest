@@ -20389,6 +20389,8 @@ SELECT ALL + NULLIF ( - COUNT( * ), + 47 * - 93 * MAX( 45 ) * - 63 * - 56 DIV - 
 -50
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query I rowsort label-2188
 SELECT ALL + NULLIF ( - COUNT ( * ), + 47 * - 93 * MAX ( 45 ) * - 63 * - 56 / - 14 * + 53 + + 56 ) + + - COALESCE ( ( + 49 ), 42 / 45 )
 ----
@@ -71857,6 +71859,7 @@ SELECT DISTINCT + + CASE + 78 WHEN - 98 THEN - 40 / 34 * + 84 WHEN - ( - NULLIF 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-7749
 SELECT DISTINCT + + CASE + 78 WHEN - 98 THEN - 40 / 34 * + 84 WHEN - ( - NULLIF ( 62, 0 * + 68 + + MIN ( - CAST ( + - 35 AS INTEGER ) ) / - ( + 88 ) / + + 32 - + - 65 + - 7 * - 21 * + - ( COUNT ( * ) ) ) ) THEN - - 98 * 48 * - 5 / + - CAST ( - CAST ( 0 AS INTEGER ) AS INTEGER ) - + 40 + + 65 WHEN - + MIN ( DISTINCT - - 34 ) THEN - 65 END AS col2
 ----

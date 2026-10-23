@@ -78759,6 +78759,7 @@ SELECT ALL * FROM tab1 AS cor0 WHERE col0 * + ( CAST ( + 53 AS INTEGER ) ) < col
 ----
 
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query III rowsort
 SELECT ALL * FROM tab0 AS cor0 WHERE NULL NOT BETWEEN + 0 * col0 AND + ( 66 ) / + 0
 ----

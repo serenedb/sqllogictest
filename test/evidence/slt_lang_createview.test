@@ -66,6 +66,7 @@ CREATE TEMPORARY VIEW view3 AS SELECT x FROM t1 WHERE x>0
 # view.
 
 skipif mssql  # this is allowed
+skipif postgres # PostgreSQL updates a simple view
 statement error
 DELETE FROM view1 WHERE x>0
 
@@ -77,6 +78,7 @@ statement error
 INSERT INTO view1 VALUES(2,'unknown')
 
 skipif mssql  # this is allowed
+skipif postgres # PostgreSQL updates a simple view
 statement error
 UPDATE view1 SET x=2
 

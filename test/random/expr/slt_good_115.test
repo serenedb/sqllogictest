@@ -27525,6 +27525,7 @@ SELECT ALL + CASE 33 WHEN + 46 * - MAX( 46 ) THEN 65 + + 29 / - 0 END * ( + 6 ) 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises division by zero where SQLite returns NULL
 query I rowsort label-2946
 SELECT ALL + CASE 33 WHEN + 46 * - MAX ( 46 ) THEN 65 + + 29 / - 0 END * ( + 6 ) AS col2
 ----
@@ -92586,6 +92587,8 @@ SELECT DISTINCT - 27 + 0 + 47 - - 3, - 72 * + + 23 * - - NULLIF ( ( 36 ), 23 * +
 -59520
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL raises integer out of range where SQLite computes in 64 bits
+skipif serenedb # PostgreSQL raises integer out of range where SQLite computes in 64 bits
 query II rowsort label-9895
 SELECT DISTINCT - 27 + 0 + 47 - - 3, - 72 * + + 23 * - - NULLIF ( ( 36 ), 23 * + MIN ( - 66 ) * - 84 * 58 * 48 * - - 61 / - ( 58 ) ) * COUNT ( * ) + + 95 + + COUNT ( DISTINCT + 42 ) col1
 ----

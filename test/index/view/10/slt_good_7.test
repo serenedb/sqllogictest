@@ -226,6 +226,8 @@ SELECT pk FROM tab0 WHERE (col3 > 2 AND col3 >= 92) AND col1 <= 41.49 OR col1 < 
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1009
 
@@ -350,6 +352,8 @@ SELECT pk FROM tab1 WHERE (col3 > 2 AND col3 >= 92) AND col1 <= 41.49 OR col1 < 
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1009
 
@@ -474,6 +478,8 @@ SELECT pk FROM tab2 WHERE (col3 > 2 AND col3 >= 92) AND col1 <= 41.49 OR col1 < 
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1009
 
@@ -598,6 +604,8 @@ SELECT pk FROM tab3 WHERE (col3 > 2 AND col3 >= 92) AND col1 <= 41.49 OR col1 < 
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1009
 
@@ -722,6 +730,8 @@ SELECT pk FROM tab4 WHERE (col3 > 2 AND col3 >= 92) AND col1 <= 41.49 OR col1 < 
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1009
 
@@ -842,6 +852,8 @@ SELECT pk FROM tab0 WHERE col0 < 50
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1012
 
@@ -962,6 +974,8 @@ SELECT pk FROM tab1 WHERE col0 < 50
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1012
 
@@ -1082,6 +1096,8 @@ SELECT pk FROM tab2 WHERE col0 < 50
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1012
 
@@ -1202,6 +1218,8 @@ SELECT pk FROM tab3 WHERE col0 < 50
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1012
 
@@ -1322,6 +1340,8 @@ SELECT pk FROM tab4 WHERE col0 < 50
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1012
 
@@ -1447,6 +1467,8 @@ SELECT pk FROM tab0 WHERE col0 < 78
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1013
 
@@ -1572,6 +1594,8 @@ SELECT pk FROM tab1 WHERE col0 < 78
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1013
 
@@ -1697,6 +1721,8 @@ SELECT pk FROM tab2 WHERE col0 < 78
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1013
 
@@ -1822,6 +1848,8 @@ SELECT pk FROM tab3 WHERE col0 < 78
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1013
 
@@ -1947,6 +1975,8 @@ SELECT pk FROM tab4 WHERE col0 < 78
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1013
 
@@ -2042,6 +2072,8 @@ SELECT pk FROM tab0 WHERE (col0 <= 94 OR col3 < 83) AND ((((((col0 < 5 AND (col3
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1014
 
@@ -2137,6 +2169,8 @@ SELECT pk FROM tab1 WHERE (col0 <= 94 OR col3 < 83) AND ((((((col0 < 5 AND (col3
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1014
 
@@ -2232,6 +2266,8 @@ SELECT pk FROM tab2 WHERE (col0 <= 94 OR col3 < 83) AND ((((((col0 < 5 AND (col3
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1014
 
@@ -2327,6 +2363,8 @@ SELECT pk FROM tab3 WHERE (col0 <= 94 OR col3 < 83) AND ((((((col0 < 5 AND (col3
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1014
 
@@ -2422,6 +2460,8 @@ SELECT pk FROM tab4 WHERE (col0 <= 94 OR col3 < 83) AND ((((((col0 < 5 AND (col3
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1014
 
@@ -2514,6 +2554,8 @@ query I rowsort label-400-3
 SELECT pk FROM tab0 WHERE col4 BETWEEN 73.73 AND 33.21
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1015
 
@@ -2606,6 +2648,8 @@ query I rowsort label-400-3
 SELECT pk FROM tab1 WHERE col4 BETWEEN 73.73 AND 33.21
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1015
 
@@ -2698,6 +2742,8 @@ query I rowsort label-400-3
 SELECT pk FROM tab2 WHERE col4 BETWEEN 73.73 AND 33.21
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1015
 
@@ -2790,6 +2836,8 @@ query I rowsort label-400-3
 SELECT pk FROM tab3 WHERE col4 BETWEEN 73.73 AND 33.21
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1015
 
@@ -2882,6 +2930,8 @@ query I rowsort label-400-3
 SELECT pk FROM tab4 WHERE col4 BETWEEN 73.73 AND 33.21
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1015
 
@@ -3002,6 +3052,8 @@ SELECT pk FROM tab0 WHERE col0 > 58
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1016
 
@@ -3122,6 +3174,8 @@ SELECT pk FROM tab1 WHERE col0 > 58
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1016
 
@@ -3242,6 +3296,8 @@ SELECT pk FROM tab2 WHERE col0 > 58
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1016
 
@@ -3362,6 +3418,8 @@ SELECT pk FROM tab3 WHERE col0 > 58
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1016
 
@@ -3482,6 +3540,8 @@ SELECT pk FROM tab4 WHERE col0 > 58
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1016
 
@@ -3577,6 +3637,8 @@ SELECT pk FROM tab0 WHERE (col0 >= 2)
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1017
 
@@ -3672,6 +3734,8 @@ SELECT pk FROM tab1 WHERE (col0 >= 2)
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1017
 
@@ -3767,6 +3831,8 @@ SELECT pk FROM tab2 WHERE (col0 >= 2)
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1017
 
@@ -3862,6 +3928,8 @@ SELECT pk FROM tab3 WHERE (col0 >= 2)
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1017
 
@@ -3957,6 +4025,8 @@ SELECT pk FROM tab4 WHERE (col0 >= 2)
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1017
 
@@ -4083,6 +4153,8 @@ SELECT pk FROM tab0 WHERE col0 < 63
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1018
 
@@ -4209,6 +4281,8 @@ SELECT pk FROM tab1 WHERE col0 < 63
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1018
 
@@ -4335,6 +4409,8 @@ SELECT pk FROM tab2 WHERE col0 < 63
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1018
 
@@ -4461,6 +4537,8 @@ SELECT pk FROM tab3 WHERE col0 < 63
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1018
 
@@ -4587,6 +4665,8 @@ SELECT pk FROM tab4 WHERE col0 < 63
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1018
 
@@ -4679,6 +4759,8 @@ query I rowsort label-800-3
 SELECT pk FROM tab0 WHERE col0 IN (93,81,44,3,48,11)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1019
 
@@ -4771,6 +4853,8 @@ query I rowsort label-800-3
 SELECT pk FROM tab1 WHERE col0 IN (93,81,44,3,48,11)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1019
 
@@ -4863,6 +4947,8 @@ query I rowsort label-800-3
 SELECT pk FROM tab2 WHERE col0 IN (93,81,44,3,48,11)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1019
 
@@ -4955,6 +5041,8 @@ query I rowsort label-800-3
 SELECT pk FROM tab3 WHERE col0 IN (93,81,44,3,48,11)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1019
 
@@ -5047,6 +5135,8 @@ query I rowsort label-800-3
 SELECT pk FROM tab4 WHERE col0 IN (93,81,44,3,48,11)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1019
 
@@ -5139,6 +5229,8 @@ query I rowsort label-900-3
 SELECT pk FROM tab0 WHERE col0 BETWEEN 84 AND 79 OR (col4 = 85.87)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1020
 
@@ -5231,6 +5323,8 @@ query I rowsort label-900-3
 SELECT pk FROM tab1 WHERE col0 BETWEEN 84 AND 79 OR (col4 = 85.87)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1020
 
@@ -5323,6 +5417,8 @@ query I rowsort label-900-3
 SELECT pk FROM tab2 WHERE col0 BETWEEN 84 AND 79 OR (col4 = 85.87)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1020
 
@@ -5415,6 +5511,8 @@ query I rowsort label-900-3
 SELECT pk FROM tab3 WHERE col0 BETWEEN 84 AND 79 OR (col4 = 85.87)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1020
 
@@ -5507,6 +5605,8 @@ query I rowsort label-900-3
 SELECT pk FROM tab4 WHERE col0 BETWEEN 84 AND 79 OR (col4 = 85.87)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1020
 
@@ -5633,6 +5733,8 @@ SELECT pk FROM tab0 WHERE col0 < 68
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1022
 
@@ -5759,6 +5861,8 @@ SELECT pk FROM tab1 WHERE col0 < 68
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1022
 
@@ -5885,6 +5989,8 @@ SELECT pk FROM tab2 WHERE col0 < 68
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1022
 
@@ -6011,6 +6117,8 @@ SELECT pk FROM tab3 WHERE col0 < 68
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1022
 
@@ -6137,6 +6245,8 @@ SELECT pk FROM tab4 WHERE col0 < 68
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1022
 
@@ -6236,6 +6346,8 @@ SELECT pk FROM tab0 WHERE col0 > 22 OR col4 <= 27.14
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1023
 
@@ -6335,6 +6447,8 @@ SELECT pk FROM tab1 WHERE col0 > 22 OR col4 <= 27.14
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1023
 
@@ -6434,6 +6548,8 @@ SELECT pk FROM tab2 WHERE col0 > 22 OR col4 <= 27.14
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1023
 
@@ -6533,6 +6649,8 @@ SELECT pk FROM tab3 WHERE col0 > 22 OR col4 <= 27.14
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1023
 
@@ -6632,6 +6750,8 @@ SELECT pk FROM tab4 WHERE col0 > 22 OR col4 <= 27.14
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1023
 
@@ -6756,6 +6876,8 @@ SELECT pk FROM tab0 WHERE (col0 >= 12)
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1024
 
@@ -6880,6 +7002,8 @@ SELECT pk FROM tab1 WHERE (col0 >= 12)
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1024
 
@@ -7004,6 +7128,8 @@ SELECT pk FROM tab2 WHERE (col0 >= 12)
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1024
 
@@ -7128,6 +7254,8 @@ SELECT pk FROM tab3 WHERE (col0 >= 12)
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1024
 
@@ -7252,6 +7380,8 @@ SELECT pk FROM tab4 WHERE (col0 >= 12)
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1024
 
@@ -7347,6 +7477,8 @@ SELECT pk FROM tab0 WHERE col3 <= 88 OR col4 <= 84.5
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1025
 
@@ -7442,6 +7574,8 @@ SELECT pk FROM tab1 WHERE col3 <= 88 OR col4 <= 84.5
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1025
 
@@ -7537,6 +7671,8 @@ SELECT pk FROM tab2 WHERE col3 <= 88 OR col4 <= 84.5
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1025
 
@@ -7632,6 +7768,8 @@ SELECT pk FROM tab3 WHERE col3 <= 88 OR col4 <= 84.5
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1025
 
@@ -7727,6 +7865,8 @@ SELECT pk FROM tab4 WHERE col3 <= 88 OR col4 <= 84.5
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1025
 
@@ -7853,6 +7993,8 @@ SELECT pk FROM tab0 WHERE col1 <= 44.51
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1026
 
@@ -7979,6 +8121,8 @@ SELECT pk FROM tab1 WHERE col1 <= 44.51
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1026
 
@@ -8105,6 +8249,8 @@ SELECT pk FROM tab2 WHERE col1 <= 44.51
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1026
 
@@ -8231,6 +8377,8 @@ SELECT pk FROM tab3 WHERE col1 <= 44.51
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1026
 
@@ -8357,6 +8505,8 @@ SELECT pk FROM tab4 WHERE col1 <= 44.51
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1026
 
@@ -8456,6 +8606,8 @@ SELECT pk FROM tab0 WHERE (((col3 >= 84)))
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1027
 
@@ -8555,6 +8707,8 @@ SELECT pk FROM tab1 WHERE (((col3 >= 84)))
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1027
 
@@ -8654,6 +8808,8 @@ SELECT pk FROM tab2 WHERE (((col3 >= 84)))
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1027
 
@@ -8753,6 +8909,8 @@ SELECT pk FROM tab3 WHERE (((col3 >= 84)))
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1027
 
@@ -8852,6 +9010,8 @@ SELECT pk FROM tab4 WHERE (((col3 >= 84)))
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1027
 
@@ -8947,6 +9107,8 @@ SELECT pk FROM tab0 WHERE (((((col4 < 70.55)) OR col3 >= 41 AND col4 = 70.71 OR 
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1028
 
@@ -9042,6 +9204,8 @@ SELECT pk FROM tab1 WHERE (((((col4 < 70.55)) OR col3 >= 41 AND col4 = 70.71 OR 
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1028
 
@@ -9137,6 +9301,8 @@ SELECT pk FROM tab2 WHERE (((((col4 < 70.55)) OR col3 >= 41 AND col4 = 70.71 OR 
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1028
 
@@ -9232,6 +9398,8 @@ SELECT pk FROM tab3 WHERE (((((col4 < 70.55)) OR col3 >= 41 AND col4 = 70.71 OR 
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1028
 
@@ -9327,6 +9495,8 @@ SELECT pk FROM tab4 WHERE (((((col4 < 70.55)) OR col3 >= 41 AND col4 = 70.71 OR 
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1028
 
@@ -9452,6 +9622,8 @@ SELECT pk FROM tab0 WHERE (col0 >= 27)
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1029
 
@@ -9577,6 +9749,8 @@ SELECT pk FROM tab1 WHERE (col0 >= 27)
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1029
 
@@ -9702,6 +9876,8 @@ SELECT pk FROM tab2 WHERE (col0 >= 27)
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1029
 
@@ -9827,6 +10003,8 @@ SELECT pk FROM tab3 WHERE (col0 >= 27)
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1029
 
@@ -9952,6 +10130,8 @@ SELECT pk FROM tab4 WHERE (col0 >= 27)
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1029
 
@@ -10072,6 +10252,8 @@ SELECT pk FROM tab0 WHERE ((col1 IS NULL AND col1 IN (54.43,78.86,33.15,51.13) A
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1030
 
@@ -10192,6 +10374,8 @@ SELECT pk FROM tab1 WHERE ((col1 IS NULL AND col1 IN (54.43,78.86,33.15,51.13) A
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1030
 
@@ -10312,6 +10496,8 @@ SELECT pk FROM tab2 WHERE ((col1 IS NULL AND col1 IN (54.43,78.86,33.15,51.13) A
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1030
 
@@ -10432,6 +10618,8 @@ SELECT pk FROM tab3 WHERE ((col1 IS NULL AND col1 IN (54.43,78.86,33.15,51.13) A
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1030
 
@@ -10552,6 +10740,8 @@ SELECT pk FROM tab4 WHERE ((col1 IS NULL AND col1 IN (54.43,78.86,33.15,51.13) A
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1030
 
@@ -10661,6 +10851,8 @@ SELECT pk FROM tab0 WHERE col0 <= 78 AND col3 BETWEEN 8 AND 98
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1031
 
@@ -10770,6 +10962,8 @@ SELECT pk FROM tab1 WHERE col0 <= 78 AND col3 BETWEEN 8 AND 98
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1031
 
@@ -10879,6 +11073,8 @@ SELECT pk FROM tab2 WHERE col0 <= 78 AND col3 BETWEEN 8 AND 98
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1031
 
@@ -10988,6 +11184,8 @@ SELECT pk FROM tab3 WHERE col0 <= 78 AND col3 BETWEEN 8 AND 98
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1031
 
@@ -11097,6 +11295,8 @@ SELECT pk FROM tab4 WHERE col0 <= 78 AND col3 BETWEEN 8 AND 98
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1031
 
@@ -11203,6 +11403,8 @@ SELECT pk FROM tab0 WHERE col4 <= 10.93
 0
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1032
 
@@ -11309,6 +11511,8 @@ SELECT pk FROM tab1 WHERE col4 <= 10.93
 0
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1032
 
@@ -11415,6 +11619,8 @@ SELECT pk FROM tab2 WHERE col4 <= 10.93
 0
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1032
 
@@ -11521,6 +11727,8 @@ SELECT pk FROM tab3 WHERE col4 <= 10.93
 0
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1032
 
@@ -11627,6 +11835,8 @@ SELECT pk FROM tab4 WHERE col4 <= 10.93
 0
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1032
 
@@ -11726,6 +11936,8 @@ SELECT pk FROM tab0 WHERE col4 >= 74.47
 ----
 3
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1033
 
@@ -11825,6 +12037,8 @@ SELECT pk FROM tab1 WHERE col4 >= 74.47
 ----
 3
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1033
 
@@ -11924,6 +12138,8 @@ SELECT pk FROM tab2 WHERE col4 >= 74.47
 ----
 3
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1033
 
@@ -12023,6 +12239,8 @@ SELECT pk FROM tab3 WHERE col4 >= 74.47
 ----
 3
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1033
 
@@ -12122,6 +12340,8 @@ SELECT pk FROM tab4 WHERE col4 >= 74.47
 ----
 3
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1033
 
@@ -12235,6 +12455,8 @@ SELECT pk FROM tab0 WHERE col0 <= 14
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1035
 
@@ -12348,6 +12570,8 @@ SELECT pk FROM tab1 WHERE col0 <= 14
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1035
 
@@ -12461,6 +12685,8 @@ SELECT pk FROM tab2 WHERE col0 <= 14
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1035
 
@@ -12574,6 +12800,8 @@ SELECT pk FROM tab3 WHERE col0 <= 14
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1035
 
@@ -12687,6 +12915,8 @@ SELECT pk FROM tab4 WHERE col0 <= 14
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1035
 
@@ -12811,6 +13041,8 @@ SELECT pk FROM tab0 WHERE col3 >= 19 OR col4 >= 22.98 OR (col3 >= 80)
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1036
 
@@ -12935,6 +13167,8 @@ SELECT pk FROM tab1 WHERE col3 >= 19 OR col4 >= 22.98 OR (col3 >= 80)
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1036
 
@@ -13059,6 +13293,8 @@ SELECT pk FROM tab2 WHERE col3 >= 19 OR col4 >= 22.98 OR (col3 >= 80)
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1036
 
@@ -13183,6 +13419,8 @@ SELECT pk FROM tab3 WHERE col3 >= 19 OR col4 >= 22.98 OR (col3 >= 80)
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1036
 
@@ -13307,6 +13545,8 @@ SELECT pk FROM tab4 WHERE col3 >= 19 OR col4 >= 22.98 OR (col3 >= 80)
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1036
 
@@ -13406,6 +13646,8 @@ SELECT pk FROM tab0 WHERE col3 <= 78
 ----
 9 values hashing to b62312116f93d37c7a952ee38494f224
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1037
 
@@ -13505,6 +13747,8 @@ SELECT pk FROM tab1 WHERE col3 <= 78
 ----
 9 values hashing to b62312116f93d37c7a952ee38494f224
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1037
 
@@ -13604,6 +13848,8 @@ SELECT pk FROM tab2 WHERE col3 <= 78
 ----
 9 values hashing to b62312116f93d37c7a952ee38494f224
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1037
 
@@ -13703,6 +13949,8 @@ SELECT pk FROM tab3 WHERE col3 <= 78
 ----
 9 values hashing to b62312116f93d37c7a952ee38494f224
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1037
 
@@ -13802,6 +14050,8 @@ SELECT pk FROM tab4 WHERE col3 <= 78
 ----
 9 values hashing to b62312116f93d37c7a952ee38494f224
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1037
 
@@ -13901,6 +14151,8 @@ SELECT pk FROM tab0 WHERE (((col3 IS NULL) AND col3 > 51 OR col3 >= 87))
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1038
 
@@ -14000,6 +14252,8 @@ SELECT pk FROM tab1 WHERE (((col3 IS NULL) AND col3 > 51 OR col3 >= 87))
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1038
 
@@ -14099,6 +14353,8 @@ SELECT pk FROM tab2 WHERE (((col3 IS NULL) AND col3 > 51 OR col3 >= 87))
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1038
 
@@ -14198,6 +14454,8 @@ SELECT pk FROM tab3 WHERE (((col3 IS NULL) AND col3 > 51 OR col3 >= 87))
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1038
 
@@ -14297,6 +14555,8 @@ SELECT pk FROM tab4 WHERE (((col3 IS NULL) AND col3 > 51 OR col3 >= 87))
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1038
 
@@ -14389,6 +14649,8 @@ query I rowsort label-2600-3
 SELECT pk FROM tab0 WHERE col4 = 51.56
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1039
 
@@ -14481,6 +14743,8 @@ query I rowsort label-2600-3
 SELECT pk FROM tab1 WHERE col4 = 51.56
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1039
 
@@ -14573,6 +14837,8 @@ query I rowsort label-2600-3
 SELECT pk FROM tab2 WHERE col4 = 51.56
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1039
 
@@ -14665,6 +14931,8 @@ query I rowsort label-2600-3
 SELECT pk FROM tab3 WHERE col4 = 51.56
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1039
 
@@ -14757,6 +15025,8 @@ query I rowsort label-2600-3
 SELECT pk FROM tab4 WHERE col4 = 51.56
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1039
 
@@ -14849,6 +15119,8 @@ query I rowsort label-2700-3
 SELECT pk FROM tab0 WHERE (col3 >= 91)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1040
 
@@ -14941,6 +15213,8 @@ query I rowsort label-2700-3
 SELECT pk FROM tab1 WHERE (col3 >= 91)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1040
 
@@ -15033,6 +15307,8 @@ query I rowsort label-2700-3
 SELECT pk FROM tab2 WHERE (col3 >= 91)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1040
 
@@ -15125,6 +15401,8 @@ query I rowsort label-2700-3
 SELECT pk FROM tab3 WHERE (col3 >= 91)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1040
 
@@ -15217,6 +15495,8 @@ query I rowsort label-2700-3
 SELECT pk FROM tab4 WHERE (col3 >= 91)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1040
 
@@ -15309,6 +15589,8 @@ query I rowsort label-2800-3
 SELECT pk FROM tab0 WHERE ((col4 <= 6.77) AND col3 > 79)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1041
 
@@ -15401,6 +15683,8 @@ query I rowsort label-2800-3
 SELECT pk FROM tab1 WHERE ((col4 <= 6.77) AND col3 > 79)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1041
 
@@ -15493,6 +15777,8 @@ query I rowsort label-2800-3
 SELECT pk FROM tab2 WHERE ((col4 <= 6.77) AND col3 > 79)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1041
 
@@ -15585,6 +15871,8 @@ query I rowsort label-2800-3
 SELECT pk FROM tab3 WHERE ((col4 <= 6.77) AND col3 > 79)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1041
 
@@ -15677,6 +15965,8 @@ query I rowsort label-2800-3
 SELECT pk FROM tab4 WHERE ((col4 <= 6.77) AND col3 > 79)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1041
 
@@ -15776,6 +16066,8 @@ SELECT pk FROM tab0 WHERE ((col0 > 16 OR ((col0 < 9 OR col3 IN (SELECT col0 FROM
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1042
 
@@ -15875,6 +16167,8 @@ SELECT pk FROM tab1 WHERE ((col0 > 16 OR ((col0 < 9 OR col3 IN (SELECT col0 FROM
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1042
 
@@ -15974,6 +16268,8 @@ SELECT pk FROM tab2 WHERE ((col0 > 16 OR ((col0 < 9 OR col3 IN (SELECT col0 FROM
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1042
 
@@ -16073,6 +16369,8 @@ SELECT pk FROM tab3 WHERE ((col0 > 16 OR ((col0 < 9 OR col3 IN (SELECT col0 FROM
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1042
 
@@ -16172,6 +16470,8 @@ SELECT pk FROM tab4 WHERE ((col0 > 16 OR ((col0 < 9 OR col3 IN (SELECT col0 FROM
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1042
 
@@ -16298,6 +16598,8 @@ SELECT pk FROM tab0 WHERE col1 > 21.41
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1044
 
@@ -16424,6 +16726,8 @@ SELECT pk FROM tab1 WHERE col1 > 21.41
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1044
 
@@ -16550,6 +16854,8 @@ SELECT pk FROM tab2 WHERE col1 > 21.41
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1044
 
@@ -16676,6 +16982,8 @@ SELECT pk FROM tab3 WHERE col1 > 21.41
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1044
 
@@ -16802,6 +17110,8 @@ SELECT pk FROM tab4 WHERE col1 > 21.41
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1044
 
@@ -16922,6 +17232,8 @@ SELECT pk FROM tab0 WHERE col1 >= 61.10 OR col4 > 87.57 AND col0 > 74
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1045
 
@@ -17042,6 +17354,8 @@ SELECT pk FROM tab1 WHERE col1 >= 61.10 OR col4 > 87.57 AND col0 > 74
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1045
 
@@ -17162,6 +17476,8 @@ SELECT pk FROM tab2 WHERE col1 >= 61.10 OR col4 > 87.57 AND col0 > 74
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1045
 
@@ -17282,6 +17598,8 @@ SELECT pk FROM tab3 WHERE col1 >= 61.10 OR col4 > 87.57 AND col0 > 74
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1045
 
@@ -17402,6 +17720,8 @@ SELECT pk FROM tab4 WHERE col1 >= 61.10 OR col4 > 87.57 AND col0 > 74
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1045
 
@@ -17515,6 +17835,8 @@ SELECT pk FROM tab0 WHERE col4 >= 33.44 AND (col4 > 52.40)
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1046
 
@@ -17628,6 +17950,8 @@ SELECT pk FROM tab1 WHERE col4 >= 33.44 AND (col4 > 52.40)
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1046
 
@@ -17741,6 +18065,8 @@ SELECT pk FROM tab2 WHERE col4 >= 33.44 AND (col4 > 52.40)
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1046
 
@@ -17854,6 +18180,8 @@ SELECT pk FROM tab3 WHERE col4 >= 33.44 AND (col4 > 52.40)
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1046
 
@@ -17967,6 +18295,8 @@ SELECT pk FROM tab4 WHERE col4 >= 33.44 AND (col4 > 52.40)
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1046
 
@@ -18073,6 +18403,8 @@ SELECT pk FROM tab0 WHERE (((col0 < 13)))
 3
 7
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1048
 
@@ -18179,6 +18511,8 @@ SELECT pk FROM tab1 WHERE (((col0 < 13)))
 3
 7
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1048
 
@@ -18285,6 +18619,8 @@ SELECT pk FROM tab2 WHERE (((col0 < 13)))
 3
 7
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1048
 
@@ -18391,6 +18727,8 @@ SELECT pk FROM tab3 WHERE (((col0 < 13)))
 3
 7
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1048
 
@@ -18497,6 +18835,8 @@ SELECT pk FROM tab4 WHERE (((col0 < 13)))
 3
 7
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1048
 
@@ -18603,6 +18943,8 @@ SELECT pk FROM tab0 WHERE col0 <= 13
 3
 7
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1049
 
@@ -18709,6 +19051,8 @@ SELECT pk FROM tab1 WHERE col0 <= 13
 3
 7
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1049
 
@@ -18815,6 +19159,8 @@ SELECT pk FROM tab2 WHERE col0 <= 13
 3
 7
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1049
 
@@ -18921,6 +19267,8 @@ SELECT pk FROM tab3 WHERE col0 <= 13
 3
 7
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1049
 
@@ -19027,6 +19375,8 @@ SELECT pk FROM tab4 WHERE col0 <= 13
 3
 7
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1049
 
@@ -19122,6 +19472,8 @@ SELECT pk FROM tab0 WHERE (((col3 >= 86 OR col0 > 23) OR (col0 <= 84 AND col4 >=
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1050
 
@@ -19217,6 +19569,8 @@ SELECT pk FROM tab1 WHERE (((col3 >= 86 OR col0 > 23) OR (col0 <= 84 AND col4 >=
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1050
 
@@ -19312,6 +19666,8 @@ SELECT pk FROM tab2 WHERE (((col3 >= 86 OR col0 > 23) OR (col0 <= 84 AND col4 >=
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1050
 
@@ -19407,6 +19763,8 @@ SELECT pk FROM tab3 WHERE (((col3 >= 86 OR col0 > 23) OR (col0 <= 84 AND col4 >=
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1050
 
@@ -19502,6 +19860,8 @@ SELECT pk FROM tab4 WHERE (((col3 >= 86 OR col0 > 23) OR (col0 <= 84 AND col4 >=
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1050
 
@@ -19628,6 +19988,8 @@ SELECT pk FROM tab0 WHERE col1 > 35.69
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1051
 
@@ -19754,6 +20116,8 @@ SELECT pk FROM tab1 WHERE col1 > 35.69
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1051
 
@@ -19880,6 +20244,8 @@ SELECT pk FROM tab2 WHERE col1 > 35.69
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1051
 
@@ -20006,6 +20372,8 @@ SELECT pk FROM tab3 WHERE col1 > 35.69
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1051
 
@@ -20132,6 +20500,8 @@ SELECT pk FROM tab4 WHERE col1 > 35.69
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1051
 
@@ -20224,6 +20594,8 @@ query I rowsort label-3700-3
 SELECT pk FROM tab0 WHERE col1 >= 82.28 AND col4 IN (24.14,1.29,95.94,30.92)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1052
 
@@ -20316,6 +20688,8 @@ query I rowsort label-3700-3
 SELECT pk FROM tab1 WHERE col1 >= 82.28 AND col4 IN (24.14,1.29,95.94,30.92)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1052
 
@@ -20408,6 +20782,8 @@ query I rowsort label-3700-3
 SELECT pk FROM tab2 WHERE col1 >= 82.28 AND col4 IN (24.14,1.29,95.94,30.92)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1052
 
@@ -20500,6 +20876,8 @@ query I rowsort label-3700-3
 SELECT pk FROM tab3 WHERE col1 >= 82.28 AND col4 IN (24.14,1.29,95.94,30.92)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1052
 
@@ -20592,6 +20970,8 @@ query I rowsort label-3700-3
 SELECT pk FROM tab4 WHERE col1 >= 82.28 AND col4 IN (24.14,1.29,95.94,30.92)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1052
 
@@ -20684,6 +21064,8 @@ query I rowsort label-3800-3
 SELECT pk FROM tab0 WHERE (col1 >= 88.90 AND (col0 = 56)) AND ((col1 >= 39.62))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1053
 
@@ -20776,6 +21158,8 @@ query I rowsort label-3800-3
 SELECT pk FROM tab1 WHERE (col1 >= 88.90 AND (col0 = 56)) AND ((col1 >= 39.62))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1053
 
@@ -20868,6 +21252,8 @@ query I rowsort label-3800-3
 SELECT pk FROM tab2 WHERE (col1 >= 88.90 AND (col0 = 56)) AND ((col1 >= 39.62))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1053
 
@@ -20960,6 +21346,8 @@ query I rowsort label-3800-3
 SELECT pk FROM tab3 WHERE (col1 >= 88.90 AND (col0 = 56)) AND ((col1 >= 39.62))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1053
 
@@ -21052,6 +21440,8 @@ query I rowsort label-3800-3
 SELECT pk FROM tab4 WHERE (col1 >= 88.90 AND (col0 = 56)) AND ((col1 >= 39.62))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1053
 
@@ -21172,6 +21562,8 @@ SELECT pk FROM tab0 WHERE (col0 > 75) AND col4 <= 92.83 OR (col4 > 55.40 AND col
 5
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1054
 
@@ -21292,6 +21684,8 @@ SELECT pk FROM tab1 WHERE (col0 > 75) AND col4 <= 92.83 OR (col4 > 55.40 AND col
 5
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1054
 
@@ -21412,6 +21806,8 @@ SELECT pk FROM tab2 WHERE (col0 > 75) AND col4 <= 92.83 OR (col4 > 55.40 AND col
 5
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1054
 
@@ -21532,6 +21928,8 @@ SELECT pk FROM tab3 WHERE (col0 > 75) AND col4 <= 92.83 OR (col4 > 55.40 AND col
 5
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1054
 
@@ -21652,6 +22050,8 @@ SELECT pk FROM tab4 WHERE (col0 > 75) AND col4 <= 92.83 OR (col4 > 55.40 AND col
 5
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1054
 
@@ -21765,6 +22165,8 @@ SELECT pk FROM tab0 WHERE (col3 < 27)
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1055
 
@@ -21878,6 +22280,8 @@ SELECT pk FROM tab1 WHERE (col3 < 27)
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1055
 
@@ -21991,6 +22395,8 @@ SELECT pk FROM tab2 WHERE (col3 < 27)
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1055
 
@@ -22104,6 +22510,8 @@ SELECT pk FROM tab3 WHERE (col3 < 27)
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1055
 
@@ -22217,6 +22625,8 @@ SELECT pk FROM tab4 WHERE (col3 < 27)
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1055
 
@@ -22312,6 +22722,8 @@ SELECT pk FROM tab0 WHERE col1 > 2.15 OR ((col1 <= 28.98 AND (col3 <= 90) OR col
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1056
 
@@ -22407,6 +22819,8 @@ SELECT pk FROM tab1 WHERE col1 > 2.15 OR ((col1 <= 28.98 AND (col3 <= 90) OR col
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1056
 
@@ -22502,6 +22916,8 @@ SELECT pk FROM tab2 WHERE col1 > 2.15 OR ((col1 <= 28.98 AND (col3 <= 90) OR col
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1056
 
@@ -22597,6 +23013,8 @@ SELECT pk FROM tab3 WHERE col1 > 2.15 OR ((col1 <= 28.98 AND (col3 <= 90) OR col
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1056
 
@@ -22692,6 +23110,8 @@ SELECT pk FROM tab4 WHERE col1 > 2.15 OR ((col1 <= 28.98 AND (col3 <= 90) OR col
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1056
 
@@ -22818,6 +23238,8 @@ SELECT pk FROM tab0 WHERE col1 < 63.29
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1057
 
@@ -22944,6 +23366,8 @@ SELECT pk FROM tab1 WHERE col1 < 63.29
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1057
 
@@ -23070,6 +23494,8 @@ SELECT pk FROM tab2 WHERE col1 < 63.29
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1057
 
@@ -23196,6 +23622,8 @@ SELECT pk FROM tab3 WHERE col1 < 63.29
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1057
 
@@ -23322,6 +23750,8 @@ SELECT pk FROM tab4 WHERE col1 < 63.29
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1057
 
@@ -23414,6 +23844,8 @@ query I rowsort label-4300-3
 SELECT pk FROM tab0 WHERE ((col3 IN (80,75,14,23,85,2) AND col0 IS NULL OR (col0 < 54 OR col3 > 97) AND col0 = 3 AND (col4 > 56.68)) AND col4 <= 61.79 AND col3 BETWEEN 78 AND 82 OR col4 IN (63.99,17.12))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1058
 
@@ -23506,6 +23938,8 @@ query I rowsort label-4300-3
 SELECT pk FROM tab1 WHERE ((col3 IN (80,75,14,23,85,2) AND col0 IS NULL OR (col0 < 54 OR col3 > 97) AND col0 = 3 AND (col4 > 56.68)) AND col4 <= 61.79 AND col3 BETWEEN 78 AND 82 OR col4 IN (63.99,17.12))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1058
 
@@ -23598,6 +24032,8 @@ query I rowsort label-4300-3
 SELECT pk FROM tab2 WHERE ((col3 IN (80,75,14,23,85,2) AND col0 IS NULL OR (col0 < 54 OR col3 > 97) AND col0 = 3 AND (col4 > 56.68)) AND col4 <= 61.79 AND col3 BETWEEN 78 AND 82 OR col4 IN (63.99,17.12))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1058
 
@@ -23690,6 +24126,8 @@ query I rowsort label-4300-3
 SELECT pk FROM tab3 WHERE ((col3 IN (80,75,14,23,85,2) AND col0 IS NULL OR (col0 < 54 OR col3 > 97) AND col0 = 3 AND (col4 > 56.68)) AND col4 <= 61.79 AND col3 BETWEEN 78 AND 82 OR col4 IN (63.99,17.12))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1058
 
@@ -23782,6 +24220,8 @@ query I rowsort label-4300-3
 SELECT pk FROM tab4 WHERE ((col3 IN (80,75,14,23,85,2) AND col0 IS NULL OR (col0 < 54 OR col3 > 97) AND col0 = 3 AND (col4 > 56.68)) AND col4 <= 61.79 AND col3 BETWEEN 78 AND 82 OR col4 IN (63.99,17.12))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1058
 
@@ -23895,6 +24335,8 @@ SELECT pk FROM tab0 WHERE col4 >= 58.77
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1060
 
@@ -24008,6 +24450,8 @@ SELECT pk FROM tab1 WHERE col4 >= 58.77
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1060
 
@@ -24121,6 +24565,8 @@ SELECT pk FROM tab2 WHERE col4 >= 58.77
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1060
 
@@ -24234,6 +24680,8 @@ SELECT pk FROM tab3 WHERE col4 >= 58.77
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1060
 
@@ -24347,6 +24795,8 @@ SELECT pk FROM tab4 WHERE col4 >= 58.77
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1060
 
@@ -24446,6 +24896,8 @@ SELECT pk FROM tab0 WHERE col0 >= 9
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1061
 
@@ -24545,6 +24997,8 @@ SELECT pk FROM tab1 WHERE col0 >= 9
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1061
 
@@ -24644,6 +25098,8 @@ SELECT pk FROM tab2 WHERE col0 >= 9
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1061
 
@@ -24743,6 +25199,8 @@ SELECT pk FROM tab3 WHERE col0 >= 9
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1061
 
@@ -24842,6 +25300,8 @@ SELECT pk FROM tab4 WHERE col0 >= 9
 ----
 9 values hashing to 39e3d4d27bae24c9e33e78b000cc7d61
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1061
 
@@ -24937,6 +25397,8 @@ SELECT pk FROM tab0 WHERE col4 < 89.93
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1062
 
@@ -25032,6 +25494,8 @@ SELECT pk FROM tab1 WHERE col4 < 89.93
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1062
 
@@ -25127,6 +25591,8 @@ SELECT pk FROM tab2 WHERE col4 < 89.93
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1062
 
@@ -25222,6 +25688,8 @@ SELECT pk FROM tab3 WHERE col4 < 89.93
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1062
 
@@ -25317,6 +25785,8 @@ SELECT pk FROM tab4 WHERE col4 < 89.93
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1062
 
@@ -25416,6 +25886,8 @@ SELECT pk FROM tab0 WHERE (col3 > 18) OR col0 > 25 OR col1 IS NULL AND (((col4 >
 ----
 9 values hashing to 0b2f3ce47428ebec5f2931eddc864093
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1063
 
@@ -25515,6 +25987,8 @@ SELECT pk FROM tab1 WHERE (col3 > 18) OR col0 > 25 OR col1 IS NULL AND (((col4 >
 ----
 9 values hashing to 0b2f3ce47428ebec5f2931eddc864093
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1063
 
@@ -25614,6 +26088,8 @@ SELECT pk FROM tab2 WHERE (col3 > 18) OR col0 > 25 OR col1 IS NULL AND (((col4 >
 ----
 9 values hashing to 0b2f3ce47428ebec5f2931eddc864093
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1063
 
@@ -25713,6 +26189,8 @@ SELECT pk FROM tab3 WHERE (col3 > 18) OR col0 > 25 OR col1 IS NULL AND (((col4 >
 ----
 9 values hashing to 0b2f3ce47428ebec5f2931eddc864093
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1063
 
@@ -25812,6 +26290,8 @@ SELECT pk FROM tab4 WHERE (col3 > 18) OR col0 > 25 OR col1 IS NULL AND (((col4 >
 ----
 9 values hashing to 0b2f3ce47428ebec5f2931eddc864093
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1063
 
@@ -25911,6 +26391,8 @@ SELECT pk FROM tab0 WHERE col3 > 77
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1064
 
@@ -26010,6 +26492,8 @@ SELECT pk FROM tab1 WHERE col3 > 77
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1064
 
@@ -26109,6 +26593,8 @@ SELECT pk FROM tab2 WHERE col3 > 77
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1064
 
@@ -26208,6 +26694,8 @@ SELECT pk FROM tab3 WHERE col3 > 77
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1064
 
@@ -26307,6 +26795,8 @@ SELECT pk FROM tab4 WHERE col3 > 77
 ----
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1064
 
@@ -26420,6 +26910,8 @@ SELECT pk FROM tab0 WHERE (col0 < 19)
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1065
 
@@ -26533,6 +27025,8 @@ SELECT pk FROM tab1 WHERE (col0 < 19)
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1065
 
@@ -26646,6 +27140,8 @@ SELECT pk FROM tab2 WHERE (col0 < 19)
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1065
 
@@ -26759,6 +27255,8 @@ SELECT pk FROM tab3 WHERE (col0 < 19)
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1065
 
@@ -26872,6 +27370,8 @@ SELECT pk FROM tab4 WHERE (col0 < 19)
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1065
 
@@ -26971,6 +27471,8 @@ SELECT pk FROM tab0 WHERE col1 > 90.92
 ----
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1066
 
@@ -27070,6 +27572,8 @@ SELECT pk FROM tab1 WHERE col1 > 90.92
 ----
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1066
 
@@ -27169,6 +27673,8 @@ SELECT pk FROM tab2 WHERE col1 > 90.92
 ----
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1066
 
@@ -27268,6 +27774,8 @@ SELECT pk FROM tab3 WHERE col1 > 90.92
 ----
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1066
 
@@ -27367,6 +27875,8 @@ SELECT pk FROM tab4 WHERE col1 > 90.92
 ----
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1066
 
@@ -27466,6 +27976,8 @@ SELECT pk FROM tab0 WHERE (col1 <= 80.90)
 ----
 9 values hashing to 7c052a6f22ec636843783dd115badb9d
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1067
 
@@ -27565,6 +28077,8 @@ SELECT pk FROM tab1 WHERE (col1 <= 80.90)
 ----
 9 values hashing to 7c052a6f22ec636843783dd115badb9d
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1067
 
@@ -27664,6 +28178,8 @@ SELECT pk FROM tab2 WHERE (col1 <= 80.90)
 ----
 9 values hashing to 7c052a6f22ec636843783dd115badb9d
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1067
 
@@ -27763,6 +28279,8 @@ SELECT pk FROM tab3 WHERE (col1 <= 80.90)
 ----
 9 values hashing to 7c052a6f22ec636843783dd115badb9d
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1067
 
@@ -27862,6 +28380,8 @@ SELECT pk FROM tab4 WHERE (col1 <= 80.90)
 ----
 9 values hashing to 7c052a6f22ec636843783dd115badb9d
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1067
 
@@ -27975,6 +28495,8 @@ SELECT pk FROM tab0 WHERE (col0 < 80 OR col3 <= 94 OR (col0 > 2 AND col0 <= 70 O
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1068
 
@@ -28088,6 +28610,8 @@ SELECT pk FROM tab1 WHERE (col0 < 80 OR col3 <= 94 OR (col0 > 2 AND col0 <= 70 O
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1068
 
@@ -28201,6 +28725,8 @@ SELECT pk FROM tab2 WHERE (col0 < 80 OR col3 <= 94 OR (col0 > 2 AND col0 <= 70 O
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1068
 
@@ -28314,6 +28840,8 @@ SELECT pk FROM tab3 WHERE (col0 < 80 OR col3 <= 94 OR (col0 > 2 AND col0 <= 70 O
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1068
 
@@ -28427,6 +28955,8 @@ SELECT pk FROM tab4 WHERE (col0 < 80 OR col3 <= 94 OR (col0 > 2 AND col0 <= 70 O
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1068
 
@@ -28552,6 +29082,8 @@ SELECT pk FROM tab0 WHERE col3 >= 30
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1069
 
@@ -28677,6 +29209,8 @@ SELECT pk FROM tab1 WHERE col3 >= 30
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1069
 
@@ -28802,6 +29336,8 @@ SELECT pk FROM tab2 WHERE col3 >= 30
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1069
 
@@ -28927,6 +29463,8 @@ SELECT pk FROM tab3 WHERE col3 >= 30
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1069
 
@@ -29052,6 +29590,8 @@ SELECT pk FROM tab4 WHERE col3 >= 30
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1069
 
@@ -29172,6 +29712,8 @@ SELECT pk FROM tab0 WHERE ((col0 >= 30)) AND col1 <= 34.36 OR (col4 >= 14.91) AN
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1070
 
@@ -29292,6 +29834,8 @@ SELECT pk FROM tab1 WHERE ((col0 >= 30)) AND col1 <= 34.36 OR (col4 >= 14.91) AN
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1070
 
@@ -29412,6 +29956,8 @@ SELECT pk FROM tab2 WHERE ((col0 >= 30)) AND col1 <= 34.36 OR (col4 >= 14.91) AN
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1070
 
@@ -29532,6 +30078,8 @@ SELECT pk FROM tab3 WHERE ((col0 >= 30)) AND col1 <= 34.36 OR (col4 >= 14.91) AN
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1070
 
@@ -29652,6 +30200,8 @@ SELECT pk FROM tab4 WHERE ((col0 >= 30)) AND col1 <= 34.36 OR (col4 >= 14.91) AN
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1070
 
@@ -29776,6 +30326,8 @@ SELECT pk FROM tab0 WHERE (col3 >= 41 OR col3 <= 61 AND col0 IN (62,59,39,80,86,
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1071
 
@@ -29900,6 +30452,8 @@ SELECT pk FROM tab1 WHERE (col3 >= 41 OR col3 <= 61 AND col0 IN (62,59,39,80,86,
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1071
 
@@ -30024,6 +30578,8 @@ SELECT pk FROM tab2 WHERE (col3 >= 41 OR col3 <= 61 AND col0 IN (62,59,39,80,86,
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1071
 
@@ -30148,6 +30704,8 @@ SELECT pk FROM tab3 WHERE (col3 >= 41 OR col3 <= 61 AND col0 IN (62,59,39,80,86,
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1071
 
@@ -30272,6 +30830,8 @@ SELECT pk FROM tab4 WHERE (col3 >= 41 OR col3 <= 61 AND col0 IN (62,59,39,80,86,
 8
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1071
 
@@ -30371,6 +30931,8 @@ SELECT pk FROM tab0 WHERE col4 > 57.4 OR col1 < 58.84 OR ((col3 >= 77 AND col1 >
 ----
 9 values hashing to 4290bd41ca7ca69dc280e33882d8e9de
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1072
 
@@ -30470,6 +31032,8 @@ SELECT pk FROM tab1 WHERE col4 > 57.4 OR col1 < 58.84 OR ((col3 >= 77 AND col1 >
 ----
 9 values hashing to 4290bd41ca7ca69dc280e33882d8e9de
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1072
 
@@ -30569,6 +31133,8 @@ SELECT pk FROM tab2 WHERE col4 > 57.4 OR col1 < 58.84 OR ((col3 >= 77 AND col1 >
 ----
 9 values hashing to 4290bd41ca7ca69dc280e33882d8e9de
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1072
 
@@ -30668,6 +31234,8 @@ SELECT pk FROM tab3 WHERE col4 > 57.4 OR col1 < 58.84 OR ((col3 >= 77 AND col1 >
 ----
 9 values hashing to 4290bd41ca7ca69dc280e33882d8e9de
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1072
 
@@ -30767,6 +31335,8 @@ SELECT pk FROM tab4 WHERE col4 > 57.4 OR col1 < 58.84 OR ((col3 >= 77 AND col1 >
 ----
 9 values hashing to 4290bd41ca7ca69dc280e33882d8e9de
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1072
 
@@ -30859,6 +31429,8 @@ query I rowsort label-5700-3
 SELECT pk FROM tab0 WHERE col1 < 2.58 AND col3 < 75
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1073
 
@@ -30951,6 +31523,8 @@ query I rowsort label-5700-3
 SELECT pk FROM tab1 WHERE col1 < 2.58 AND col3 < 75
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1073
 
@@ -31043,6 +31617,8 @@ query I rowsort label-5700-3
 SELECT pk FROM tab2 WHERE col1 < 2.58 AND col3 < 75
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1073
 
@@ -31135,6 +31711,8 @@ query I rowsort label-5700-3
 SELECT pk FROM tab3 WHERE col1 < 2.58 AND col3 < 75
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1073
 
@@ -31227,6 +31805,8 @@ query I rowsort label-5700-3
 SELECT pk FROM tab4 WHERE col1 < 2.58 AND col3 < 75
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1073
 
@@ -31319,6 +31899,8 @@ query I rowsort label-5800-3
 SELECT pk FROM tab0 WHERE col0 IS NULL AND ((col3 > 72)) AND (((((((col1 < 93.76)))))) OR (((col3 < 60)) OR col0 <= 79 OR col0 > 52 AND (col0 = 55 OR col3 < 35 AND ((col4 < 7.4)) AND col4 > 3.23 OR (col4 < 12.88) OR col1 = 57.74 AND col3 > 64 AND col3 > 41 OR col1 IS NULL AND (col3 BETWEEN 1 AND 98) AND (col3 >= 18) OR (col1 > 95.22) OR col3 IS NULL AND col4 > 8.41 OR col3 < 15 OR col4 >= 66.17 OR col0 < 86 AND (((col3 IN (0,12,82,91,56,80)))) AND col1 > 64.56 AND col0 < 53 AND col3 <= 84 AND ((col3 <= 18) OR col1 > 80.0)) OR ((col0 >= 96)) AND (col4 IS NULL) OR col3 > 73) AND col1 = 26.89 OR ((col3 > 30 OR (col3 >= 59)))) AND ((col3 >= 92) AND (((((col3 < 65))))))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1074
 
@@ -31411,6 +31993,8 @@ query I rowsort label-5800-3
 SELECT pk FROM tab1 WHERE col0 IS NULL AND ((col3 > 72)) AND (((((((col1 < 93.76)))))) OR (((col3 < 60)) OR col0 <= 79 OR col0 > 52 AND (col0 = 55 OR col3 < 35 AND ((col4 < 7.4)) AND col4 > 3.23 OR (col4 < 12.88) OR col1 = 57.74 AND col3 > 64 AND col3 > 41 OR col1 IS NULL AND (col3 BETWEEN 1 AND 98) AND (col3 >= 18) OR (col1 > 95.22) OR col3 IS NULL AND col4 > 8.41 OR col3 < 15 OR col4 >= 66.17 OR col0 < 86 AND (((col3 IN (0,12,82,91,56,80)))) AND col1 > 64.56 AND col0 < 53 AND col3 <= 84 AND ((col3 <= 18) OR col1 > 80.0)) OR ((col0 >= 96)) AND (col4 IS NULL) OR col3 > 73) AND col1 = 26.89 OR ((col3 > 30 OR (col3 >= 59)))) AND ((col3 >= 92) AND (((((col3 < 65))))))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1074
 
@@ -31503,6 +32087,8 @@ query I rowsort label-5800-3
 SELECT pk FROM tab2 WHERE col0 IS NULL AND ((col3 > 72)) AND (((((((col1 < 93.76)))))) OR (((col3 < 60)) OR col0 <= 79 OR col0 > 52 AND (col0 = 55 OR col3 < 35 AND ((col4 < 7.4)) AND col4 > 3.23 OR (col4 < 12.88) OR col1 = 57.74 AND col3 > 64 AND col3 > 41 OR col1 IS NULL AND (col3 BETWEEN 1 AND 98) AND (col3 >= 18) OR (col1 > 95.22) OR col3 IS NULL AND col4 > 8.41 OR col3 < 15 OR col4 >= 66.17 OR col0 < 86 AND (((col3 IN (0,12,82,91,56,80)))) AND col1 > 64.56 AND col0 < 53 AND col3 <= 84 AND ((col3 <= 18) OR col1 > 80.0)) OR ((col0 >= 96)) AND (col4 IS NULL) OR col3 > 73) AND col1 = 26.89 OR ((col3 > 30 OR (col3 >= 59)))) AND ((col3 >= 92) AND (((((col3 < 65))))))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1074
 
@@ -31595,6 +32181,8 @@ query I rowsort label-5800-3
 SELECT pk FROM tab3 WHERE col0 IS NULL AND ((col3 > 72)) AND (((((((col1 < 93.76)))))) OR (((col3 < 60)) OR col0 <= 79 OR col0 > 52 AND (col0 = 55 OR col3 < 35 AND ((col4 < 7.4)) AND col4 > 3.23 OR (col4 < 12.88) OR col1 = 57.74 AND col3 > 64 AND col3 > 41 OR col1 IS NULL AND (col3 BETWEEN 1 AND 98) AND (col3 >= 18) OR (col1 > 95.22) OR col3 IS NULL AND col4 > 8.41 OR col3 < 15 OR col4 >= 66.17 OR col0 < 86 AND (((col3 IN (0,12,82,91,56,80)))) AND col1 > 64.56 AND col0 < 53 AND col3 <= 84 AND ((col3 <= 18) OR col1 > 80.0)) OR ((col0 >= 96)) AND (col4 IS NULL) OR col3 > 73) AND col1 = 26.89 OR ((col3 > 30 OR (col3 >= 59)))) AND ((col3 >= 92) AND (((((col3 < 65))))))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1074
 
@@ -31687,6 +32275,8 @@ query I rowsort label-5800-3
 SELECT pk FROM tab4 WHERE col0 IS NULL AND ((col3 > 72)) AND (((((((col1 < 93.76)))))) OR (((col3 < 60)) OR col0 <= 79 OR col0 > 52 AND (col0 = 55 OR col3 < 35 AND ((col4 < 7.4)) AND col4 > 3.23 OR (col4 < 12.88) OR col1 = 57.74 AND col3 > 64 AND col3 > 41 OR col1 IS NULL AND (col3 BETWEEN 1 AND 98) AND (col3 >= 18) OR (col1 > 95.22) OR col3 IS NULL AND col4 > 8.41 OR col3 < 15 OR col4 >= 66.17 OR col0 < 86 AND (((col3 IN (0,12,82,91,56,80)))) AND col1 > 64.56 AND col0 < 53 AND col3 <= 84 AND ((col3 <= 18) OR col1 > 80.0)) OR ((col0 >= 96)) AND (col4 IS NULL) OR col3 > 73) AND col1 = 26.89 OR ((col3 > 30 OR (col3 >= 59)))) AND ((col3 >= 92) AND (((((col3 < 65))))))
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1074
 
@@ -31800,6 +32390,8 @@ SELECT pk FROM tab0 WHERE ((col3 > 71))
 3
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1075
 
@@ -31913,6 +32505,8 @@ SELECT pk FROM tab1 WHERE ((col3 > 71))
 3
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1075
 
@@ -32026,6 +32620,8 @@ SELECT pk FROM tab2 WHERE ((col3 > 71))
 3
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1075
 
@@ -32139,6 +32735,8 @@ SELECT pk FROM tab3 WHERE ((col3 > 71))
 3
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1075
 
@@ -32252,6 +32850,8 @@ SELECT pk FROM tab4 WHERE ((col3 > 71))
 3
 6
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1075
 
@@ -32361,6 +32961,8 @@ SELECT pk FROM tab0 WHERE ((((col3 > 54 OR col0 = 44 AND (((col0 >= 49))) AND ((
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1076
 
@@ -32470,6 +33072,8 @@ SELECT pk FROM tab1 WHERE ((((col3 > 54 OR col0 = 44 AND (((col0 >= 49))) AND ((
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1076
 
@@ -32579,6 +33183,8 @@ SELECT pk FROM tab2 WHERE ((((col3 > 54 OR col0 = 44 AND (((col0 >= 49))) AND ((
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1076
 
@@ -32688,6 +33294,8 @@ SELECT pk FROM tab3 WHERE ((((col3 > 54 OR col0 = 44 AND (((col0 >= 49))) AND ((
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1076
 
@@ -32797,6 +33405,8 @@ SELECT pk FROM tab4 WHERE ((((col3 > 54 OR col0 = 44 AND (((col0 >= 49))) AND ((
 6
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1076
 
@@ -32917,6 +33527,8 @@ SELECT pk FROM tab0 WHERE col3 < 53
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1077
 
@@ -33037,6 +33649,8 @@ SELECT pk FROM tab1 WHERE col3 < 53
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1077
 
@@ -33157,6 +33771,8 @@ SELECT pk FROM tab2 WHERE col3 < 53
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1077
 
@@ -33277,6 +33893,8 @@ SELECT pk FROM tab3 WHERE col3 < 53
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1077
 
@@ -33397,6 +34015,8 @@ SELECT pk FROM tab4 WHERE col3 < 53
 7
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1077
 
@@ -33503,6 +34123,8 @@ SELECT pk FROM tab0 WHERE ((col3 <= 22 OR col3 IN (27)))
 0
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1078
 
@@ -33609,6 +34231,8 @@ SELECT pk FROM tab1 WHERE ((col3 <= 22 OR col3 IN (27)))
 0
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1078
 
@@ -33715,6 +34339,8 @@ SELECT pk FROM tab2 WHERE ((col3 <= 22 OR col3 IN (27)))
 0
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1078
 
@@ -33821,6 +34447,8 @@ SELECT pk FROM tab3 WHERE ((col3 <= 22 OR col3 IN (27)))
 0
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1078
 
@@ -33927,6 +34555,8 @@ SELECT pk FROM tab4 WHERE ((col3 <= 22 OR col3 IN (27)))
 0
 8
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1078
 
@@ -34040,6 +34670,8 @@ SELECT pk FROM tab0 WHERE (col1 >= 68.67)
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1079
 
@@ -34153,6 +34785,8 @@ SELECT pk FROM tab1 WHERE (col1 >= 68.67)
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1079
 
@@ -34266,6 +34900,8 @@ SELECT pk FROM tab2 WHERE (col1 >= 68.67)
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1079
 
@@ -34379,6 +35015,8 @@ SELECT pk FROM tab3 WHERE (col1 >= 68.67)
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1079
 
@@ -34492,6 +35130,8 @@ SELECT pk FROM tab4 WHERE (col1 >= 68.67)
 3
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1079
 
@@ -34616,6 +35256,8 @@ SELECT pk FROM tab0 WHERE col3 >= 24
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1080
 
@@ -34740,6 +35382,8 @@ SELECT pk FROM tab1 WHERE col3 >= 24
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1080
 
@@ -34864,6 +35508,8 @@ SELECT pk FROM tab2 WHERE col3 >= 24
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1080
 
@@ -34988,6 +35634,8 @@ SELECT pk FROM tab3 WHERE col3 >= 24
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1080
 
@@ -35112,6 +35760,8 @@ SELECT pk FROM tab4 WHERE col3 >= 24
 7
 9
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1080
 
@@ -35207,6 +35857,8 @@ SELECT pk FROM tab0 WHERE col3 > 48 OR col3 <= 29 OR col0 >= 55
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1081
 
@@ -35302,6 +35954,8 @@ SELECT pk FROM tab1 WHERE col3 > 48 OR col3 <= 29 OR col0 >= 55
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1081
 
@@ -35397,6 +36051,8 @@ SELECT pk FROM tab2 WHERE col3 > 48 OR col3 <= 29 OR col0 >= 55
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1081
 
@@ -35492,6 +36148,8 @@ SELECT pk FROM tab3 WHERE col3 > 48 OR col3 <= 29 OR col0 >= 55
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1081
 
@@ -35587,6 +36245,8 @@ SELECT pk FROM tab4 WHERE col3 > 48 OR col3 <= 29 OR col0 >= 55
 ----
 10 values hashing to e20b902b49a98b1a05ed62804c757f94
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1081
 
@@ -35679,6 +36339,8 @@ query I rowsort label-6600-3
 SELECT pk FROM tab0 WHERE (col3 = 24)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1082
 
@@ -35771,6 +36433,8 @@ query I rowsort label-6600-3
 SELECT pk FROM tab1 WHERE (col3 = 24)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1082
 
@@ -35863,6 +36527,8 @@ query I rowsort label-6600-3
 SELECT pk FROM tab2 WHERE (col3 = 24)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1082
 
@@ -35955,6 +36621,8 @@ query I rowsort label-6600-3
 SELECT pk FROM tab3 WHERE (col3 = 24)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1082
 
@@ -36047,6 +36715,8 @@ query I rowsort label-6600-3
 SELECT pk FROM tab4 WHERE (col3 = 24)
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1082
 
@@ -36173,6 +36843,8 @@ SELECT pk FROM tab0 WHERE col4 > 27.68 OR col1 >= 59.78
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1083
 
@@ -36299,6 +36971,8 @@ SELECT pk FROM tab1 WHERE col4 > 27.68 OR col1 >= 59.78
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1083
 
@@ -36425,6 +37099,8 @@ SELECT pk FROM tab2 WHERE col4 > 27.68 OR col1 >= 59.78
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1083
 
@@ -36551,6 +37227,8 @@ SELECT pk FROM tab3 WHERE col4 > 27.68 OR col1 >= 59.78
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1083
 
@@ -36677,6 +37355,8 @@ SELECT pk FROM tab4 WHERE col4 > 27.68 OR col1 >= 59.78
 4
 5
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1083
 
@@ -36769,6 +37449,8 @@ query I rowsort label-6800-3
 SELECT pk FROM tab0 WHERE col3 >= 89
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab0_1084
 
@@ -36861,6 +37543,8 @@ query I rowsort label-6800-3
 SELECT pk FROM tab1 WHERE col3 >= 89
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab1_1084
 
@@ -36953,6 +37637,8 @@ query I rowsort label-6800-3
 SELECT pk FROM tab2 WHERE col3 >= 89
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab2_1084
 
@@ -37045,6 +37731,8 @@ query I rowsort label-6800-3
 SELECT pk FROM tab3 WHERE col3 >= 89
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab3_1084
 
@@ -37137,6 +37825,8 @@ query I rowsort label-6800-3
 SELECT pk FROM tab4 WHERE col3 >= 89
 ----
 
+skipif postgres # PostgreSQL does not drop a view other views depend on
+skipif serenedb # PostgreSQL does not drop a view other views depend on
 statement ok
 DROP VIEW view_1_tab4_1084
 
