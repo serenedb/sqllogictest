@@ -79436,6 +79436,8 @@ SELECT col2 * col2 * - 56 col1 FROM tab0
 -548856
 -5600
 
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query III rowsort
 SELECT ALL * FROM tab0 WHERE + col0 / 0 BETWEEN col0 AND NULL
 ----

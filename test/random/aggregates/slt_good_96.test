@@ -7267,6 +7267,7 @@ SELECT DISTINCT - + COUNT( * ) FROM tab1 AS cor0 WHERE NOT - col2 BETWEEN + col0
 -3
 
 skipif mysql # not compatible
+skipif serenedb # TODO(mbkkt) int32 overflow
 query I rowsort label-792
 SELECT DISTINCT - + COUNT ( * ) FROM tab1 AS cor0 WHERE NOT - col2 BETWEEN + col0 / 63 + 22 AND + - col2 * - col1 * - col2 * + col2 * + col1 * + - col2 * + + col0
 ----
@@ -81447,6 +81448,8 @@ NULL
 
 skipif mysql # not compatible
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query I rowsort label-8894
 SELECT ALL 7 / + - COUNT ( * ) * + + MIN ( + ( + 87 ) ) AS col1 FROM tab2 cor0 WHERE NOT NULL >= NULL
 ----

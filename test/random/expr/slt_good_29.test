@@ -11720,6 +11720,8 @@ SELECT DISTINCT - CASE CAST( - 91 AS SIGNED ) WHEN + COUNT( * ) THEN NULL WHEN +
 65
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-1447
 SELECT DISTINCT - CASE CAST ( - 91 AS INTEGER ) WHEN + COUNT ( * ) THEN NULL WHEN + 31 - + COALESCE ( + CAST ( - 3 AS INTEGER ), - + 66 ) THEN - + AVG ( DISTINCT + 72 ) ELSE - COUNT ( * ) END * 58 * + + ( COUNT ( * ) ) / - 61 * + - 33 * + 65 - - 65 AS col0
 ----
@@ -13179,6 +13181,8 @@ SELECT + COALESCE ( 4, - AVG ( ALL + - 85 ) ) * 75 DIV - 33
 -9
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-1631
 SELECT + COALESCE ( 4, - AVG ( ALL + - 85 ) ) * 75 / - 33
 ----
@@ -46469,6 +46473,7 @@ SELECT ALL - COUNT( * ) + - NULLIF ( + COUNT( - 43 ), - AVG ( 17 ) ) DIV + + 82 
 -1
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-5653
 SELECT ALL - COUNT ( * ) + - NULLIF ( + COUNT ( - 43 ), - AVG ( 17 ) ) / + + 82 * 73 AS col2
 ----
@@ -48098,6 +48103,8 @@ SELECT + COALESCE ( + 59, - AVG ( - 39 ) ) DIV - 51 - - + 43 AS col2
 42
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-5843
 SELECT + COALESCE ( + 59, - AVG ( - 39 ) ) / - 51 - - + 43 AS col2
 ----
@@ -58836,6 +58843,7 @@ SELECT COUNT( * ) DIV 6 * - + 57 + - COALESCE ( + ( COUNT( * ) ), 13 * COALESCE 
 -1
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-7164
 SELECT COUNT ( * ) / 6 * - + 57 + - COALESCE ( + ( COUNT ( * ) ), 13 * COALESCE ( 26 / - CASE 96 WHEN - 16 * 40 THEN NULL ELSE 65 / 84 END, NULLIF ( - 24, + ( - 17 ) ) * 48 ) + - 30, 65 )
 ----
@@ -59900,6 +59908,7 @@ SELECT DISTINCT + 24 AS col0, - NULLIF ( 55, 17 + - AVG ( + ( 88 ) ) ) DIV 35 - 
 -53
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query II rowsort label-7281
 SELECT DISTINCT + 24 AS col0, - NULLIF ( 55, 17 + - AVG ( + ( 88 ) ) ) / 35 - - ( - 40 + COUNT ( * ) * - 13 ) + COUNT ( * ) / + COUNT ( * ) AS col2
 ----

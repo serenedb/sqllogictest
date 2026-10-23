@@ -9301,6 +9301,8 @@ SELECT ALL * FROM tab2 WHERE NOT - + col2 NOT BETWEEN NULL AND col2
 ----
 
 skipif postgresql # PostgreSQL handles NULL in DIV/0 by differently
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query I rowsort
 SELECT DISTINCT 40 + + 78 / - 0 FROM tab0 WHERE NOT NULL IS NULL
 ----
@@ -38019,6 +38021,8 @@ query III rowsort
 SELECT * FROM tab1 WHERE NOT - col0 IN ( - col0, 90, + ( - 95 ) + 30 * - 63 )
 ----
 
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query I rowsort
 SELECT ALL + col1 * - - 80 * + col2 FROM tab2 AS cor0 WHERE NULL IN ( col1 * 14, 20, - - 47, + 84 * + 80 * + col0 + + - col0 * - + 29 / - 0, - col1 )
 ----

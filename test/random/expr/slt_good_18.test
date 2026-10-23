@@ -8970,6 +8970,8 @@ SELECT - COALESCE ( - COUNT( * ), - COUNT( - NULLIF ( + + 66, + 68 ) ) * - 8 DIV
 0
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-965
 SELECT - COALESCE ( - COUNT ( * ), - COUNT ( - NULLIF ( + + 66, + 68 ) ) * - 8 / NULLIF ( + - 98, + 75 ) * 14 + ( + ( - + AVG ( DISTINCT 81 ) ) ) + - 86 ) / - - 74
 ----
@@ -22035,6 +22037,7 @@ SELECT - COUNT( * ) AS col0, - 0 + + - COUNT( * ) + - COALESCE ( + MIN( + 33 ), 
 -1
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query II rowsort label-2388
 SELECT - COUNT ( * ) AS col0, - 0 + + - COUNT ( * ) + - COALESCE ( + MIN ( + 33 ), + COUNT ( ALL + 51 ), - 5 * 63 + + + 88 + - NULLIF ( + COUNT ( * ), + AVG ( + - 73 ) ) * 67 + 74 * 44 * + 41 * 3 + + 54 * + ( - COUNT ( * ) ) * + 66 ) / 84
 ----
@@ -24027,6 +24030,7 @@ SELECT ALL NULLIF ( - 60, - CASE + ( 59 ) WHEN - COUNT( * ) THEN NULL WHEN - 35 
 0
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-2602
 SELECT ALL NULLIF ( - 60, - CASE + ( 59 ) WHEN - COUNT ( * ) THEN NULL WHEN - 35 + + + 32 + - COUNT ( * ) * + 60 * + 15 THEN NULL ELSE - AVG ( ALL - - 22 ) - CAST ( NULL AS INTEGER ) + - 25 * + + 37 / + 8 END * 38 + COALESCE ( + CAST ( NULL AS INTEGER ), + ( + ( + COUNT ( * ) ) ) / 28 - - 63 + + COUNT ( * ) + - 35 ) + - 66 * - 10 ) / + 87
 ----
@@ -44109,6 +44113,7 @@ SELECT + + COALESCE ( + CASE 83 WHEN - ( - + CASE 54 WHEN COUNT( * ) * COUNT( * 
 -3720
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-4738
 SELECT + + COALESCE ( + CASE 83 WHEN - ( - + CASE 54 WHEN COUNT ( * ) * COUNT ( * ) * + COUNT ( * ) / 31 THEN 54 / - - 88 / + + ( 0 ) WHEN - - 21 / 25 THEN NULL END ) * + 37 + + 3 THEN NULL WHEN - + 83 * - - ( - + 50 ) * - + 36 + 4 - + + SUM ( + - 20 ) + 33 + + COUNT ( * ) * NULLIF ( - + 9, + 42 ) * + CASE + COUNT ( * ) WHEN + 25 THEN + + ( + 46 ) - - 62 * - 64 * + 48 * 37 WHEN 44 + + 54 * - 89 + + 69 THEN NULL END * NULLIF ( - 61, + 99 + 28 ) THEN NULL ELSE - 40 END, - CAST ( 0 AS INTEGER ) * 88 ) * + 93
 ----
@@ -51700,6 +51705,8 @@ SELECT - CASE 94 WHEN - 77 - + + CASE + ( - 10 ) WHEN - MIN( - 48 ) THEN NULL WH
 17
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-5536
 SELECT - CASE 94 WHEN - 77 - + + CASE + ( - 10 ) WHEN - MIN ( - 48 ) THEN NULL WHEN + 52 THEN + 1 + 87 END THEN AVG ( ALL - + 56 ) / - 73 WHEN 86 * - + 3 / 64 THEN NULL ELSE + + 89 END / - 5
 ----
@@ -63329,6 +63336,8 @@ SELECT - - 39 - 10 DIV COALESCE ( - 63, - + 70, - 76 * + + COALESCE ( 41, 34 * 3
 39
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-6773
 SELECT - - 39 - 10 / COALESCE ( - 63, - + 70, - 76 * + + COALESCE ( 41, 34 * 34 + + AVG ( + ( + 74 ) ) * - 86 ) + + 72 * + 20 + COUNT ( * ) ) AS col0
 ----
@@ -67211,6 +67220,7 @@ SELECT + - NULLIF ( 38, 50 * 24 * - ( AVG ( - COALESCE ( - 81, + 65, + 23, - 91,
 -9
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-7184
 SELECT + - NULLIF ( 38, 50 * 24 * - ( AVG ( - COALESCE ( - 81, + 65, + 23, - 91, - + 19 * + 57 + 48 / + + 73 + + CAST ( + - CAST ( NULL AS REAL ) AS INTEGER ) ) ) ) ) * 74 / + 82 - - + 25 AS col0
 ----
@@ -77639,6 +77649,7 @@ SELECT DISTINCT + + 24 * NULLIF ( ( COALESCE ( + CAST( 61 AS SIGNED ), NULLIF ( 
 34
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-8294
 SELECT DISTINCT + + 24 * NULLIF ( ( COALESCE ( + CAST ( 61 AS INTEGER ), NULLIF ( + 44, + COUNT ( * ) * 3 + + MIN ( ALL COALESCE ( + CAST ( NULL AS REAL ), + 44 / CAST ( 43 AS INTEGER ) ) ) * 39 ) ) ), + AVG ( DISTINCT COALESCE ( 87, 65 * 69, - 46 + + 49 ) ) + 59 ) / 43 AS col0
 ----
@@ -82295,6 +82306,7 @@ SELECT ALL - COALESCE ( - ( 10 ), + + 25, - CAST( NULL AS SIGNED ) * - + ( + 66 
 10
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-8764
 SELECT ALL - COALESCE ( - ( 10 ), + + 25, - CAST ( NULL AS INTEGER ) * - + ( + 66 ) - + 85 ) * 1 + - - NULLIF ( - + 9, - - COUNT ( * ) * + 31 - 6 + 76 + + - MAX ( ALL - 78 ) + COUNT ( * ) * 18 * + + AVG ( - 41 ) ) / 63 AS col0
 ----

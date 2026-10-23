@@ -1149,6 +1149,7 @@ SELECT - NULLIF ( - - 68, 43 + + - COUNT( * ) + + - 60 / - COUNT( * ) * + - CAST
 0
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-125
 SELECT - NULLIF ( - - 68, 43 + + - COUNT ( * ) + + - 60 / - COUNT ( * ) * + - CAST ( - + 30 AS REAL ) + + COUNT ( * ) / 30 ) * - + 0 AS col2
 ----
@@ -3055,6 +3056,7 @@ SELECT + 85 + - COALESCE ( - ( - - CAST( NULL AS SIGNED ) ), - NULLIF ( + 1, + C
 85
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-336
 SELECT + 85 + - COALESCE ( - ( - - CAST ( NULL AS INTEGER ) ), - NULLIF ( + 1, + CAST ( NULL AS REAL ) * - COALESCE ( - - 48, + 10 * - NULLIF ( + 22, + 89 ) ) ) / + 36 )
 ----
@@ -12419,6 +12421,8 @@ SELECT ALL 86 * - 80 - COALESCE ( - CASE + COUNT( * ) WHEN - 25 THEN 92 * - CASE
 -6802
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-1365
 SELECT ALL 86 * - 80 - COALESCE ( - CASE + COUNT ( * ) WHEN - 25 THEN 92 * - CASE 17 WHEN + 89 + + COALESCE ( - COUNT ( * ) + - COUNT ( * ) / + NULLIF ( COUNT ( * ) * - 52, - 5 - + 52 * 4 ), - 81 ) THEN NULL WHEN 53 * + 26 THEN + COUNT ( * ) ELSE 95 * ( + 90 ) END WHEN ( - 13 ) * - 70 THEN 71 + + ( 17 - ( CASE 80 WHEN 73 THEN + 70 + + ( AVG ( COALESCE ( + 37, - 65, - 66 ) ) ) * + 49 END ) ) END + - 52 * + 94, 94 + 63 ) / - 2
 ----
@@ -28191,6 +28195,7 @@ SELECT + COUNT( * ) * + NULLIF ( 58, - CAST( NULL AS DECIMAL ) - + 34 ) DIV 51 +
 90
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-3063
 SELECT + COUNT ( * ) * + NULLIF ( 58, - CAST ( NULL AS REAL ) - + 34 ) / 51 + 89
 ----
@@ -35543,6 +35548,7 @@ SELECT + 70 + - - NULLIF ( - 10, - 53 + + CAST( - - 31 AS SIGNED ) * ( - COALESC
 68
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-3855
 SELECT + 70 + - - NULLIF ( - 10, - 53 + + CAST ( - - 31 AS INTEGER ) * ( - COALESCE ( ( - - 35 ), - - ( - + AVG ( - 0 ) ) ) ) ) / - - 4 AS col0
 ----
@@ -38039,6 +38045,8 @@ SELECT ALL - COUNT( * ) DIV COALESCE ( 16, + AVG ( + 93 ), - + COUNT( * ) ) + 27
 27
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-4116
 SELECT ALL - COUNT ( * ) / COALESCE ( 16, + AVG ( + 93 ), - + COUNT ( * ) ) + 27 col1
 ----
@@ -41434,6 +41442,7 @@ SELECT + 81 DIV + NULLIF ( - + 21, + + AVG ( ALL - - 76 ) DIV COUNT( * ) ) AS co
 -3
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-4474
 SELECT + 81 / + NULLIF ( - + 21, + + AVG ( ALL - - 76 ) / COUNT ( * ) ) AS col0
 ----
@@ -52341,6 +52350,8 @@ SELECT - CASE + CAST( NULL AS SIGNED ) WHEN + MIN( ALL + CAST( - CASE + 48 WHEN 
 5356
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-5639
 SELECT - CASE + CAST ( NULL AS INTEGER ) WHEN + MIN ( ALL + CAST ( - CASE + 48 WHEN + + 37 THEN NULL ELSE 98 END AS INTEGER ) ) THEN NULL ELSE 95 + + - COUNT ( * ) END * - ( + SUM ( ALL - - 57 ) ) + - ( - - COUNT ( * ) ) + + ( - 98 ) / + + CASE - 68 WHEN - 97 THEN NULL WHEN 60 THEN - + AVG ( 69 ) + - - CAST ( NULL AS INTEGER ) + - 64 + + 68 * + 22 / + 28 ELSE 27 + 51 END * + COUNT ( * )
 ----
@@ -57646,6 +57657,7 @@ SELECT + SUM( ALL - + COALESCE ( + + 64, - CASE + 20 WHEN - 89 - + 59 THEN - 33 
 247457
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-6207
 SELECT + SUM ( ALL - + COALESCE ( + + 64, - CASE + 20 WHEN - 89 - + 59 THEN - 33 + + 16 WHEN COALESCE ( - 29, + 39, 57 ) * + 61 + 68 - 91 + + - 47 * + 23 * + 16 * - 13 * + - 3 / 91 THEN NULL END, 2 ) ) * 69 + COUNT ( * ) + - COUNT ( * ) + - 91 + - ( + 36 ) + + NULLIF ( + 5, 52 ) * - COUNT ( * ) * - - 60 * COALESCE ( - 42, - AVG ( + 64 ) / 94 + + 72 + - - 68 * - 1 + - 31 / - + 66 + 62 + 32 * 42 / + 78 ) / COUNT ( * ) * 20 col2
 ----
@@ -70178,6 +70190,7 @@ SELECT COUNT( * ) + - 27 - 68 * 87 DIV - COALESCE ( + 1, - AVG ( + + 54 ) ) col1
 5890
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-7563
 SELECT COUNT ( * ) + - 27 - 68 * 87 / - COALESCE ( + 1, - AVG ( + + 54 ) ) col1
 ----

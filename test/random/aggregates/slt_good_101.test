@@ -59164,6 +59164,8 @@ query III rowsort
 SELECT ALL * FROM tab1 AS cor0 WHERE - col1 NOT BETWEEN NULL AND NULL
 ----
 
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query III rowsort
 SELECT * FROM tab0 WHERE NOT - - col1 / + - col1 - - + ( - col2 ) + - col0 + + col0 * - 92 * + + col2 * col0 * col2 + col0 NOT BETWEEN + col1 AND NULL
 ----

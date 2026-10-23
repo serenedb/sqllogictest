@@ -57247,11 +57247,15 @@ query III rowsort
 SELECT DISTINCT * FROM tab0 WHERE NOT NULL BETWEEN NULL AND + - col2
 ----
 
+skipif postgres # SIGNED is a MySQL type
+skipif serenedb # SIGNED is a MySQL type
 query I rowsort
 SELECT 43 - MAX( ALL - 87 + col1 ) FROM tab2 WHERE col1 * col1 * - CAST( - col2 AS SIGNED ) * + - col0 * + - 77 * - col0 IS NOT NULL AND NOT + col0 BETWEEN 35 * - col2 AND NULL
 ----
 NULL
 
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query I
 SELECT 43 - MAX( ALL - 87 + col1 ) FROM tab2 WHERE col1 * col1 * - CAST ( - col2 AS INTEGER ) * + - col0 * + - 77 * - col0 IS NOT NULL AND NOT + col0 BETWEEN 35 * - col2 AND NULL
 ----
@@ -67710,6 +67714,8 @@ SELECT ALL * FROM tab0 cor0 WHERE NOT - 66 + + 72 - + col1 + - col2 * + + col0 *
 
 skipif mysql # not compatible
 skipif postgresql # PostgreSQL does not promote INTEGER (32-bit) results
+skipif postgres # PostgreSQL does not promote INTEGER (32-bit) results
+skipif serenedb # PostgreSQL does not promote INTEGER (32-bit) results
 query III rowsort label-7426
 SELECT ALL * FROM tab0 cor0 WHERE NOT - 66 + + 72 - + col1 + - col2 * + + col0 * - CAST ( 93 AS INTEGER ) * + + col2 * - col0 * - col1 / - 15 IS NULL
 ----

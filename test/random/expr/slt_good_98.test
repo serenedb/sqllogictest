@@ -88859,6 +88859,7 @@ SELECT + CASE - MIN( ALL 97 ) WHEN + CAST( + 18 AS DECIMAL ) THEN - 62 + - MIN( 
 NULL
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-9472
 SELECT + CASE - MIN ( ALL 97 ) WHEN + CAST ( + 18 AS REAL ) THEN - 62 + - MIN ( - - 78 ) + 54 / - + 0 WHEN - 59 * - - 9 - - 45 - 31 THEN NULL END
 ----

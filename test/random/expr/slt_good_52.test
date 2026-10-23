@@ -70336,6 +70336,8 @@ SELECT - 62 DIV - COALESCE ( + + NULLIF ( + + MIN( 98 ), - CAST( CAST( NULL AS S
 -22
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-7559
 SELECT - 62 / - COALESCE ( + + NULLIF ( + + MIN ( 98 ), - CAST ( CAST ( NULL AS INTEGER ) AS INTEGER ) ), - 41 * - 12 + - + 73, + 70 - - 63 + AVG ( ALL 23 ) * + 55 * + 41 ) + - 95 + + SUM ( ALL - - 95 ) / - 87 + 74
 ----

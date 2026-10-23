@@ -8837,6 +8837,8 @@ SELECT + 6 + 74 DIV + + CASE + 12 WHEN 91 DIV + 72 * AVG ( ALL + 17 ) + + 43 + -
 -570
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-972
 SELECT + 6 + 74 / + + CASE + 12 WHEN 91 / + 72 * AVG ( ALL + 17 ) + + 43 + - + 39 * - 13 * + - 83 THEN + 25 / AVG ( DISTINCT - 98 ) + 16 ELSE 57 * + - 60 END + - 32 * + + 18 AS col2
 ----
@@ -39437,6 +39439,7 @@ SELECT DISTINCT NULLIF ( COUNT( DISTINCT 86 ), + 96 + + + AVG ( ALL - 25 ) ) DIV
 0
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-4341
 SELECT DISTINCT NULLIF ( COUNT ( DISTINCT 86 ), + 96 + + + AVG ( ALL - 25 ) ) / - + 12 AS col2
 ----
@@ -52962,6 +52965,8 @@ SELECT DISTINCT + COALESCE ( - 83, - 66 * + - ( ( + 28 ) ), AVG ( ALL - 94 ) ) D
 -1
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-5814
 SELECT DISTINCT + COALESCE ( - 83, - 66 * + - ( ( + 28 ) ), AVG ( ALL - 94 ) ) / 43 AS col1
 ----

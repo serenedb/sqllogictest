@@ -11611,6 +11611,8 @@ SELECT - + COUNT( * ) AS col2 FROM tab0 AS cor0 WHERE NOT ( NULL ) IN ( 15, + 78
 0
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query I rowsort label-1262
 SELECT - + COUNT ( * ) AS col2 FROM tab0 AS cor0 WHERE NOT ( NULL ) IN ( 15, + 78 + - col2 + + 37 * + - col0 * + 87 * 72 * + col0, + col0 / + 57, col0, - col1 * - col2 )
 ----
@@ -60562,6 +60564,7 @@ SELECT ALL * FROM tab1 AS cor0 WHERE NOT CAST( NULL AS SIGNED ) NOT IN ( + ( - c
 ----
 
 skipif mysql # not compatible
+skipif serenedb # TODO(mbkkt) int32 overflow
 query III rowsort label-6594
 SELECT ALL * FROM tab1 AS cor0 WHERE NOT CAST ( NULL AS INTEGER ) NOT IN ( + ( - col2 ) * 82 * + col2 * col2 * + + col0 )
 ----

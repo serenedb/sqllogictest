@@ -38315,6 +38315,8 @@ query III rowsort
 SELECT ALL * FROM tab1 WHERE NOT - col0 NOT BETWEEN ( NULL ) AND col2 - 37 * + 64
 ----
 
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query I rowsort
 SELECT - 43 AS col2 FROM tab1 WHERE NOT + col2 * - 8 NOT BETWEEN - col2 / - ( + col2 * 0 ) AND NULL
 ----

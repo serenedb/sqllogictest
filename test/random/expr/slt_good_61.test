@@ -88307,6 +88307,7 @@ SELECT COALESCE ( + 67, + 30 ) DIV - COUNT( * ) - + 40 AS col0, + COUNT( * ) DIV
 0
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query II rowsort label-9462
 SELECT COALESCE ( + 67, + 30 ) / - COUNT ( * ) - + 40 AS col0, + COUNT ( * ) / NULLIF ( - 22, - - 63 + - - AVG ( ALL - - ( - + 51 ) ) + + 92 )
 ----

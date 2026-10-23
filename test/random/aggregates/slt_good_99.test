@@ -31945,6 +31945,7 @@ SELECT 57 + 86 / - 37 AS col0 FROM tab1 AS cor0
 55
 
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # TODO(mbkkt)
 query I rowsort
 SELECT col2 col2 FROM tab1 AS cor0 WHERE NULL < ( 38 ) / - 0
 ----

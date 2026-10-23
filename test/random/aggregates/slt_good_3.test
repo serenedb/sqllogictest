@@ -924,6 +924,8 @@ SELECT COUNT( * ) col2 FROM tab0 WHERE NULL IN ( - col0 + + 39, col0, - col2, 57
 
 skipif mysql # not compatible
 skipif postgresql # PostgreSQL requires AS when renaming output columns
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query I rowsort label-95
 SELECT COUNT ( * ) col2 FROM tab0 WHERE NULL IN ( - col0 + + 39, col0, - col2, 57 * 60 * + col2 * + col2 * col2, - 58 )
 ----

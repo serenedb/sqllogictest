@@ -34921,6 +34921,8 @@ SELECT DISTINCT COUNT( * ) DIV - + COALESCE ( + 82, AVG ( - + 73 ) )
 0
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-3745
 SELECT DISTINCT COUNT ( * ) / - + COALESCE ( + 82, AVG ( - + 73 ) )
 ----

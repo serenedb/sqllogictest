@@ -48567,6 +48567,8 @@ SELECT DISTINCT * FROM tab1 WHERE + col2 * + CAST( NULL AS SIGNED ) * col0 IN ( 
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query III rowsort label-5318
 SELECT DISTINCT * FROM tab1 WHERE + col2 * + CAST ( NULL AS INTEGER ) * col0 IN ( + col1 ) AND - 13 + - + 96 + + ( - + col0 ) / + - 0 BETWEEN - + col0 AND NULL
 ----

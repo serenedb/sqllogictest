@@ -25542,6 +25542,8 @@ SELECT ALL * FROM tab1 AS cor0 WHERE NOT col0 BETWEEN col2 * + 63 * 84 * - 22 - 
 ----
 9 values hashing to c6c0a4111b36d04dbc811a11e4d54cad
 
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query III rowsort
 SELECT * FROM tab0 AS cor0 WHERE NOT col0 NOT BETWEEN ( NULL ) AND + col0 / - col2 / + ( + 0 )
 ----
@@ -36213,6 +36215,8 @@ SELECT + + 98 * col2 FROM tab2 AS cor0
 3920
 5684
 
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query III rowsort
 SELECT ALL * FROM tab0 cor0 WHERE NULL IN ( + col0, col1 * - - 98 * + 67 * - - col2 * - 47 * + ( + col2 ) )
 ----

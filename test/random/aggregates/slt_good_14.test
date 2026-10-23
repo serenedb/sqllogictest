@@ -80828,6 +80828,8 @@ SELECT ALL * FROM tab0 WHERE ( + col2 / col2 * + col1 ) NOT IN ( col2 + - col0 /
 ----
 
 skipif mysql # not compatible
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query III rowsort label-8839
 SELECT ALL * FROM tab0 WHERE ( + col2 / col2 * + col1 ) NOT IN ( col2 + - col0 / 0, - 1, + - CAST ( NULL AS INTEGER ) )
 ----

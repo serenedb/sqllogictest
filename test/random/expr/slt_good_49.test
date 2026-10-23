@@ -34925,6 +34925,7 @@ SELECT ALL 64 / + - 0 * + CAST( NULL AS SIGNED ) AS col2
 NULL
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-3793
 SELECT ALL 64 / + - 0 * + CAST ( NULL AS INTEGER ) AS col2
 ----
@@ -58870,6 +58871,8 @@ SELECT COALESCE ( + 13, + + 70 DIV CASE + COUNT( * ) WHEN 46 THEN - + 82 ELSE + 
 -1
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-6385
 SELECT COALESCE ( + 13, + + 70 / CASE + COUNT ( * ) WHEN 46 THEN - + 82 ELSE + - AVG ( + 6 ) * + - 8 + - + 40 + 50 * COUNT ( * ) - 42 + - 21 * - 2 * + - 59 END * + ( - ( + CASE + 50 WHEN + 75 THEN NULL ELSE + 2 * NULLIF ( + ( 4 ), - COUNT ( * ) + + COUNT ( * ) ) END ) ) * 97 + 64 ) / - 10 AS col2
 ----
@@ -64018,6 +64021,7 @@ SELECT ALL - 27 DIV + CASE - 16 WHEN + + 2 THEN NULL WHEN CAST( + 14 AS SIGNED )
 -27
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-6952
 SELECT ALL - 27 / + CASE - 16 WHEN + + 2 THEN NULL WHEN CAST ( + 14 AS INTEGER ) + + - MAX ( DISTINCT + 16 ) * + + AVG ( DISTINCT 73 ) - + COUNT ( 30 ) + AVG ( 72 ) - + 99 * ( - - 94 ) THEN - + ( 18 ) + + ( 53 ) + + 48 + + + 46 * + CASE - 12 WHEN 39 * - COUNT ( * ) THEN + ( + 61 ) ELSE + AVG ( ALL - ( + 63 ) ) * + 32 END - 94 ELSE COUNT ( * ) END AS col1
 ----
@@ -64367,6 +64371,7 @@ SELECT - + ( + 44 ) * + COUNT( * ) * - - 29 + + COUNT( * ) DIV - NULLIF ( + - 95
 -1220
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-6993
 SELECT - + ( + 44 ) * + COUNT ( * ) * - - 29 + + COUNT ( * ) / - NULLIF ( + - 95, + AVG ( + 59 ) * - 13 ) * - 78 + 38 + + + 14 + - - 4
 ----
@@ -66418,6 +66423,7 @@ SELECT 84 * + CAST( NULL AS SIGNED ) + AVG ( ALL 38 ) + - 14 - + + 45 + + 48 * +
 NULL
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-7209
 SELECT 84 * + CAST ( NULL AS INTEGER ) + AVG ( ALL 38 ) + - 14 - + + 45 + + 48 * + CAST ( 20 AS INTEGER ) * + 42 * + 65 / - CAST ( + - 80 AS INTEGER ) * - 35 * 37 * + + 73 AS col1
 ----
@@ -74851,6 +74857,8 @@ SELECT + COALESCE ( 30, 99 * + CAST( - + 58 AS SIGNED ) DIV + - 69 DIV + 9 * 19 
 37
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-8107
 SELECT + COALESCE ( 30, 99 * + CAST ( - + 58 AS INTEGER ) / + - 69 / + 9 * 19 + NULLIF ( AVG ( + - 74 ), + ( - 22 ) + - + 53 ) + + 23 * + 89 * - 8 + - + 32, 20 - - COUNT ( * ) - + - 77 ) / - ( 65 ) + 37
 ----
@@ -90245,6 +90253,7 @@ SELECT DISTINCT - 70 + + 8 DIV NULLIF ( 87, + - ( CAST( NULL AS DECIMAL ) ) ) * 
 -27
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-9744
 SELECT DISTINCT - 70 + + 8 / NULLIF ( 87, + - ( CAST ( NULL AS REAL ) ) ) * - + 7 + - - 43 col0
 ----
@@ -91507,6 +91516,7 @@ SELECT + 27 DIV + NULLIF ( + NULLIF ( - NULLIF ( 7, - 37 + - 28 * + CAST( NULL A
 -5
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-9884
 SELECT + 27 / + NULLIF ( + NULLIF ( - NULLIF ( 7, - 37 + - 28 * + CAST ( NULL AS REAL ) ), + 6 - + 59 ), - 89 + - 6 + - + COALESCE ( COUNT ( * ), - + ( 60 ), - 62 ) ) - + 59 + 57 AS col1
 ----

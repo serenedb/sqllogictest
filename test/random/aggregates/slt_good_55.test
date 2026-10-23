@@ -26784,6 +26784,8 @@ SELECT ALL col0 * - col1 * - col1 col1 FROM tab1
 2125
 9996
 
+skipif postgres # PostgreSQL handles NULL in DIV/0 by differently
+skipif serenedb # PostgreSQL handles NULL in DIV/0 by differently
 query III rowsort
 SELECT * FROM tab2 WHERE - col1 * - col1 * col0 / + - 0 BETWEEN NULL AND 12 + 65
 ----

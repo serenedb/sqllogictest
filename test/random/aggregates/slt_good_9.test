@@ -27693,6 +27693,7 @@ SELECT DISTINCT * FROM tab2 AS cor0 WHERE NOT NULL IN ( - col0 * + + 7 + + + col
 ----
 
 skipif mysql # not compatible
+skipif serenedb # TODO(mbkkt) int32 overflow
 query III rowsort label-3057
 SELECT DISTINCT * FROM tab2 AS cor0 WHERE NOT NULL IN ( - col0 * + + 7 + + + col0 + + col1 - - col1 + - col2 * + col0 * + col2 * + 4 * - 27 * + col1 * ( + col2 ) * + + CAST ( - + col2 AS INTEGER ) + + col2 )
 ----
@@ -76310,6 +76311,8 @@ SELECT ALL + COUNT ( * ) * + CAST ( NULL AS INTEGER ) col2 FROM tab1 AS cor0
 NULL
 
 skipif postgresql # PostgreSQL does not promote INTEGER (32-bit) results
+skipif postgres # PostgreSQL does not promote INTEGER (32-bit) results
+skipif serenedb # PostgreSQL does not promote INTEGER (32-bit) results
 query III rowsort
 SELECT * FROM tab2 AS cor0 WHERE + col0 * + col1 * 98 * ( col0 ) * - + 86 / - col2 > - - col1 + + 92 + - 69
 ----

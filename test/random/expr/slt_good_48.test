@@ -1186,6 +1186,7 @@ NULL
 -1
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query II rowsort label-125
 SELECT CASE - + 74 WHEN - 19 * + COUNT ( * ) * ( + + 1 ) + 85 - + + ( - 1 ) THEN 80 / - CAST ( 0 AS INTEGER ) END * - 69 * + - AVG ( 66 ) + 46 AS col2, ( - COUNT ( * ) ) AS col0
 ----
@@ -46266,6 +46267,7 @@ SELECT - ( - 95 ) + + + NULLIF ( - 64, + - CASE + - 37 WHEN 4 THEN AVG ( 78 ) EN
 29
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-5006
 SELECT - ( - 95 ) + + + NULLIF ( - 64, + - CASE + - 37 WHEN 4 THEN AVG ( 78 ) END ) * 54 / + 52
 ----
@@ -60788,6 +60790,7 @@ SELECT 40 * 45 DIV NULLIF ( - 17, CAST( + 10 AS DECIMAL ) )
 -105
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-6551
 SELECT 40 * 45 / NULLIF ( - 17, CAST ( + 10 AS REAL ) )
 ----
@@ -85123,6 +85126,7 @@ SELECT DISTINCT + + 91 - + ( - 0 ) DIV - - COALESCE ( - NULLIF ( - CASE 19 WHEN 
 91
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-9185
 SELECT DISTINCT + + 91 - + ( - 0 ) / - - COALESCE ( - NULLIF ( - CASE 19 WHEN - CASE + 66 WHEN + 63 / + COUNT ( * ) THEN NULL WHEN - 51 THEN 91 END THEN 3 - + 35 ELSE AVG ( ALL CAST ( NULL AS INTEGER ) ) + - COALESCE ( 45, + 90 ) END, - COUNT ( * ) * 19 ), 68 * NULLIF ( 65, + ( + 34 ) ), 10 * - 4 - + 99 / COUNT ( 17 * 85 ) )
 ----

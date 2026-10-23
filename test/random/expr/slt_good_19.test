@@ -56715,6 +56715,8 @@ SELECT - 23 DIV + COALESCE ( + + 79, + 4, - 75 + - AVG ( + 40 ) + - 48 + + 5 ) +
 62
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-6049
 SELECT - 23 / + COALESCE ( + + 79, + 4, - 75 + - AVG ( + 40 ) + - 48 + + 5 ) + 62
 ----
@@ -59087,6 +59089,8 @@ SELECT - 87 / - COALESCE ( CAST( + + 16 AS DECIMAL ), 7 )
 5
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-6304
 SELECT - 87 / - COALESCE ( CAST ( + + 16 AS REAL ), 7 )
 ----

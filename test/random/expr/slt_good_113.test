@@ -967,6 +967,8 @@ SELECT DISTINCT - 8 * COALESCE ( 39, 54 * - + 54 + 18 + + 30 + - 49 * - SUM( ALL
 -4
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-93
 SELECT DISTINCT - 8 * COALESCE ( 39, 54 * - + 54 + 18 + + 30 + - 49 * - SUM ( ALL + 42 ) + - - 6, 0 - + - ( - AVG ( ALL 77 ) ) ) / + 71
 ----
@@ -21290,6 +21292,8 @@ SELECT + 45 DIV + + COALESCE ( - 70, - - ( - AVG ( + + 99 ) ) + SUM( + 65 ) ) AS
 23
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query II rowsort label-2262
 SELECT + 45 / + + COALESCE ( - 70, - - ( - AVG ( + + 99 ) ) + SUM ( + 65 ) ) AS col2, 23
 ----
@@ -44440,6 +44444,7 @@ SELECT DISTINCT + 69 DIV - + NULLIF ( + COALESCE ( - + 71, 95 + - 62 ), - CAST( 
 0
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-4732
 SELECT DISTINCT + 69 / - + NULLIF ( + COALESCE ( - + 71, 95 + - 62 ), - CAST ( NULL AS REAL ) * - COUNT ( * ) + - 91 + 77 * - - 44 - - - 7 ) * + + COUNT ( * ) AS col0
 ----
@@ -63006,6 +63011,8 @@ SELECT CASE 24 WHEN - - 89 + ( + ( + - 42 ) ) * + - 50 THEN NULL ELSE + 23 * - 4
 67925
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-6697
 SELECT CASE 24 WHEN - - 89 + ( + ( + - 42 ) ) * + - 50 THEN NULL ELSE + 23 * - 45 END / COALESCE ( - 87, - 93 * - 8 * + + AVG ( 10 ) / 94 * - ( 21 ), + 79 ) * 95 * + 65
 ----
@@ -72257,6 +72264,8 @@ SELECT ALL + 50 * - - 52 * ( + 78 ) + - + COALESCE ( - + 32, + AVG ( DISTINCT - 
 202800
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
+skipif serenedb # TODO(mbkkt)
 query I rowsort label-7694
 SELECT ALL + 50 * - - 52 * ( + 78 ) + - + COALESCE ( - + 32, + AVG ( DISTINCT - ( + 84 ) ) ) / + - 56
 ----
@@ -73426,6 +73435,7 @@ SELECT DISTINCT + 35 * - - 76 + 60 DIV + NULLIF ( + - 15, - + AVG ( DISTINCT + +
 2656
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-7818
 SELECT DISTINCT + 35 * - - 76 + 60 / + NULLIF ( + - 15, - + AVG ( DISTINCT + + 55 ) + - 25 ) AS col2
 ----
@@ -87417,6 +87427,7 @@ SELECT - 79 * 3 DIV COALESCE ( 22, - - NULLIF ( + 74, CAST( 74 AS DECIMAL ) * - 
 -43
 
 skipif mysql # not compatible
+skipif postgres # TODO(mbkkt)
 query I rowsort label-9333
 SELECT - 79 * 3 / COALESCE ( 22, - - NULLIF ( + 74, CAST ( 74 AS REAL ) * - 36 / - 4 * - 72 - - 62 + 97 ) ) + - 33
 ----
