@@ -17182,7 +17182,7 @@ SELECT ALL 81 DIV + NULLIF ( 16, + + AVG ( ALL + 91 ) ) AS col1
 5
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-1846
 SELECT ALL 81 / + NULLIF ( 16, + + AVG ( ALL + 91 ) ) AS col1
 ----
@@ -21600,7 +21600,7 @@ SELECT - NULLIF ( 92, + 34 DIV + 46 - 8 DIV + + NULLIF ( - 55, 58 * AVG ( 83 ) +
 1
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-2310
 SELECT - NULLIF ( 92, + 34 / + 46 - 8 / + + NULLIF ( - 55, 58 * AVG ( 83 ) + + 91 ) + - + 47 - - COUNT ( * ) * - 70 * + - COUNT ( + 79 ) ) / - ( 66 )
 ----
@@ -25323,7 +25323,7 @@ SELECT 47 AS col0, ( NULLIF ( MAX( ALL - 4 ), AVG ( DISTINCT + 92 ) ) ) DIV 20
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-2719
 SELECT 47 AS col0, ( NULLIF ( MAX ( ALL - 4 ), AVG ( DISTINCT + 92 ) ) ) / 20
 ----
@@ -44068,7 +44068,7 @@ SELECT ALL 95 - + + 5 DIV + NULLIF ( - + 45, - 44 * + - CAST( NULL AS DECIMAL ) 
 95
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-4718
 SELECT ALL 95 - + + 5 / + NULLIF ( - + 45, - 44 * + - CAST ( NULL AS REAL ) + 31 )
 ----
@@ -44522,6 +44522,7 @@ SELECT ALL - 97 * 18 * - 75 AS col0, + 23 DIV + + 60 * ( 57 ) * + 22 * - NULLIF 
 0
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-4763
 SELECT ALL - 97 * 18 * - 75 AS col0, + 23 / + + 60 * ( 57 ) * + 22 * - NULLIF ( + 12, 9 * + 3 * - ( AVG ( DISTINCT - 83 ) ) + COUNT ( * ) / - - COUNT ( * ) ) * + 24 * 28
 ----

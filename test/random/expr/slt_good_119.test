@@ -4654,7 +4654,7 @@ SELECT ALL CAST( - - COUNT( * ) AS SIGNED ) DIV + NULLIF ( + 3, COALESCE ( - ( -
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-499
 SELECT ALL CAST ( - - COUNT ( * ) AS INTEGER ) / + NULLIF ( + 3, COALESCE ( - ( - - COUNT ( * ) ), 51, + + 92 * - 25 + + AVG ( DISTINCT - 92 ) ) * + + NULLIF ( - 70, 26 ) * 47 + + 84 * + AVG ( ALL + - 88 ) * + 40 / SUM ( DISTINCT - + 85 ) * + MAX ( - + 18 ) - + + 79 - + - 29 + + COUNT ( + 39 ) - 61 )
 ----
@@ -65528,7 +65528,6 @@ SELECT + + COALESCE ( + 73, COUNT( * ) ) + - - ( + ( - 99 ) ) DIV + NULLIF ( - -
 72
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-6984
 SELECT + + COALESCE ( + 73, COUNT ( * ) ) + - - ( + ( - 99 ) ) / + NULLIF ( - - 75, CAST ( NULL AS REAL ) )
 ----

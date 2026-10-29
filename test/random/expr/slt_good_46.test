@@ -43340,7 +43340,7 @@ SELECT - COUNT( * ) DIV + COALESCE ( - + 79, 67 + - 1, + 47 * - NULLIF ( COUNT( 
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-4734
 SELECT - COUNT ( * ) / + COALESCE ( - + 79, 67 + - 1, + 47 * - NULLIF ( COUNT ( * ), - ( - - 9 ) - - 21 * - + CAST ( NULL AS REAL ) / + 59 + - 33 ) ) * - 11
 ----
@@ -68300,7 +68300,6 @@ SELECT ALL CAST( + + 42 AS SIGNED ) DIV - NULLIF ( - 79, CAST( 31 AS DECIMAL ) *
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-7479
 SELECT ALL CAST ( + + 42 AS INTEGER ) / - NULLIF ( - 79, CAST ( 31 AS REAL ) * + + ( - 12 ) + + AVG ( + - 58 ) + - + CAST ( NULL AS INTEGER ) / - 30 + - 74 )
 ----
@@ -71716,7 +71715,7 @@ SELECT ( + ( - NULLIF ( + COUNT( * ), 7 + AVG ( DISTINCT - 91 ) ) ) ) DIV - + 79
 -69
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-7859
 SELECT ( + ( - NULLIF ( + COUNT ( * ), 7 + AVG ( DISTINCT - 91 ) ) ) ) / - + 79 + - 69
 ----
@@ -87271,7 +87270,7 @@ SELECT - CASE - 26 WHEN + 47 THEN + 66 ELSE + 87 DIV NULLIF ( + 67, + + AVG ( + 
 -63
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-9527
 SELECT - CASE - 26 WHEN + 47 THEN + 66 ELSE + 87 / NULLIF ( + 67, + + AVG ( + CAST ( NULL AS INTEGER ) ) * - - 1 + 57 * - - 17 / CASE + COUNT ( * ) WHEN - 83 + - + 10 + + - 42 + 9 + - + 34 THEN - - 31 * - ( + ( CAST ( NULL AS INTEGER ) ) ) + ( + + CAST ( NULL AS INTEGER ) ) + - 88 * + 72 * - - 6 + - 38 / + 55 WHEN - 44 THEN NULL ELSE NULL END ) + 62 END
 ----

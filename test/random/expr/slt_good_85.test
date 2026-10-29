@@ -60557,7 +60557,7 @@ SELECT DISTINCT + NULLIF ( COUNT( * ), - + COALESCE ( CASE - - 73 WHEN + COUNT( 
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-6474
 SELECT DISTINCT + NULLIF ( COUNT ( * ), - + COALESCE ( CASE - - 73 WHEN + COUNT ( * ) THEN NULL WHEN 94 THEN - 19 ELSE + 87 + - 33 END, 93, NULLIF ( 97, + 45 * 82 + 3 ), + AVG ( 62 ) ) * + COUNT ( * ) ) / 3 AS col1
 ----

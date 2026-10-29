@@ -29629,7 +29629,7 @@ SELECT 14 + - + NULLIF ( - 56, 6 * + + AVG ( - ( 58 ) ) * 36 ) DIV + + 90 AS col
 14
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-3228
 SELECT 14 + - + NULLIF ( - 56, 6 * + + AVG ( - ( 58 ) ) * 36 ) / + + 90 AS col1
 ----

@@ -88307,7 +88307,7 @@ SELECT COALESCE ( + 67, + 30 ) DIV - COUNT( * ) - + 40 AS col0, + COUNT( * ) DIV
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-9462
 SELECT COALESCE ( + 67, + 30 ) / - COUNT ( * ) - + 40 AS col0, + COUNT ( * ) / NULLIF ( - 22, - - 63 + - - AVG ( ALL - - ( - + 51 ) ) + + 92 )
 ----

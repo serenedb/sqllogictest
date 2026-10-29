@@ -15844,7 +15844,7 @@ SELECT + + 71 DIV + COALESCE ( + NULLIF ( - + 74, - 2 - + 71 + - COALESCE ( - CA
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-1701
 SELECT + + 71 / + COALESCE ( + NULLIF ( - + 74, - 2 - + 71 + - COALESCE ( - CAST ( NULL AS INTEGER ), - CAST ( + - 35 AS REAL ) + 92 + - + 41 - + 16 * - 28 ) ), - - 7 / + 62, - 33 )
 ----

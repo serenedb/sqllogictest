@@ -936,7 +936,7 @@ SELECT ALL 60 * + 98 + - 94 + NULLIF ( + 88, + - 12 + - 92 ) + + + NULLIF ( 6, +
 5874
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-91
 SELECT ALL 60 * + 98 + - 94 + NULLIF ( + 88, + - 12 + - 92 ) + + + NULLIF ( 6, + + ( + 18 ) * - 70 ) * 42 / - NULLIF ( - ( ( 10 ) ) * 99, - CASE COUNT ( * ) WHEN 95 THEN CAST ( NULL AS INTEGER ) WHEN - CASE - NULLIF ( 19, - 74 + 20 ) WHEN - ( 25 ) * 25 + 55 THEN NULL WHEN 67 + NULLIF ( 44, 65 ) / - MIN ( 13 ) THEN NULL ELSE CASE 18 WHEN AVG ( 15 ) THEN NULL WHEN + 81 THEN NULL WHEN NULLIF ( - 45, 72 ) THEN NULL ELSE - 26 END END / 99 THEN - COUNT ( 6 ) * + ( 71 ) END * AVG ( 35 ) )
 ----
@@ -30094,7 +30094,7 @@ SELECT + 70 DIV NULLIF ( 66, - - 34 + - AVG ( 76 ) ) - - 56 * + 56 AS col2
 3137
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-3197
 SELECT + 70 / NULLIF ( 66, - - 34 + - AVG ( 76 ) ) - - 56 * + 56 AS col2
 ----
@@ -51962,7 +51962,7 @@ SELECT NULLIF ( + - 27, - 32 * - AVG ( 95 ) + - - 60 ) DIV + MIN( 32 ) AS col1
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-5513
 SELECT NULLIF ( + - 27, - 32 * - AVG ( 95 ) + - - 60 ) / + MIN ( 32 ) AS col1
 ----
@@ -62894,7 +62894,7 @@ SELECT - - 4 * - 71 + + COUNT( * ) DIV + + NULLIF ( + COALESCE ( + 77, - ( - 39 
 -284
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-6671
 SELECT - - 4 * - 71 + + COUNT ( * ) / + + NULLIF ( + COALESCE ( + 77, - ( - 39 ) ), + AVG ( DISTINCT + 51 ) ) AS col2
 ----

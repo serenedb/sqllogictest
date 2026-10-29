@@ -39438,7 +39438,7 @@ SELECT DISTINCT NULLIF ( COUNT( DISTINCT 86 ), + 96 + + + AVG ( ALL - 25 ) ) DIV
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-4341
 SELECT DISTINCT NULLIF ( COUNT ( DISTINCT 86 ), + 96 + + + AVG ( ALL - 25 ) ) / - + 12 AS col2
 ----

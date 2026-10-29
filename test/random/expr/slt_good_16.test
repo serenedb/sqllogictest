@@ -61213,7 +61213,7 @@ SELECT 20 AS col2, NULLIF ( 75, - COUNT( * ) - NULLIF ( - 95, AVG ( DISTINCT - 4
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-6540
 SELECT 20 AS col2, NULLIF ( 75, - COUNT ( * ) - NULLIF ( - 95, AVG ( DISTINCT - 4 ) * - 19 ) ) / - - 86
 ----
@@ -89969,7 +89969,7 @@ SELECT ALL 99 + - NULLIF ( - - COUNT( * ), CAST( NULL AS DECIMAL ) ) DIV + MIN( 
 99
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-9603
 SELECT ALL 99 + - NULLIF ( - - COUNT ( * ), CAST ( NULL AS REAL ) ) / + MIN ( + + 82 )
 ----

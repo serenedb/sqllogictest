@@ -27472,7 +27472,6 @@ SELECT ALL 18 DIV + 41 * + + NULLIF ( - + 24, + - 73 + + 86 DIV - + 79 DIV 16 + 
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-2911
 SELECT ALL 18 / + 41 * + + NULLIF ( - + 24, + - 73 + + 86 / - + 79 / 16 + CAST ( NULL AS REAL ) - + - 46 / + COUNT ( * ) ) AS col2
 ----
@@ -44454,7 +44453,7 @@ SELECT 5, + MAX( + NULLIF ( 49, + - CAST( NULL AS DECIMAL ) DIV - 71 ) ) DIV + N
 -2
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query II rowsort label-4713
 SELECT 5, + MAX ( + NULLIF ( 49, + - CAST ( NULL AS REAL ) / - 71 ) ) / + NULLIF ( - + 19, + + 60 * + COUNT ( ALL - 28 ) * - - 35 * - 91 * - - 40 / - 95 + + 24 ) col2
 ----

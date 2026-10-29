@@ -74447,7 +74447,7 @@ SELECT ALL NULLIF ( + 56, + COALESCE ( 59, 38 + + 91 - + COALESCE ( + + 29, + 80
 2
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-9110
 SELECT ALL NULLIF ( + 56, + COALESCE ( 59, 38 + + 91 - + COALESCE ( + + 29, + 80 ) * + AVG ( DISTINCT - 77 ) ) / + COUNT ( * ) + - 88 ) / 51 + COUNT ( * ) AS col1
 ----

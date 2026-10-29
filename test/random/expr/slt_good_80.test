@@ -80815,7 +80815,7 @@ SELECT 23 + + - CAST( + COALESCE ( + 64, - 91, 62 ) AS SIGNED ) DIV NULLIF ( - 6
 23
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-8649
 SELECT 23 + + - CAST ( + COALESCE ( + 64, - 91, 62 ) AS INTEGER ) / NULLIF ( - 67, - 37 * 67 + 90 * NULLIF ( - 15, COALESCE ( AVG ( + 6 ), 63 ) * - 12 ) )
 ----

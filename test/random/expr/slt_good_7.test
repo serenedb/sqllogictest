@@ -15682,7 +15682,7 @@ SELECT ALL - 1 DIV - + ( + - NULLIF ( - 17, + COALESCE ( + 41, - MAX( ALL - + 4 
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-1681
 SELECT ALL - 1 / - + ( + - NULLIF ( - 17, + COALESCE ( + 41, - MAX ( ALL - + 4 ) / AVG ( DISTINCT + 21 ) ) * 47 ) )
 ----
@@ -26737,7 +26737,7 @@ SELECT - NULLIF ( + + 4, NULLIF ( + 28, - NULLIF ( + - NULLIF ( + CAST( - 8 AS D
 798833
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-2866
 SELECT - NULLIF ( + + 4, NULLIF ( + 28, - NULLIF ( + - NULLIF ( + CAST ( - 8 AS REAL ), + CASE - + 27 WHEN - COUNT ( * ) THEN NULL ELSE - CAST ( NULL AS INTEGER ) * 16 END ), - + 33 ) + 81 ) * 95 + + 81 ) / - + MAX ( ALL CAST ( + 21 AS INTEGER ) ) + + 48 - - - COALESCE ( - 35, COUNT ( * ) + 16 ) + + - 30 * - 5 * CAST ( + 75 AS INTEGER ) * - - 71
 ----
@@ -30227,7 +30227,7 @@ SELECT ALL NULLIF ( - 97, - + NULLIF ( AVG ( ALL + NULLIF ( + + CAST( NULL AS SI
 -3
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-3236
 SELECT ALL NULLIF ( - 97, - + NULLIF ( AVG ( ALL + NULLIF ( + + CAST ( NULL AS INTEGER ), 57 ) ), + 23 * 17 + MAX ( - 6 ) ) / + - NULLIF ( - + 33, - ( - + 81 ) ) ) / + + 28
 ----
@@ -35592,6 +35592,7 @@ SELECT DISTINCT - 76 * COUNT( * ) + - 54 * 71 * + MAX( - - 66 ) * - 39 - + - NUL
 9868632
 
 skipif mysql # not compatible
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-3808
 SELECT DISTINCT - 76 * COUNT ( * ) + - 54 * 71 * + MAX ( - - 66 ) * - 39 - + - NULLIF ( COUNT ( * ), 86 / + CAST ( - + 83 AS REAL ) + ( - 54 ) + 67 * 33 ) * 48 - + MIN ( + 56 ) AS col2
 ----

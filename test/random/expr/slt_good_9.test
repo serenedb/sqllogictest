@@ -16854,7 +16854,7 @@ SELECT + 64 + + + ( 61 ) + 67 - - - 75 DIV - + NULLIF ( 23, CAST( + 31 AS DECIMA
 149
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-1822
 SELECT + 64 + + + ( 61 ) + 67 - - - 75 / - + NULLIF ( 23, CAST ( + 31 AS REAL ) ) + - 46
 ----
@@ -25670,7 +25670,7 @@ SELECT DISTINCT + 33 DIV NULLIF ( - - COUNT( * ), + + 73 + + + CAST( 60 AS DECIM
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-2753
 SELECT DISTINCT + 33 / NULLIF ( - - COUNT ( * ), + + 73 + + + CAST ( 60 AS REAL ) + COUNT ( * ) * 2 * + - 93 * - 41 * - 15 ) / + + 47 AS col1
 ----
@@ -56440,7 +56440,7 @@ SELECT - NULLIF ( - MAX( ALL - 48 ), - + 76 * - + AVG ( DISTINCT - 20 ) ) DIV + 
 -1
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-6031
 SELECT - NULLIF ( - MAX ( ALL - 48 ), - + 76 * - + AVG ( DISTINCT - 20 ) ) / + MIN ( - 42 ) + - + 2 AS col0
 ----
@@ -89343,7 +89343,7 @@ SELECT NULLIF ( - MAX( ALL - 50 ), - AVG ( - 90 ) DIV - 4 ) DIV + 19 + 36 + + CO
 -55
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-9587
 SELECT NULLIF ( - MAX ( ALL - 50 ), - AVG ( - 90 ) / - 4 ) / + 19 + 36 + + COUNT ( * ) * - 93 AS col1
 ----
@@ -89729,7 +89729,7 @@ SELECT ALL - NULLIF ( - 89, - - ( - 75 ) * + 42 * + - CAST( NULL AS DECIMAL ) ) 
 1
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-9622
 SELECT ALL - NULLIF ( - 89, - - ( - 75 ) * + 42 * + - CAST ( NULL AS REAL ) ) / - - COALESCE ( + - 77, 32 + + 4 * + 61, 41 ) + 2 * + COUNT ( * ) AS col0
 ----

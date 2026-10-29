@@ -33102,7 +33102,7 @@ SELECT ALL NULLIF ( - - 80, - NULLIF ( + 10, + 68 * - ( + 4 ) * - COUNT( + + 66 
 1
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-3613
 SELECT ALL NULLIF ( - - 80, - NULLIF ( + 10, + 68 * - ( + 4 ) * - COUNT ( + + 66 ) * NULLIF ( + 58, 9 + CAST ( NULL AS REAL ) ) + 35 + COUNT ( * ) / + SUM ( - 24 * 93 - 18 / 10 ) ) ) / 49
 ----

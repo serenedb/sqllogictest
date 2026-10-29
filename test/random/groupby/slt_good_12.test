@@ -28208,7 +28208,7 @@ SELECT + col0 DIV NULLIF ( 43, + + AVG ( ALL + col1 ) ) FROM tab0 AS cor0 GROUP 
 1
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-3803
 SELECT + col0 / NULLIF ( 43, + + AVG ( ALL + col1 ) ) FROM tab0 AS cor0 GROUP BY col0
 ----
@@ -39528,7 +39528,7 @@ SELECT + 84 * - - 60 + NULLIF ( + 82, + 29 * - 51 + - + SUM( ALL + COALESCE ( - 
 5053
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-5171
 SELECT + 84 * - - 60 + NULLIF ( + 82, + 29 * - 51 + - + SUM ( ALL + COALESCE ( - CASE - 11 WHEN + col2 * - + col0 THEN + 16 END, + col0 * col0 ) ) * + CAST ( NULL AS REAL ) + col1 * col1 ) / + col1 FROM tab1 GROUP BY col1
 ----

@@ -44442,7 +44442,7 @@ SELECT DISTINCT + 69 DIV - + NULLIF ( + COALESCE ( - + 71, 95 + - 62 ), - CAST( 
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-4732
 SELECT DISTINCT + 69 / - + NULLIF ( + COALESCE ( - + 71, 95 + - 62 ), - CAST ( NULL AS REAL ) * - COUNT ( * ) + - 91 + 77 * - - 44 - - - 7 ) * + + COUNT ( * ) AS col0
 ----
@@ -87423,7 +87423,7 @@ SELECT - 79 * 3 DIV COALESCE ( 22, - - NULLIF ( + 74, CAST( 74 AS DECIMAL ) * - 
 -43
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-9333
 SELECT - 79 * 3 / COALESCE ( 22, - - NULLIF ( + 74, CAST ( 74 AS REAL ) * - 36 / - 4 * - 72 - - 62 + 97 ) ) + - 33
 ----

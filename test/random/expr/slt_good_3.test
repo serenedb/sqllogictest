@@ -2633,7 +2633,7 @@ SELECT ALL + NULLIF ( - - COUNT( * ), + 68 DIV - AVG ( ALL + - 93 ) ) DIV + 67 -
 545
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-273
 SELECT ALL + NULLIF ( - - COUNT ( * ), + 68 / - AVG ( ALL + - 93 ) ) / + 67 - CAST ( + COUNT ( * ) AS INTEGER ) + 13 + + + 91 * COUNT ( * ) * 5 + + 30 - - 48
 ----
@@ -43485,7 +43485,7 @@ SELECT ALL - 57 DIV - NULLIF ( + 85, CAST( + - 89 AS DECIMAL ) ) + 15 + - - 77, 
 84
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query II rowsort label-4600
 SELECT ALL - 57 / - NULLIF ( + 85, CAST ( + - 89 AS REAL ) ) + 15 + - - 77, + 84 AS col2
 ----
@@ -80347,7 +80347,7 @@ SELECT - NULLIF ( 41, + + CASE - + 88 WHEN - 90 + - ( - + 29 ) THEN - + ( 17 ) W
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-8494
 SELECT - NULLIF ( 41, + + CASE - + 88 WHEN - 90 + - ( - + 29 ) THEN - + ( 17 ) WHEN + ( 52 ) + + - MIN ( - 95 ) THEN NULL WHEN + 43 + + 21 + + 61 + COUNT ( * ) * 3 THEN CAST ( NULL AS REAL ) END ) / - 66 AS col0
 ----
@@ -85250,7 +85250,7 @@ SELECT ALL CASE - 57 WHEN 60 * + ( + + 61 ) THEN NULL WHEN 10 * - 37 * 45 THEN N
 126937192
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-9027
 SELECT ALL CASE - 57 WHEN 60 * + ( + + 61 ) THEN NULL WHEN 10 * - 37 * 45 THEN NULL WHEN + 52 - - 10 THEN - 33 ELSE - COUNT ( - 29 ) + + - CASE - + COUNT ( * ) WHEN + - 43 - 30 THEN NULL ELSE - 57 * + 6 * - 98 + NULLIF ( 44, - AVG ( - - ( + 16 ) ) / 80 + 96 ) / + 16 END - - 44 END * SUM ( DISTINCT + - 48 ) * + + 79 + - ( 86 ) + + 33 + 45 AS col1
 ----

@@ -49630,7 +49630,6 @@ SELECT - NULLIF ( - 46, + 60 - + 93 + CAST( 83 AS DECIMAL ) ) DIV + - 10, - 34 +
 6
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query II rowsort label-5287
 SELECT - NULLIF ( - 46, + 60 - + 93 + CAST ( 83 AS REAL ) ) / + - 10, - 34 + - - 40 AS col2
 ----

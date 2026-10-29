@@ -19702,7 +19702,7 @@ SELECT - 78 * - - 92 - + 91 + - - NULLIF ( - - 17, - 60 - - 17 + + AVG ( DISTINC
 -7305
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-2106
 SELECT - 78 * - - 92 - + 91 + - - NULLIF ( - - 17, - 60 - - 17 + + AVG ( DISTINCT - 29 ) * - 55 + - 99 ) / + + 89 * + + CAST ( + 47 AS INTEGER ) + - SUM ( ALL - - 38 )
 ----

@@ -46268,7 +46268,7 @@ SELECT - ( - 95 ) + + + NULLIF ( - 64, + - CASE + - 37 WHEN 4 THEN AVG ( 78 ) EN
 29
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-5006
 SELECT - ( - 95 ) + + + NULLIF ( - 64, + - CASE + - 37 WHEN 4 THEN AVG ( 78 ) END ) * 54 / + 52
 ----
@@ -60791,7 +60791,7 @@ SELECT 40 * 45 DIV NULLIF ( - 17, CAST( + 10 AS DECIMAL ) )
 -105
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-6551
 SELECT 40 * 45 / NULLIF ( - 17, CAST ( + 10 AS REAL ) )
 ----

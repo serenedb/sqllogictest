@@ -43300,7 +43300,7 @@ SELECT - - 74 + 12 AS col0, NULLIF ( 26, - NULLIF ( - 12, + CAST( NULL AS DECIMA
 -4
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query II rowsort label-4628
 SELECT - - 74 + 12 AS col0, NULLIF ( 26, - NULLIF ( - 12, + CAST ( NULL AS REAL ) ) ) / - 6 AS col2
 ----

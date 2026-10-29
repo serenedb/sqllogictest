@@ -36218,7 +36218,7 @@ SELECT COUNT( * ) DIV + NULLIF ( + - NULLIF ( + 13, - 18 + + - MAX( ALL - - 20 )
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-3893
 SELECT COUNT ( * ) / + NULLIF ( + - NULLIF ( + 13, - 18 + + - MAX ( ALL - - 20 ) ), + - 49 + - + 84 + 66 / ( - ( ( 91 ) ) ) * - COALESCE ( - 78, - 33 * - - AVG ( - + 70 ) + 5 + - 27 / - - 18 ) + - 32 ) col1
 ----

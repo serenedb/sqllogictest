@@ -11361,7 +11361,7 @@ SELECT DISTINCT + NULLIF ( - COUNT( * ), + AVG ( ALL 8 ) ) DIV + 81 + - - 76 + (
 21
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-1235
 SELECT DISTINCT + NULLIF ( - COUNT ( * ), + AVG ( ALL 8 ) ) / + 81 + - - 76 + ( ( + 79 ) ) * - 57 col1, 53 - 32 AS col0
 ----
@@ -13582,7 +13582,7 @@ SELECT - - 65 DIV + ( NULLIF ( + - 66, + 74 DIV - + 72 * - 83 DIV + CAST( - 35 A
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-1471
 SELECT - - 65 / + ( NULLIF ( + - 66, + 74 / - + 72 * - 83 / + CAST ( - 35 AS REAL ) ) ) AS col0
 ----
@@ -45467,7 +45467,7 @@ SELECT - - COUNT( * ) DIV - NULLIF ( - 79, - - AVG ( - - 98 ) * - 29 + 12 + + 80
 -4929
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-4849
 SELECT - - COUNT ( * ) / - NULLIF ( - 79, - - AVG ( - - 98 ) * - 29 + 12 + + 80 ) - - + 2, - 31 * 70 + + 61 * - 45 - + COUNT ( * ) - 13 AS col0
 ----
@@ -57769,7 +57769,7 @@ SELECT + 70 DIV + + 81 AS col1, 58 DIV + NULLIF ( 24, + ( + + AVG ( - 82 ) ) * +
 2
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query II rowsort label-6170
 SELECT + 70 / + + 81 AS col1, 58 / + NULLIF ( 24, + ( + + AVG ( - 82 ) ) * + + 5 * 44 ) AS col2
 ----
@@ -68689,7 +68689,6 @@ SELECT DISTINCT - 47, - 11 DIV - + 69 * + NULLIF ( - 4, + NULLIF ( + 49, + 79 * 
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query II rowsort label-7335
 SELECT DISTINCT - 47, - 11 / - + 69 * + NULLIF ( - 4, + NULLIF ( + 49, + 79 * - 92 * 18 * - COUNT ( * ) * CAST ( NULL AS REAL ) * - 89 ) ) * COUNT ( * ) AS col0
 ----

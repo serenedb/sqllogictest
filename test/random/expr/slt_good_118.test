@@ -74396,7 +74396,7 @@ SELECT + COUNT( * ) DIV ( + NULLIF ( 11, - ( - 85 ) + - - 35 + + 2 + + 82 * - - 
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-7918
 SELECT + COUNT ( * ) / ( + NULLIF ( 11, - ( - 85 ) + - - 35 + + 2 + + 82 * - - 16 + - + COALESCE ( + - 93, + + CAST ( - ( - 16 ) AS REAL ) ) ) )
 ----

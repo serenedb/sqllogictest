@@ -31746,7 +31746,6 @@ SELECT - 49 DIV - - NULLIF ( 98, + ( COALESCE ( + - 34, + 14 ) ) * - - 84 * - - 
 0
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-3381
 SELECT - 49 / - - NULLIF ( 98, + ( COALESCE ( + - 34, + 14 ) ) * - - 84 * - - COUNT ( * ) * - NULLIF ( 53, + CAST ( NULL AS REAL ) * - 76 + + + MIN ( 40 ) ) )
 ----
@@ -91763,7 +91762,7 @@ SELECT ALL - COALESCE ( + 43, - ( 55 ), 88 + + 19 ) * MIN( ALL - - 25 ) + + - CO
 -1118
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-9782
 SELECT ALL - COALESCE ( + 43, - ( 55 ), 88 + + 19 ) * MIN ( ALL - - 25 ) + + - COUNT ( * ) / + + NULLIF ( - - 28, AVG ( + + 83 ) + - + 90 + - COUNT ( * ) ) + - 43 AS col1
 ----

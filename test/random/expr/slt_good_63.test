@@ -57190,7 +57190,6 @@ SELECT NULLIF ( 81, + - 57 * - - 31 DIV CAST( 9 AS DECIMAL ) * 49 * - + 17 * + 4
 9
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
 query I rowsort label-6125
 SELECT NULLIF ( 81, + - 57 * - - 31 / CAST ( 9 AS REAL ) * 49 * - + 17 * + 42 * + 74 + + 36 + 23 + + COALESCE ( - 58, - - 15 + - CAST ( NULL AS INTEGER ) ) * 68 + - - 89 * + 9 ) / 10 + 89 / + 74
 ----
@@ -66529,7 +66528,7 @@ SELECT ALL COUNT( * ) * + 78 * NULLIF ( - 69, + AVG ( - 60 ) ) DIV 35
 -153
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-7115
 SELECT ALL COUNT ( * ) * + 78 * NULLIF ( - 69, + AVG ( - 60 ) ) / 35
 ----

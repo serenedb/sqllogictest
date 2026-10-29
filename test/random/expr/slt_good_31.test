@@ -47926,6 +47926,7 @@ SELECT DISTINCT 70 - - COUNT( ALL + - 50 ) + - 79 + 78 * + + ( + 84 ) * 74 * + C
 -20363624
 
 skipif mysql # not compatible
+skipif serenedb # an integer and a real mix in real, not double precision: serenedb/serenedb#2007
 query I rowsort label-5386
 SELECT DISTINCT 70 - - COUNT ( ALL + - 50 ) + - 79 + 78 * + + ( + 84 ) * 74 * + COUNT ( - 89 ) * - NULLIF ( - NULLIF ( - CAST ( + 42 AS INTEGER ), - + COUNT ( * ) * + - 27 ), - - 47 + - 11 / - 3 + + COUNT ( * ) + CAST ( 63 AS REAL ) / - 55 ) AS col2
 ----

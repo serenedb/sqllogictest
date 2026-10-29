@@ -19169,7 +19169,7 @@ SELECT DISTINCT - NULLIF ( 95, + AVG ( DISTINCT + - 60 ) DIV + 18 + - 57 ) DIV 1
 37
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-2069
 SELECT DISTINCT - NULLIF ( 95, + AVG ( DISTINCT + - 60 ) / + 18 + - 57 ) / 12 - - 44 col1
 ----

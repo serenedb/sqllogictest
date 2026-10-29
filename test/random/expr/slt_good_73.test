@@ -24520,7 +24520,7 @@ SELECT - 80 DIV + - ( NULLIF ( + - 18, - - 68 * + + AVG ( DISTINCT ( - - 87 ) ) 
 -4
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-2630
 SELECT - 80 / + - ( NULLIF ( + - 18, - - 68 * + + AVG ( DISTINCT ( - - 87 ) ) + - MAX ( - + 6 ) - 9 + ( - + 39 ) / + 74 * + 35 ) )
 ----
@@ -38107,7 +38107,7 @@ SELECT + + COUNT( * ) * + NULLIF ( + 15, - - AVG ( DISTINCT + CASE 8 WHEN - 55 +
 -2
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-4068
 SELECT + + COUNT ( * ) * + NULLIF ( + 15, - - AVG ( DISTINCT + CASE 8 WHEN - 55 + - - 10 * + 95 THEN + COALESCE ( - - 27, - 43, - 86 * 21 + - 78 + - - 70 - - 46 * - 73 / - 91 + + 85 ) - - + 52 WHEN + 97 THEN + - 75 * + 47 + - 39 WHEN 28 THEN NULL END ) + ( + 20 ) ) / - 6
 ----
@@ -54684,6 +54684,7 @@ SELECT NULLIF ( + 0, - 95 * CAST( NULL AS SIGNED ) + - 44 * CAST( + 77 AS SIGNED
 0
 
 skipif mysql # not compatible
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-5858
 SELECT NULLIF ( + 0, - 95 * CAST ( NULL AS INTEGER ) + - 44 * CAST ( + 77 AS INTEGER ) + 1 + + COUNT ( DISTINCT - + 90 ) * - COUNT ( ALL 44 ) / + ( - 95 ) * AVG ( DISTINCT 69 ) ) * - COUNT ( * ) AS col2
 ----
@@ -82718,7 +82719,7 @@ SELECT 96 DIV + NULLIF ( + 63, + AVG ( ALL - 87 ) * + 58 * - COUNT( * ) + + 2 + 
 1
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-8870
 SELECT 96 / + NULLIF ( + 63, + AVG ( ALL - 87 ) * + 58 * - COUNT ( * ) + + 2 + + COUNT ( * ) ) + - + MIN ( + 57 ) / - 81 * - COALESCE ( + + CAST ( - + 77 AS INTEGER ), - - ( COUNT ( * ) ) + - + COALESCE ( - 88, - 5 * + 0 ) )
 ----

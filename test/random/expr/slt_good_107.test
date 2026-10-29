@@ -3989,7 +3989,7 @@ SELECT + - 32 DIV - ( - NULLIF ( - 73, - AVG ( 81 ) ) ) + - 75
 -75
 
 skipif mysql # not compatible
-skipif serenedb # NULLIF keeps its first argument's type: serenedb/serenedb#1898
+skipif serenedb # avg(integer) is double precision, not numeric: serenedb/serenedb#1435
 query I rowsort label-418
 SELECT + - 32 / - ( - NULLIF ( - 73, - AVG ( 81 ) ) ) + - 75
 ----
